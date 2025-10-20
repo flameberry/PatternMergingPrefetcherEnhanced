@@ -1,0 +1,51 @@
+#include "cache.h"
+#include "pmp_prefetcher.h"
+
+// File-local static PMP pointer
+static PMP* pmp_prefetcher = nullptr;
+
+void CACHE::l2c_prefetcher_initialize() 
+{
+    if (!pmp_prefetcher) {
+        // Initialize PMP with pattern length 64 (can tune later)
+        pmp_prefetcher = new PMP(64);
+    }
+}
+
+uint32_t CACHE::l2c_prefetcher_operate(uint64_t addr, uint64_t ip,
+                                      uint8_t cache_hit, uint8_t type,
+                                      uint32_t metadata_in, uint8_t critical_ip_flag)
+{
+    if (pmp_prefetcher) {
+        // Tell PMP that this block was accessed by this instruction PC
+        pmp_prefetcher->access(addr >> LOG2_BLOCK_SIZE, ip);
+    }
+    return metadata_in;
+}
+
+uint32_t CACHE::l2c_prefetcher_cache_fill(uint64_t addr, uint32_t set, uint32_t way,
+                                          uint8_t prefetch, uint64_t evicted_addr,
+                                          uint32_t metadata_in)
+{
+    if (pmp_prefetcher) {
+        // Get prefetch candidates from PMP using real instruction PC
+        auto pf_blocks = pmp_prefetcher->prefetch(addr >> LOG2_BLOCK_SIZE, metadata_in);
+
+        for (auto b : pf_blocks) {
+            uint64_t pf_addr = b << LOG2_BLOCK_SIZE;
+
+            // Issue prefetch to the cache (level 0 here is L2C)
+            // true: prefetch, 0: metadata
+            this->prefetch_line(0, addr, pf_addr, true, 0);
+        }
+    }
+    return metadata_in;
+}
+
+void CACHE::l2c_prefetcher_final_stats()
+{
+    if (pmp_prefetcher) {
+        delete pmp_prefetcher;
+        pmp_prefetcher = nullptr;
+    }
+}
