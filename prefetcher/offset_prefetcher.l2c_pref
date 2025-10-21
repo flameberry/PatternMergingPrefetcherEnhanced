@@ -1,51 +1,115 @@
 #include "cache.h"
-#include "pmp_prefetcher.h"
+#include <map>
+#include <vector>
 
-// File-local static PMP pointer
-static PMP* pmp_prefetcher = nullptr;
+// Pattern table entry
+struct PatternEntry {
+    uint64_t last_addr;        // Last address accessed
+    int64_t stride;            // Detected stride
+    int confidence;            // Confidence counter
+    uint64_t last_prefetch;    // Last prefetched address
+    
+    PatternEntry() : last_addr(0), stride(0), confidence(0), last_prefetch(0) {}
+};
+
+// Configuration
+#define PATTERN_TABLE_SIZE 256
+#define PREFETCH_DEGREE 4           // Number of prefetches to issue
+#define CONFIDENCE_THRESHOLD 2      // Minimum confidence to start prefetching
+#define MAX_CONFIDENCE 7            // Maximum confidence value
+#define MIN_CONFIDENCE -3           // Minimum confidence before removing pattern
+
+// Pattern table indexed by instruction pointer (IP)
+std::map<uint64_t, PatternEntry> pattern_table;
 
 void CACHE::l2c_prefetcher_initialize() 
 {
-    if (!pmp_prefetcher) {
-        // Initialize PMP with pattern length 64 (can tune later)
-        pmp_prefetcher = new PMP(64);
-    }
+    pattern_table.clear();
 }
 
-uint32_t CACHE::l2c_prefetcher_operate(uint64_t addr, uint64_t ip,
-                                      uint8_t cache_hit, uint8_t type,
-                                      uint32_t metadata_in, uint8_t critical_ip_flag)
+uint32_t CACHE::l2c_prefetcher_operate(uint64_t addr, uint64_t ip, uint8_t cache_hit, uint8_t type, uint32_t metadata_in, uint8_t critical_ip_flag)
 {
-    if (pmp_prefetcher) {
-        // Tell PMP that this block was accessed by this instruction PC
-        pmp_prefetcher->access(addr >> LOG2_BLOCK_SIZE, ip);
+    // Only prefetch on demand loads (not prefetches themselves)
+    if (type != LOAD)
+        return metadata_in;
+    
+    // Convert address to cache block address
+    uint64_t block_addr = addr >> LOG2_BLOCK_SIZE;
+    
+    // Check if we have an entry for this IP
+    if (pattern_table.find(ip) != pattern_table.end()) {
+        PatternEntry& entry = pattern_table[ip];
+        
+        // Calculate stride
+        int64_t current_stride = block_addr - entry.last_addr;
+        
+        // Check if stride matches
+        if (current_stride == entry.stride && entry.stride != 0) {
+            // Pattern confirmed, increase confidence
+            if (entry.confidence < MAX_CONFIDENCE)
+                entry.confidence++;
+            
+            // If confidence is high enough, issue prefetches
+            if (entry.confidence >= CONFIDENCE_THRESHOLD) {
+                for (int i = 1; i <= PREFETCH_DEGREE; i++) {
+                    uint64_t prefetch_addr = (block_addr + i * entry.stride) << LOG2_BLOCK_SIZE;
+                    
+                    // Issue prefetch
+                    prefetch_line(ip, addr, prefetch_addr, FILL_L2, 0);
+                    
+                    // Update last prefetch
+                    entry.last_prefetch = block_addr + i * entry.stride;
+                }
+            }
+        } 
+        else {
+            // Pattern changed
+            if (entry.confidence > 0) {
+                // Decrease confidence if we had a pattern
+                entry.confidence--;
+            } else {
+                // Adopt new stride
+                entry.stride = current_stride;
+                entry.confidence = 0;
+            }
+        }
+        
+        // Update last address
+        entry.last_addr = block_addr;
+        
+        // Remove entry if confidence is too low
+        if (entry.confidence < MIN_CONFIDENCE) {
+            pattern_table.erase(ip);
+        }
+    } 
+    else {
+        // New IP, create entry
+        if (pattern_table.size() < PATTERN_TABLE_SIZE) {
+            PatternEntry new_entry;
+            new_entry.last_addr = block_addr;
+            new_entry.stride = 0;
+            new_entry.confidence = 0;
+            pattern_table[ip] = new_entry;
+        }
     }
+    
     return metadata_in;
 }
 
-uint32_t CACHE::l2c_prefetcher_cache_fill(uint64_t addr, uint32_t set, uint32_t way,
-                                          uint8_t prefetch, uint64_t evicted_addr,
-                                          uint32_t metadata_in)
+uint32_t CACHE::l2c_prefetcher_cache_fill(uint64_t addr, uint32_t set, uint32_t way, uint8_t prefetch, uint64_t evicted_addr, uint32_t metadata_in)
 {
-    if (pmp_prefetcher) {
-        // Get prefetch candidates from PMP using real instruction PC
-        auto pf_blocks = pmp_prefetcher->prefetch(addr >> LOG2_BLOCK_SIZE, metadata_in);
-
-        for (auto b : pf_blocks) {
-            uint64_t pf_addr = b << LOG2_BLOCK_SIZE;
-
-            // Issue prefetch to the cache (level 0 here is L2C)
-            // true: prefetch, 0: metadata
-            this->prefetch_line(0, addr, pf_addr, true, 0);
-        }
-    }
     return metadata_in;
 }
 
 void CACHE::l2c_prefetcher_final_stats()
 {
-    if (pmp_prefetcher) {
-        delete pmp_prefetcher;
-        pmp_prefetcher = nullptr;
+    std::cout << "Pattern Matching Prefetcher Final Statistics" << std::endl;
+    std::cout << "Total pattern table entries: " << pattern_table.size() << std::endl;
+    
+    int high_confidence = 0;
+    for (auto& entry : pattern_table) {
+        if (entry.second.confidence >= CONFIDENCE_THRESHOLD)
+            high_confidence++;
     }
+    std::cout << "High confidence patterns: " << high_confidence << std::endl;
 }
