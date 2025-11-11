@@ -5,23 +5,22 @@ WARNING: physical memory size is smaller than virtual memory size
 *** ChampSim Multicore Out-of-Order Simulator ***
 
 Warmup Instructions: 5000000
-Simulation Instructions: 20000000
+Simulation Instructions: 5000000
 Number of CPUs: 1
 Page size: 4096
 
 Basic BTB sets: 1024 ways: 8 indirect buffer size: 4096 RAS size: 64
 Off-chip DRAM Size: 4 GiB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
 Max paddr 8M
-Warmup finished CPU 0 instructions: 5000000 cycles: 1272036 cumulative IPC: 3.93071 (Simulation time: 0 hr 2 min 24 sec) 
+Warmup finished CPU 0 instructions: 5000000 cycles: 1272036 cumulative IPC: 3.93071 (Simulation time: 0 hr 2 min 12 sec) 
 
-Warmup complete CPU 0 instructions: 5000000 cycles: 1272036 (Simulation time: 0 hr 2 min 24 sec) 
+Warmup complete CPU 0 instructions: 5000000 cycles: 1272036 (Simulation time: 0 hr 2 min 12 sec) 
 
-Heartbeat CPU 0 instructions: 10000000 cycles: 5393589 heartbeat IPC: 1.85406 cumulative IPC: 1.21314 (Simulation time: 0 hr 9 min 14 sec) 
-Heartbeat CPU 0 instructions: 20000001 cycles: 13129951 heartbeat IPC: 1.2926 cumulative IPC: 1.26498 (Simulation time: 0 hr 18 min 39 sec) 
-Max paddr 9M
-Simulation finished CPU 0 instructions: 20000002 cycles: 15642100 cumulative IPC: 1.27861 (Simulation time: 0 hr 20 min 47 sec) 
+Heartbeat CPU 0 instructions: 10000000 cycles: 5393589 heartbeat IPC: 1.85406 cumulative IPC: 1.21314 (Simulation time: 0 hr 6 min 51 sec) 
+Max paddr 8M
+Simulation finished CPU 0 instructions: 5000000 cycles: 4121554 cumulative IPC: 1.21314 (Simulation time: 0 hr 6 min 51 sec) 
 
-Simulation complete CPU 0 instructions: 20000002 cycles: 15642100 (Simulation time: 0 hr 20 min 47 sec) 
+Simulation complete CPU 0 instructions: 5000000 cycles: 4121554 (Simulation time: 0 hr 6 min 51 sec) 
 
 
 ChampSim completed all CPUs
@@ -35,23 +34,23 @@ ChampSim completed all CPUs
     "roi": {
       "cores": [
         {
-          "instructions": 20000002,
-          "cycles": 15642100,
-          "Avg ROB occupancy at mispredict": 248.044, 
+          "instructions": 5000000,
+          "cycles": 4121554,
+          "Avg ROB occupancy at mispredict": 269.994, 
           "mispredict": {
-            "BRANCH_DIRECT_JUMP": 42,
+            "BRANCH_DIRECT_JUMP": 0,
             "BRANCH_INDIRECT": 0,
-            "BRANCH_CONDITIONAL": 71636,
-            "BRANCH_DIRECT_CALL": 67,
-            "BRANCH_INDIRECT_CALL": 2,
-            "BRANCH_RETURN": 94
+            "BRANCH_CONDITIONAL": 17502,
+            "BRANCH_DIRECT_CALL": 0,
+            "BRANCH_INDIRECT_CALL": 0,
+            "BRANCH_RETURN": 4
           }
         }
       ],
       "cpu0_L1I": {
         "LOAD": {
-          "hit":4125,
-          "miss":299
+          "hit":518,
+          "miss":0
         },
         "RFO": {
           "hit":0,
@@ -81,14 +80,14 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 8.05916,
+        "miss latency": null,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 4525,
-          "RQ_MERGED": 101,
+          "RQ_ACCESS": 539,
+          "RQ_MERGED": 21,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
           "WQ_MERGED": 0,
@@ -97,8 +96,8 @@ ChampSim completed all CPUs
       },
       "cpu0_ITLB": {
         "LOAD": {
-          "hit":3665,
-          "miss":17
+          "hit":408,
+          "miss":0
         },
         "RFO": {
           "hit":0,
@@ -128,13 +127,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 18.8493,
+        "miss latency": null,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 3682,
+          "RQ_ACCESS": 408,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -144,8 +143,8 @@ ChampSim completed all CPUs
       },
       "cpu0_DTLB": {
         "LOAD": {
-          "hit":5428178,
-          "miss":101372
+          "hit":1323181,
+          "miss":26742
         },
         "RFO": {
           "hit":0,
@@ -163,7 +162,7 @@ ChampSim completed all CPUs
           "hit":0,
           "miss":0
         },
-        "mshr full": 723,
+        "mshr full": 2,
         "prefetch requested": 0,
         "prefetch issued": 0,
         "prefetch filled": 0,
@@ -175,15 +174,15 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 0.604253,
+        "miss latency": 0.56621,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 5534420,
+          "RQ_ACCESS": 1350245,
           "RQ_MERGED": 0,
-          "RQ_FULL": 4870,
+          "RQ_FULL": 322,
           "WQ_ACCESS": 0,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
@@ -191,8 +190,8 @@ ChampSim completed all CPUs
       },
       "cpu0_STLB": {
         "LOAD": {
-          "hit":15326,
-          "miss":7066
+          "hit":4501,
+          "miss":1743
         },
         "RFO": {
           "hit":0,
@@ -222,13 +221,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 7.05326,
+        "miss latency": 6.8181,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 22392,
+          "RQ_ACCESS": 6244,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -238,8 +237,8 @@ ChampSim completed all CPUs
       },
       "cpu0_L1D": {
         "LOAD": {
-          "hit":2493483,
-          "miss":2547460
+          "hit":594093,
+          "miss":670320
         },
         "RFO": {
           "hit":0,
@@ -250,14 +249,14 @@ ChampSim completed all CPUs
           "miss":0
         },
         "WRITE": {
-          "hit":339647,
-          "miss":137921
+          "hit":54653,
+          "miss":27539
         },
         "TRANSLATION": {
-          "hit":3005,
-          "miss":3847
+          "hit":722,
+          "miss":978
         },
-        "mshr full": 84944,
+        "mshr full": 14946,
         "prefetch requested": 0,
         "prefetch issued": 0,
         "prefetch filled": 0,
@@ -269,40 +268,40 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 1.35613,
+        "miss latency": 1.3372,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 5117625,
-          "RQ_MERGED": 12701,
-          "RQ_FULL": 63982,
-          "WQ_ACCESS": 501963,
+          "RQ_ACCESS": 1273134,
+          "RQ_MERGED": 3398,
+          "RQ_FULL": 5324,
+          "WQ_ACCESS": 86583,
           "WQ_MERGED": 0,
-          "WQ_FULL": 24393
+          "WQ_FULL": 4391
         }
       },
       "cpu0_L2C": {
         "LOAD": {
-          "hit":36369,
-          "miss":218176
+          "hit":9183,
+          "miss":57010
         },
         "RFO": {
-          "hit":1379,
-          "miss":18913
+          "hit":210,
+          "miss":3931
         },
         "PREFETCH": {
           "hit":0,
           "miss":0
         },
         "WRITE": {
-          "hit":21745,
+          "hit":4470,
           "miss":0
         },
         "TRANSLATION": {
-          "hit":1512,
-          "miss":2335
+          "hit":384,
+          "miss":594
         },
         "mshr full": 0,
         "prefetch requested": 0,
@@ -316,40 +315,40 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 14.4449,
+        "miss latency": 14.4423,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 278685,
+          "RQ_ACCESS": 71312,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 21773,
+          "WQ_ACCESS": 4474,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "LLC": {
         "LOAD": {
-          "hit": [8067],
-          "miss": [210109]
+          "hit": [2095],
+          "miss": [54915]
         },
         "RFO": {
-          "hit": [3128],
-          "miss": [15785]
+          "hit": [645],
+          "miss": [3286]
         },
         "PREFETCH": {
           "hit": [0],
           "miss": [0]
         },
         "WRITE": {
-          "hit": [8099],
+          "hit": [1862],
           "miss": [0]
         },
         "TRANSLATION": {
-          "hit": [219],
-          "miss": [2116]
+          "hit": [64],
+          "miss": [530]
         },
         "mshr full": 0,
         "prefetch requested": 0,
@@ -363,29 +362,29 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 13.6463,
+        "miss latency": 13.6363,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 239424,
+          "RQ_ACCESS": 61535,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 8108,
+          "WQ_ACCESS": 1866,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "DRAM": [
         {
-          "RQ ROW_BUFFER_HIT": 141732,
-          "RQ ROW_BUFFER_MISS": 86149,
+          "RQ ROW_BUFFER_HIT": 35282,
+          "RQ ROW_BUFFER_MISS": 23416,
           "PQ FULL": 0,
-          "WQ ROW_BUFFER_HIT": 774,
-          "WQ ROW_BUFFER_MISS": 2990,
+          "WQ ROW_BUFFER_HIT": 205,
+          "WQ ROW_BUFFER_MISS": 691,
           "WQ FULL": 0,
-          "AVG DBUS CONGESTED CYCLE": 3.90319
+          "AVG DBUS CONGESTED CYCLE": 3.89436
         }
       ]
 
@@ -393,23 +392,23 @@ ChampSim completed all CPUs
     "sim": {
       "cores": [
         {
-          "instructions": 20000002,
-          "cycles": 15642100,
-          "Avg ROB occupancy at mispredict": 248.044, 
+          "instructions": 5000000,
+          "cycles": 4121554,
+          "Avg ROB occupancy at mispredict": 269.994, 
           "mispredict": {
-            "BRANCH_DIRECT_JUMP": 42,
+            "BRANCH_DIRECT_JUMP": 0,
             "BRANCH_INDIRECT": 0,
-            "BRANCH_CONDITIONAL": 71636,
-            "BRANCH_DIRECT_CALL": 67,
-            "BRANCH_INDIRECT_CALL": 2,
-            "BRANCH_RETURN": 94
+            "BRANCH_CONDITIONAL": 17502,
+            "BRANCH_DIRECT_CALL": 0,
+            "BRANCH_INDIRECT_CALL": 0,
+            "BRANCH_RETURN": 4
           }
         }
       ],
       "cpu0_L1I": {
         "LOAD": {
-          "hit":4125,
-          "miss":299
+          "hit":518,
+          "miss":0
         },
         "RFO": {
           "hit":0,
@@ -439,14 +438,14 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 8.05916,
+        "miss latency": null,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 4525,
-          "RQ_MERGED": 101,
+          "RQ_ACCESS": 539,
+          "RQ_MERGED": 21,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
           "WQ_MERGED": 0,
@@ -455,8 +454,8 @@ ChampSim completed all CPUs
       },
       "cpu0_ITLB": {
         "LOAD": {
-          "hit":3665,
-          "miss":17
+          "hit":408,
+          "miss":0
         },
         "RFO": {
           "hit":0,
@@ -486,13 +485,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 18.8493,
+        "miss latency": null,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 3682,
+          "RQ_ACCESS": 408,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -502,8 +501,8 @@ ChampSim completed all CPUs
       },
       "cpu0_DTLB": {
         "LOAD": {
-          "hit":5428178,
-          "miss":101372
+          "hit":1323181,
+          "miss":26742
         },
         "RFO": {
           "hit":0,
@@ -521,7 +520,7 @@ ChampSim completed all CPUs
           "hit":0,
           "miss":0
         },
-        "mshr full": 723,
+        "mshr full": 2,
         "prefetch requested": 0,
         "prefetch issued": 0,
         "prefetch filled": 0,
@@ -533,15 +532,15 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 0.604253,
+        "miss latency": 0.56621,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 5534420,
+          "RQ_ACCESS": 1350245,
           "RQ_MERGED": 0,
-          "RQ_FULL": 4870,
+          "RQ_FULL": 322,
           "WQ_ACCESS": 0,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
@@ -549,8 +548,8 @@ ChampSim completed all CPUs
       },
       "cpu0_STLB": {
         "LOAD": {
-          "hit":15326,
-          "miss":7066
+          "hit":4501,
+          "miss":1743
         },
         "RFO": {
           "hit":0,
@@ -580,13 +579,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 7.05326,
+        "miss latency": 6.8181,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 22392,
+          "RQ_ACCESS": 6244,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -596,8 +595,8 @@ ChampSim completed all CPUs
       },
       "cpu0_L1D": {
         "LOAD": {
-          "hit":2493483,
-          "miss":2547460
+          "hit":594093,
+          "miss":670320
         },
         "RFO": {
           "hit":0,
@@ -608,14 +607,14 @@ ChampSim completed all CPUs
           "miss":0
         },
         "WRITE": {
-          "hit":339647,
-          "miss":137921
+          "hit":54653,
+          "miss":27539
         },
         "TRANSLATION": {
-          "hit":3005,
-          "miss":3847
+          "hit":722,
+          "miss":978
         },
-        "mshr full": 84944,
+        "mshr full": 14946,
         "prefetch requested": 0,
         "prefetch issued": 0,
         "prefetch filled": 0,
@@ -627,40 +626,40 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 1.35613,
+        "miss latency": 1.3372,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 5117625,
-          "RQ_MERGED": 12701,
-          "RQ_FULL": 63982,
-          "WQ_ACCESS": 501963,
+          "RQ_ACCESS": 1273134,
+          "RQ_MERGED": 3398,
+          "RQ_FULL": 5324,
+          "WQ_ACCESS": 86583,
           "WQ_MERGED": 0,
-          "WQ_FULL": 24393
+          "WQ_FULL": 4391
         }
       },
       "cpu0_L2C": {
         "LOAD": {
-          "hit":36369,
-          "miss":218176
+          "hit":9183,
+          "miss":57010
         },
         "RFO": {
-          "hit":1379,
-          "miss":18913
+          "hit":210,
+          "miss":3931
         },
         "PREFETCH": {
           "hit":0,
           "miss":0
         },
         "WRITE": {
-          "hit":21745,
+          "hit":4470,
           "miss":0
         },
         "TRANSLATION": {
-          "hit":1512,
-          "miss":2335
+          "hit":384,
+          "miss":594
         },
         "mshr full": 0,
         "prefetch requested": 0,
@@ -674,40 +673,40 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 14.4449,
+        "miss latency": 14.4423,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 278685,
+          "RQ_ACCESS": 71312,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 21773,
+          "WQ_ACCESS": 4474,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "LLC": {
         "LOAD": {
-          "hit": [8067],
-          "miss": [210109]
+          "hit": [2095],
+          "miss": [54915]
         },
         "RFO": {
-          "hit": [3128],
-          "miss": [15785]
+          "hit": [645],
+          "miss": [3286]
         },
         "PREFETCH": {
           "hit": [0],
           "miss": [0]
         },
         "WRITE": {
-          "hit": [8099],
+          "hit": [1862],
           "miss": [0]
         },
         "TRANSLATION": {
-          "hit": [219],
-          "miss": [2116]
+          "hit": [64],
+          "miss": [530]
         },
         "mshr full": 0,
         "prefetch requested": 0,
@@ -721,29 +720,29 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 13.6463,
+        "miss latency": 13.6363,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 239424,
+          "RQ_ACCESS": 61535,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 8108,
+          "WQ_ACCESS": 1866,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "DRAM": [
         {
-          "RQ ROW_BUFFER_HIT": 141732,
-          "RQ ROW_BUFFER_MISS": 86149,
+          "RQ ROW_BUFFER_HIT": 35282,
+          "RQ ROW_BUFFER_MISS": 23416,
           "PQ FULL": 0,
-          "WQ ROW_BUFFER_HIT": 774,
-          "WQ ROW_BUFFER_MISS": 2990,
+          "WQ ROW_BUFFER_HIT": 205,
+          "WQ ROW_BUFFER_MISS": 691,
           "WQ FULL": 0,
-          "AVG DBUS CONGESTED CYCLE": 3.90319
+          "AVG DBUS CONGESTED CYCLE": 3.89436
         }
       ]
 

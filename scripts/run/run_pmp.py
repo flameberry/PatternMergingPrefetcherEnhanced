@@ -1,5 +1,5 @@
+# (Aditya): This is to run the simulation for no prefetcher and pmp prefetcher only
 import os
-import json
 from run_functions import *
 
 
@@ -11,10 +11,10 @@ def main():
         "Running single-core general simulations. The results can be used to generate fig. 1, 6, 7, 8, 11"
     )
 
-    prefix = "aditya_20M_w5M"
     # num_warmup, num_simulation = 200000000, 200000000
-    num_warmup, num_simulation = 5000000, 20000000
+    num_warmup, num_simulation = 5000000, 5000000
     begin, num = 0, len(workloads_all)
+    prefix = f"aditya_warmup{num_warmup}_sim{num_simulation}"
 
     for prefetcher in ["no", "pmp"]:
         run_1core(prefetcher, prefix, num_warmup, num_simulation, begin, num)
