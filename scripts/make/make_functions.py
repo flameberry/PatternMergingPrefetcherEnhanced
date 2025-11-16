@@ -153,7 +153,7 @@ def modify_config_multicore(num_cores, branch, prefetcher, name):
 
 
 def make_multicore(num_cores, prefetcher):
-    name = 'champsim_' + str(num_cores) + 'core__' + prefetcher
+    name = 'champsim_' + str(num_cores) + 'core_' + prefetcher
     modify_config_multicore(num_cores, 'hashed_perceptron', prefetcher, name)
     os.system('./config.sh champsim_config_auto.json')
     os.system('make clean && make -j16')
