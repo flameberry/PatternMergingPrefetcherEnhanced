@@ -17,6 +17,7 @@
 #include "vmem.h"
 
 #include <cassert>
+#include <cstdint>
 
 #include "champsim.h"
 #include "champsim_constants.h"

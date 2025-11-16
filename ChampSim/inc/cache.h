@@ -107,6 +107,11 @@ class CACHE : public champsim::operable, public MemoryRequestConsumer, public Me
     bool handle_miss(const PACKET& handle_pkt);
     bool handle_write(const PACKET& handle_pkt);
 
+    // #ifdef ENABLE_CLIP
+    // // CLIP wrapper instance (only if enabled)
+    //     class PMPEnhanced* pmp_enhanced;
+    // #endif
+
     struct BLOCK {
         bool valid = false;
         bool prefetch = false;

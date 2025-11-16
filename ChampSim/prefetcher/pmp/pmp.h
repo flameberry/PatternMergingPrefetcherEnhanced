@@ -12,8 +12,10 @@ namespace pmp {
 
 #define DEBUG(x)
 
-#define __fine_offset(addr) (addr & OFFSET_MASK)
-#define __coarse_offset(fine_offset) ((fine_offset) >> (LOG2_BLOCK_SIZE - BOTTOM_BITS))
+/// Commented Manish Kumar
+// #define fine_offset(addr) (addr & OFFSET_MASK)
+// #define coarse_offset(fine_offset) ((fine_offset) >> (LOG2_BLOCK_SIZE - BOTTOM_BITS))
+/// Commented Manish Kumar Ends
 
 #define FT_CACHE_TYPE custom_util::SRRIPSetAssociativeCache
 #define AT_CACHE_TYPE custom_util::LRUSetAssociativeCache
@@ -33,6 +35,16 @@ constexpr int PATTERN_DEGRADE_LEVEL = 2;
 
 int filter_by_ppt = 0;
 int prefetch_to_l1, prefetch_to_l2 = 0;
+
+/// Added Manish Kumar
+inline constexpr int fine_offset(uint64_t addr) {
+    return addr & OFFSET_MASK;
+}
+
+inline constexpr int coarse_offset(int m_fine_offset) {
+    return m_fine_offset >> (LOG2_BLOCK_SIZE - BOTTOM_BITS);
+}
+/// Added Manish Kumar Ends
 
 // SMS Filter Table Data
 // <Tag, PC/Offset>
@@ -145,7 +157,7 @@ public:
                       << ", offset=" << std::dec << offset << std::dec << std::endl;
         uint64_t key = this->build_key(region_number);
         std::vector<bool> pattern(this->pattern_len, false);
-        pattern[__coarse_offset(offset)] = true;
+        pattern[coarse_offset(offset)] = true;
         Entry old_entry = Super::insert(key, {offset, second_offset, pc, pattern});
         Super::rp_insert(key);
         return old_entry;
@@ -206,7 +218,7 @@ public:
         if (this->debug_level >= 2)
             std::cerr << "OffsetPatternTable::insert(" << std::hex << "address=0x" << address
                       << ", pattern=" << custom_util::pattern_to_string(pattern) << ")" << std::dec << std::endl;
-        int offset = __coarse_offset(__fine_offset(address));
+        int offset = coarse_offset(fine_offset(address));
         offset = is_degrade ? offset / PATTERN_DEGRADE_LEVEL : offset;
         pattern = custom_util::my_rotate(pattern, -offset);
         // auto new_pattern = pattern;
@@ -264,7 +276,7 @@ private:
     }
 
     virtual uint64_t build_key(uint64_t address, uint64_t pc) {
-        uint64_t offset = __fine_offset(address);
+        uint64_t offset = fine_offset(address);
         uint64_t key = offset & ((1 << this->tag_size) - 1);
         return key;
     }
@@ -323,7 +335,7 @@ public:
                       << " MSHR entries occupied." << std::dec << std::endl;
         }
         uint64_t base_addr = block_address << BOTTOM_BITS;
-        int region_offset = __coarse_offset(__fine_offset(block_address));
+        int region_offset = coarse_offset(fine_offset(block_address));
         uint64_t region_number = block_address >> OFFSET_BITS;
         uint64_t key = this->build_key(region_number);
         Entry* entry = Super::find(key);
@@ -380,6 +392,13 @@ public:
         return Super::log(headers);
     }
 
+    /// Added Manish Kumar    
+        Entry* get_entry_for_region(uint64_t region_number) {
+        uint64_t key = this->build_key(region_number);
+        return Super::find(key);
+    }
+    /// Added Manish Kumar Ends here
+
 private:
     void write_data(Entry& entry, custom_util::Table& table, int row) {
         uint64_t key = custom_util::hash_index(entry.key, this->index_len);
@@ -424,6 +443,10 @@ public:
     int prefetch(CACHE* cache, uint64_t block_number);
     void set_debug_level(int debug_level);
     void log();
+   
+    /// Added Manish Kumar 
+    PrefetchBuffer US_getPrefetchBuffer(){return pf_buffer;}
+    /// Added Manish Kumar Ends here
 
     int FILL_L1_PMP;
     int FILL_L2_PMP;

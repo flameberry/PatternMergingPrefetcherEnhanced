@@ -4,1056 +4,1075 @@
 ###
 
 ######
-# Build ID: c2c31fef
-# Executable: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp
+# Build ID: 578b05a8
+# Executable: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced
 ######
 
 ###
-# Build ID: c2c31fef
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj
+# Build ID: 578b05a8
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj
 ###
 
-c2c31fef_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj
-c2c31fef_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/*.cc))
-$(c2c31fef_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src
-$(c2c31fef_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/obj/*.d)
+578b05a8_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj
+578b05a8_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/*.cc))
+$(578b05a8_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src
+$(578b05a8_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/obj/*.d)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_objs_0) | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin
-$(c2c31fef_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-build_dirs += $(c2c31fef_dirs_0) /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin
-build_objs += $(c2c31fef_objs_0)
-executable_name += /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_objs_0) | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin
+$(578b05a8_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+build_dirs += $(578b05a8_dirs_0) /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin
+build_objs += $(578b05a8_objs_0)
+executable_name += /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced
 
 ###
-# Build ID: c2c31fef_btbDbasic_btb
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb
+# Build ID: 578b05a8_btbDbasic_btb
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb
 ###
 
-c2c31fef_btbDbasic_btb_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb
-c2c31fef_btbDbasic_btb_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/*.cc))
-$(c2c31fef_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb
-$(c2c31fef_btbDbasic_btb_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/btbDbasic_btb/*.d)
+578b05a8_btbDbasic_btb_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb
+578b05a8_btbDbasic_btb_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/*.cc))
+$(578b05a8_btbDbasic_btb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
+$(578b05a8_btbDbasic_btb_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/btbDbasic_btb/*.d)
 
-$(c2c31fef_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
-module_dirs += $(c2c31fef_btbDbasic_btb_dirs_0)
-module_objs += $(c2c31fef_btbDbasic_btb_objs_0)
+$(578b05a8_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_btbDbasic_btb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
+module_dirs += $(578b05a8_btbDbasic_btb_dirs_0)
+module_objs += $(578b05a8_btbDbasic_btb_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_btbDbasic_btb_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_btbDbasic_btb_objs_0)
 ###
-# Build ID: c2c31fef_branchDhashed_perceptron
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron
-###
-
-c2c31fef_branchDhashed_perceptron_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron
-c2c31fef_branchDhashed_perceptron_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/*.cc))
-$(c2c31fef_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron
-$(c2c31fef_branchDhashed_perceptron_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/branchDhashed_perceptron/*.d)
-
-$(c2c31fef_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
-module_dirs += $(c2c31fef_branchDhashed_perceptron_dirs_0)
-module_objs += $(c2c31fef_branchDhashed_perceptron_objs_0)
-
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_branchDhashed_perceptron_objs_0)
-###
-# Build ID: c2c31fef_prefetcherDno
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno
+# Build ID: 578b05a8_branchDhashed_perceptron
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron
 ###
 
-c2c31fef_prefetcherDno_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno
-c2c31fef_prefetcherDno_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/*.cc))
-$(c2c31fef_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no
-$(c2c31fef_prefetcherDno_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno/*.d)
+578b05a8_branchDhashed_perceptron_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron
+578b05a8_branchDhashed_perceptron_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/*.cc))
+$(578b05a8_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
+$(578b05a8_branchDhashed_perceptron_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/branchDhashed_perceptron/*.d)
 
-$(c2c31fef_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
-module_dirs += $(c2c31fef_prefetcherDno_dirs_0)
-module_objs += $(c2c31fef_prefetcherDno_objs_0)
+$(578b05a8_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
+module_dirs += $(578b05a8_branchDhashed_perceptron_dirs_0)
+module_objs += $(578b05a8_branchDhashed_perceptron_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_prefetcherDno_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_branchDhashed_perceptron_objs_0)
 ###
-# Build ID: c2c31fef_prefetcherDno_instr
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr
-###
-
-c2c31fef_prefetcherDno_instr_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr
-c2c31fef_prefetcherDno_instr_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/*.cc))
-$(c2c31fef_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr
-$(c2c31fef_prefetcherDno_instr_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDno_instr/*.d)
-
-$(c2c31fef_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
-module_dirs += $(c2c31fef_prefetcherDno_instr_dirs_0)
-module_objs += $(c2c31fef_prefetcherDno_instr_objs_0)
-
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_prefetcherDno_instr_objs_0)
-###
-# Build ID: c2c31fef_prefetcherDpmp
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp
+# Build ID: 578b05a8_prefetcherDno
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno
 ###
 
-c2c31fef_prefetcherDpmp_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp
-c2c31fef_prefetcherDpmp_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/*.cc))
-$(c2c31fef_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp
-$(c2c31fef_prefetcherDpmp_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/prefetcherDpmp/*.d)
+578b05a8_prefetcherDno_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno
+578b05a8_prefetcherDno_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/*.cc))
+$(578b05a8_prefetcherDno_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
+$(578b05a8_prefetcherDno_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno/*.d)
 
-$(c2c31fef_prefetcherDpmp_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_prefetcherDpmp_objs_0): CPPFLAGS += -include prefetcherDpmp.inc
-module_dirs += $(c2c31fef_prefetcherDpmp_dirs_0)
-module_objs += $(c2c31fef_prefetcherDpmp_objs_0)
+$(578b05a8_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_prefetcherDno_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
+module_dirs += $(578b05a8_prefetcherDno_dirs_0)
+module_objs += $(578b05a8_prefetcherDno_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_prefetcherDpmp_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_prefetcherDno_objs_0)
 ###
-# Build ID: c2c31fef_replacementDlru
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru
+# Build ID: 578b05a8_prefetcherDno_instr
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr
 ###
 
-c2c31fef_replacementDlru_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru
-c2c31fef_replacementDlru_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/*.cc))
-$(c2c31fef_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru
-$(c2c31fef_replacementDlru_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/replacementDlru/*.d)
+578b05a8_prefetcherDno_instr_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr
+578b05a8_prefetcherDno_instr_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/*.cc))
+$(578b05a8_prefetcherDno_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
+$(578b05a8_prefetcherDno_instr_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDno_instr/*.d)
 
-$(c2c31fef_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(c2c31fef_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/c2c31fef/inc
-$(c2c31fef_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
-module_dirs += $(c2c31fef_replacementDlru_dirs_0)
-module_objs += $(c2c31fef_replacementDlru_objs_0)
+$(578b05a8_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_prefetcherDno_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
+module_dirs += $(578b05a8_prefetcherDno_instr_dirs_0)
+module_objs += $(578b05a8_prefetcherDno_instr_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/bin/champsim_prefetcher_pmp: $(c2c31fef_replacementDlru_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_prefetcherDno_instr_objs_0)
+###
+# Build ID: 578b05a8_prefetcherDpmp_enhanced
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced
+###
+
+578b05a8_prefetcherDpmp_enhanced_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced
+578b05a8_prefetcherDpmp_enhanced_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/*.cc))
+$(578b05a8_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced
+$(578b05a8_prefetcherDpmp_enhanced_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/prefetcherDpmp_enhanced/*.d)
+
+$(578b05a8_prefetcherDpmp_enhanced_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -include prefetcherDpmp_enhanced.inc
+module_dirs += $(578b05a8_prefetcherDpmp_enhanced_dirs_0)
+module_objs += $(578b05a8_prefetcherDpmp_enhanced_objs_0)
+
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_prefetcherDpmp_enhanced_objs_0)
+###
+# Build ID: 578b05a8_replacementDlru
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru
+###
+
+578b05a8_replacementDlru_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru
+578b05a8_replacementDlru_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/*.cc))
+$(578b05a8_replacementDlru_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
+$(578b05a8_replacementDlru_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/replacementDlru/*.d)
+
+$(578b05a8_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(578b05a8_replacementDlru_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/578b05a8/inc
+$(578b05a8_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
+module_dirs += $(578b05a8_replacementDlru_dirs_0)
+module_objs += $(578b05a8_replacementDlru_objs_0)
+
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core__pmp_enhanced: $(578b05a8_replacementDlru_objs_0)
 
 ######
-# Build ID: fef8abdf
-# Executable: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main
+# Build ID: f4bfc7b0
+# Executable: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main
 ######
 
 ###
-# Build ID: fef8abdf
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj
+# Build ID: f4bfc7b0
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj
 ###
 
-fef8abdf_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj
-fef8abdf_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/*.cc))
-$(fef8abdf_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src
-$(fef8abdf_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/src/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/obj/*.d)
+f4bfc7b0_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj
+f4bfc7b0_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/*.cc))
+$(f4bfc7b0_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src
+$(f4bfc7b0_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/obj/*.d)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_objs_0) | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin
-$(fef8abdf_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-build_dirs += $(fef8abdf_dirs_0) /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin
-build_objs += $(fef8abdf_objs_0)
-executable_name += /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_objs_0) | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin
+$(f4bfc7b0_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+build_dirs += $(f4bfc7b0_dirs_0) /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin
+build_objs += $(f4bfc7b0_objs_0)
+executable_name += /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main
 
 ###
-# Build ID: fef8abdf_btbDbasic_btb
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb
+# Build ID: f4bfc7b0_btbDbasic_btb
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb
 ###
 
-fef8abdf_btbDbasic_btb_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb
-fef8abdf_btbDbasic_btb_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/*.cc))
-$(fef8abdf_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb
-$(fef8abdf_btbDbasic_btb_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/btb/basic_btb/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/btbDbasic_btb/*.d)
+f4bfc7b0_btbDbasic_btb_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb
+f4bfc7b0_btbDbasic_btb_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/*.cc))
+$(f4bfc7b0_btbDbasic_btb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
+$(f4bfc7b0_btbDbasic_btb_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/btbDbasic_btb/*.d)
 
-$(fef8abdf_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
-module_dirs += $(fef8abdf_btbDbasic_btb_dirs_0)
-module_objs += $(fef8abdf_btbDbasic_btb_objs_0)
+$(f4bfc7b0_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_btbDbasic_btb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
+module_dirs += $(f4bfc7b0_btbDbasic_btb_dirs_0)
+module_objs += $(f4bfc7b0_btbDbasic_btb_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_btbDbasic_btb_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_btbDbasic_btb_objs_0)
 ###
-# Build ID: fef8abdf_branchDbimodal
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/bimodal
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal
+# Build ID: f4bfc7b0_branchDbimodal
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/bimodal
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal
 ###
 
-fef8abdf_branchDbimodal_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal
-fef8abdf_branchDbimodal_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/bimodal/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/bimodal/*.cc))
-$(fef8abdf_branchDbimodal_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/bimodal
-$(fef8abdf_branchDbimodal_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/bimodal/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDbimodal/*.d)
+f4bfc7b0_branchDbimodal_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal
+f4bfc7b0_branchDbimodal_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/bimodal/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/bimodal/*.cc))
+$(f4bfc7b0_branchDbimodal_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/bimodal
+$(f4bfc7b0_branchDbimodal_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/bimodal/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDbimodal/*.d)
 
-$(fef8abdf_branchDbimodal_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_branchDbimodal_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_branchDbimodal_objs_0): CPPFLAGS += -include branchDbimodal.inc
-module_dirs += $(fef8abdf_branchDbimodal_dirs_0)
-module_objs += $(fef8abdf_branchDbimodal_objs_0)
+$(f4bfc7b0_branchDbimodal_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_branchDbimodal_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_branchDbimodal_objs_0): CPPFLAGS += -include branchDbimodal.inc
+module_dirs += $(f4bfc7b0_branchDbimodal_dirs_0)
+module_objs += $(f4bfc7b0_branchDbimodal_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_branchDbimodal_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_branchDbimodal_objs_0)
 ###
-# Build ID: fef8abdf_branchDgshare
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/gshare
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare
+# Build ID: f4bfc7b0_branchDgshare
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/gshare
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare
 ###
 
-fef8abdf_branchDgshare_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare
-fef8abdf_branchDgshare_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/gshare/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/gshare/*.cc))
-$(fef8abdf_branchDgshare_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/gshare
-$(fef8abdf_branchDgshare_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/gshare/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDgshare/*.d)
+f4bfc7b0_branchDgshare_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare
+f4bfc7b0_branchDgshare_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/gshare/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/gshare/*.cc))
+$(f4bfc7b0_branchDgshare_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/gshare
+$(f4bfc7b0_branchDgshare_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/gshare/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDgshare/*.d)
 
-$(fef8abdf_branchDgshare_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_branchDgshare_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_branchDgshare_objs_0): CPPFLAGS += -include branchDgshare.inc
-module_dirs += $(fef8abdf_branchDgshare_dirs_0)
-module_objs += $(fef8abdf_branchDgshare_objs_0)
+$(f4bfc7b0_branchDgshare_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_branchDgshare_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_branchDgshare_objs_0): CPPFLAGS += -include branchDgshare.inc
+module_dirs += $(f4bfc7b0_branchDgshare_dirs_0)
+module_objs += $(f4bfc7b0_branchDgshare_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_branchDgshare_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_branchDgshare_objs_0)
 ###
-# Build ID: fef8abdf_branchDhashed_perceptron
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron
+# Build ID: f4bfc7b0_branchDhashed_perceptron
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron
 ###
 
-fef8abdf_branchDhashed_perceptron_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron
-fef8abdf_branchDhashed_perceptron_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/*.cc))
-$(fef8abdf_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron
-$(fef8abdf_branchDhashed_perceptron_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/hashed_perceptron/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDhashed_perceptron/*.d)
+f4bfc7b0_branchDhashed_perceptron_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron
+f4bfc7b0_branchDhashed_perceptron_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/*.cc))
+$(f4bfc7b0_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
+$(f4bfc7b0_branchDhashed_perceptron_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDhashed_perceptron/*.d)
 
-$(fef8abdf_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
-module_dirs += $(fef8abdf_branchDhashed_perceptron_dirs_0)
-module_objs += $(fef8abdf_branchDhashed_perceptron_objs_0)
+$(f4bfc7b0_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
+module_dirs += $(f4bfc7b0_branchDhashed_perceptron_dirs_0)
+module_objs += $(f4bfc7b0_branchDhashed_perceptron_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_branchDhashed_perceptron_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_branchDhashed_perceptron_objs_0)
 ###
-# Build ID: fef8abdf_branchDperceptron
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/perceptron
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron
+# Build ID: f4bfc7b0_branchDperceptron
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/perceptron
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron
 ###
 
-fef8abdf_branchDperceptron_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron
-fef8abdf_branchDperceptron_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/perceptron/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/perceptron/*.cc))
-$(fef8abdf_branchDperceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/perceptron
-$(fef8abdf_branchDperceptron_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/branch/perceptron/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/branchDperceptron/*.d)
+f4bfc7b0_branchDperceptron_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron
+f4bfc7b0_branchDperceptron_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/perceptron/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/perceptron/*.cc))
+$(f4bfc7b0_branchDperceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/perceptron
+$(f4bfc7b0_branchDperceptron_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/branch/perceptron/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/branchDperceptron/*.d)
 
-$(fef8abdf_branchDperceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_branchDperceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_branchDperceptron_objs_0): CPPFLAGS += -include branchDperceptron.inc
-module_dirs += $(fef8abdf_branchDperceptron_dirs_0)
-module_objs += $(fef8abdf_branchDperceptron_objs_0)
+$(f4bfc7b0_branchDperceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_branchDperceptron_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_branchDperceptron_objs_0): CPPFLAGS += -include branchDperceptron.inc
+module_dirs += $(f4bfc7b0_branchDperceptron_dirs_0)
+module_objs += $(f4bfc7b0_branchDperceptron_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_branchDperceptron_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_branchDperceptron_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherD1offset
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/1offset
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset
+# Build ID: f4bfc7b0_prefetcherD1offset
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/1offset
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset
 ###
 
-fef8abdf_prefetcherD1offset_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset
-fef8abdf_prefetcherD1offset_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/1offset/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/1offset/*.cc))
-$(fef8abdf_prefetcherD1offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/1offset
-$(fef8abdf_prefetcherD1offset_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/1offset/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD1offset/*.d)
+f4bfc7b0_prefetcherD1offset_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset
+f4bfc7b0_prefetcherD1offset_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/1offset/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/1offset/*.cc))
+$(f4bfc7b0_prefetcherD1offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/1offset
+$(f4bfc7b0_prefetcherD1offset_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/1offset/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD1offset/*.d)
 
-$(fef8abdf_prefetcherD1offset_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherD1offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherD1offset_objs_0): CPPFLAGS += -include prefetcherD1offset.inc
-module_dirs += $(fef8abdf_prefetcherD1offset_dirs_0)
-module_objs += $(fef8abdf_prefetcherD1offset_objs_0)
+$(f4bfc7b0_prefetcherD1offset_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherD1offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherD1offset_objs_0): CPPFLAGS += -include prefetcherD1offset.inc
+module_dirs += $(f4bfc7b0_prefetcherD1offset_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherD1offset_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherD1offset_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherD1offset_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherD2offset
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/2offset
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset
+# Build ID: f4bfc7b0_prefetcherD2offset
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/2offset
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset
 ###
 
-fef8abdf_prefetcherD2offset_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset
-fef8abdf_prefetcherD2offset_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/2offset/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/2offset/*.cc))
-$(fef8abdf_prefetcherD2offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/2offset
-$(fef8abdf_prefetcherD2offset_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/2offset/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD2offset/*.d)
+f4bfc7b0_prefetcherD2offset_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset
+f4bfc7b0_prefetcherD2offset_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/2offset/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/2offset/*.cc))
+$(f4bfc7b0_prefetcherD2offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/2offset
+$(f4bfc7b0_prefetcherD2offset_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/2offset/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD2offset/*.d)
 
-$(fef8abdf_prefetcherD2offset_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherD2offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherD2offset_objs_0): CPPFLAGS += -include prefetcherD2offset.inc
-module_dirs += $(fef8abdf_prefetcherD2offset_dirs_0)
-module_objs += $(fef8abdf_prefetcherD2offset_objs_0)
+$(f4bfc7b0_prefetcherD2offset_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherD2offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherD2offset_objs_0): CPPFLAGS += -include prefetcherD2offset.inc
+module_dirs += $(f4bfc7b0_prefetcherD2offset_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherD2offset_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherD2offset_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherD2offset_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherD3offset
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/3offset
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset
+# Build ID: f4bfc7b0_prefetcherD3offset
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/3offset
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset
 ###
 
-fef8abdf_prefetcherD3offset_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset
-fef8abdf_prefetcherD3offset_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/3offset/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/3offset/*.cc))
-$(fef8abdf_prefetcherD3offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/3offset
-$(fef8abdf_prefetcherD3offset_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/3offset/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD3offset/*.d)
+f4bfc7b0_prefetcherD3offset_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset
+f4bfc7b0_prefetcherD3offset_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/3offset/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/3offset/*.cc))
+$(f4bfc7b0_prefetcherD3offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/3offset
+$(f4bfc7b0_prefetcherD3offset_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/3offset/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD3offset/*.d)
 
-$(fef8abdf_prefetcherD3offset_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherD3offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherD3offset_objs_0): CPPFLAGS += -include prefetcherD3offset.inc
-module_dirs += $(fef8abdf_prefetcherD3offset_dirs_0)
-module_objs += $(fef8abdf_prefetcherD3offset_objs_0)
+$(f4bfc7b0_prefetcherD3offset_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherD3offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherD3offset_objs_0): CPPFLAGS += -include prefetcherD3offset.inc
+module_dirs += $(f4bfc7b0_prefetcherD3offset_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherD3offset_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherD3offset_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherD3offset_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherD4offset
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/4offset
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset
+# Build ID: f4bfc7b0_prefetcherD4offset
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/4offset
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset
 ###
 
-fef8abdf_prefetcherD4offset_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset
-fef8abdf_prefetcherD4offset_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/4offset/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/4offset/*.cc))
-$(fef8abdf_prefetcherD4offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/4offset
-$(fef8abdf_prefetcherD4offset_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/4offset/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherD4offset/*.d)
+f4bfc7b0_prefetcherD4offset_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset
+f4bfc7b0_prefetcherD4offset_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/4offset/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/4offset/*.cc))
+$(f4bfc7b0_prefetcherD4offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/4offset
+$(f4bfc7b0_prefetcherD4offset_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/4offset/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherD4offset/*.d)
 
-$(fef8abdf_prefetcherD4offset_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherD4offset_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherD4offset_objs_0): CPPFLAGS += -include prefetcherD4offset.inc
-module_dirs += $(fef8abdf_prefetcherD4offset_dirs_0)
-module_objs += $(fef8abdf_prefetcherD4offset_objs_0)
+$(f4bfc7b0_prefetcherD4offset_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherD4offset_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherD4offset_objs_0): CPPFLAGS += -include prefetcherD4offset.inc
+module_dirs += $(f4bfc7b0_prefetcherD4offset_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherD4offset_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherD4offset_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherD4offset_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDberti
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/berti
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti
+# Build ID: f4bfc7b0_prefetcherDberti
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/berti
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti
 ###
 
-fef8abdf_prefetcherDberti_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti
-fef8abdf_prefetcherDberti_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/berti/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/berti/*.cc))
-$(fef8abdf_prefetcherDberti_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/berti
-$(fef8abdf_prefetcherDberti_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/berti/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDberti/*.d)
+f4bfc7b0_prefetcherDberti_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti
+f4bfc7b0_prefetcherDberti_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/berti/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/berti/*.cc))
+$(f4bfc7b0_prefetcherDberti_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/berti
+$(f4bfc7b0_prefetcherDberti_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/berti/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDberti/*.d)
 
-$(fef8abdf_prefetcherDberti_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDberti_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDberti_objs_0): CPPFLAGS += -include prefetcherDberti.inc
-module_dirs += $(fef8abdf_prefetcherDberti_dirs_0)
-module_objs += $(fef8abdf_prefetcherDberti_objs_0)
+$(f4bfc7b0_prefetcherDberti_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDberti_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDberti_objs_0): CPPFLAGS += -include prefetcherDberti.inc
+module_dirs += $(f4bfc7b0_prefetcherDberti_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDberti_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDberti_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDberti_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDbingo
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/bingo
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo
+# Build ID: f4bfc7b0_prefetcherDbingo
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/bingo
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo
 ###
 
-fef8abdf_prefetcherDbingo_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo
-fef8abdf_prefetcherDbingo_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/bingo/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/bingo/*.cc))
-$(fef8abdf_prefetcherDbingo_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/bingo
-$(fef8abdf_prefetcherDbingo_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/bingo/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDbingo/*.d)
+f4bfc7b0_prefetcherDbingo_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo
+f4bfc7b0_prefetcherDbingo_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/bingo/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/bingo/*.cc))
+$(f4bfc7b0_prefetcherDbingo_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/bingo
+$(f4bfc7b0_prefetcherDbingo_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/bingo/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDbingo/*.d)
 
-$(fef8abdf_prefetcherDbingo_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDbingo_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDbingo_objs_0): CPPFLAGS += -include prefetcherDbingo.inc
-module_dirs += $(fef8abdf_prefetcherDbingo_dirs_0)
-module_objs += $(fef8abdf_prefetcherDbingo_objs_0)
+$(f4bfc7b0_prefetcherDbingo_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDbingo_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDbingo_objs_0): CPPFLAGS += -include prefetcherDbingo.inc
+module_dirs += $(f4bfc7b0_prefetcherDbingo_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDbingo_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDbingo_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDbingo_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDdspatch
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/dspatch
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch
+# Build ID: f4bfc7b0_prefetcherDdspatch
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/dspatch
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch
 ###
 
-fef8abdf_prefetcherDdspatch_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch
-fef8abdf_prefetcherDdspatch_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/dspatch/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/dspatch/*.cc))
-$(fef8abdf_prefetcherDdspatch_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/dspatch
-$(fef8abdf_prefetcherDdspatch_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/dspatch/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDdspatch/*.d)
+f4bfc7b0_prefetcherDdspatch_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch
+f4bfc7b0_prefetcherDdspatch_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/dspatch/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/dspatch/*.cc))
+$(f4bfc7b0_prefetcherDdspatch_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/dspatch
+$(f4bfc7b0_prefetcherDdspatch_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/dspatch/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDdspatch/*.d)
 
-$(fef8abdf_prefetcherDdspatch_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDdspatch_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDdspatch_objs_0): CPPFLAGS += -include prefetcherDdspatch.inc
-module_dirs += $(fef8abdf_prefetcherDdspatch_dirs_0)
-module_objs += $(fef8abdf_prefetcherDdspatch_objs_0)
+$(f4bfc7b0_prefetcherDdspatch_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDdspatch_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDdspatch_objs_0): CPPFLAGS += -include prefetcherDdspatch.inc
+module_dirs += $(f4bfc7b0_prefetcherDdspatch_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDdspatch_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDdspatch_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDdspatch_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze
+# Build ID: f4bfc7b0_prefetcherDgaze
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze
 ###
 
-fef8abdf_prefetcherDgaze_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze
-fef8abdf_prefetcherDgaze_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze/*.cc))
-$(fef8abdf_prefetcherDgaze_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze
-$(fef8abdf_prefetcherDgaze_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze/*.d)
+f4bfc7b0_prefetcherDgaze_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze
+f4bfc7b0_prefetcherDgaze_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze/*.cc))
+$(f4bfc7b0_prefetcherDgaze_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze
+$(f4bfc7b0_prefetcherDgaze_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze/*.d)
 
-$(fef8abdf_prefetcherDgaze_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_objs_0): CPPFLAGS += -include prefetcherDgaze.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_objs_0)
+$(f4bfc7b0_prefetcherDgaze_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_objs_0): CPPFLAGS += -include prefetcherDgaze.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_analysis_pht
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht
+# Build ID: f4bfc7b0_prefetcherDgaze_analysis_pht
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht
 ###
 
-fef8abdf_prefetcherDgaze_analysis_pht_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht
-fef8abdf_prefetcherDgaze_analysis_pht_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht/*.cc))
-$(fef8abdf_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht
-$(fef8abdf_prefetcherDgaze_analysis_pht_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht/*.d)
+f4bfc7b0_prefetcherDgaze_analysis_pht_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht
+f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht/*.cc))
+$(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht
+$(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht/*.d)
 
-$(fef8abdf_prefetcherDgaze_analysis_pht_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_pht.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_analysis_pht_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_analysis_pht_objs_0)
+$(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_pht.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_analysis_pht_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_analysis_pht_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_analysis_pht_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_analysis_pht4ss
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht4ss
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss
+# Build ID: f4bfc7b0_prefetcherDgaze_analysis_pht4ss
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht4ss
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss
 ###
 
-fef8abdf_prefetcherDgaze_analysis_pht4ss_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss
-fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht4ss/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht4ss/*.cc))
-$(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht4ss
-$(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_pht4ss/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_pht4ss/*.d)
+f4bfc7b0_prefetcherDgaze_analysis_pht4ss_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss
+f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht4ss/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht4ss/*.cc))
+$(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht4ss
+$(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_pht4ss/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_pht4ss/*.d)
 
-$(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_pht4ss.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_analysis_pht4ss_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0)
+$(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_pht4ss.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_analysis_pht4ss_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_analysis_pht4ss_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_analysis_sm4ss
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_sm4ss
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss
+# Build ID: f4bfc7b0_prefetcherDgaze_analysis_sm4ss
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_sm4ss
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss
 ###
 
-fef8abdf_prefetcherDgaze_analysis_sm4ss_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss
-fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_sm4ss/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_sm4ss/*.cc))
-$(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_sm4ss
-$(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_analysis_sm4ss/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_analysis_sm4ss/*.d)
+f4bfc7b0_prefetcherDgaze_analysis_sm4ss_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss
+f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_sm4ss/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_sm4ss/*.cc))
+$(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_sm4ss
+$(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_analysis_sm4ss/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_analysis_sm4ss/*.d)
 
-$(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_sm4ss.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_analysis_sm4ss_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0)
+$(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0): CPPFLAGS += -include prefetcherDgaze_analysis_sm4ss.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_analysis_sm4ss_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_analysis_sm4ss_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_pht1024
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht1024
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_pht1024
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht1024
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_pht1024_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024
-fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht1024/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht1024/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht1024
-$(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht1024/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht1024/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024
+f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht1024/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht1024/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht1024
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht1024/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht1024/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht1024.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_pht1024_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht1024.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_pht1024_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_pht1024_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_pht128
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht128
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_pht128
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht128
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_pht128_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128
-fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht128/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht128/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht128
-$(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht128/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht128/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_pht128_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128
+f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht128/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht128/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht128
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht128/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht128/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht128.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_pht128_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht128.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_pht128_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_pht128_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_pht256
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht256
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_pht256
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht256
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_pht256_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256
-fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht256/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht256/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht256
-$(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht256/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht256/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_pht256_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256
+f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht256/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht256/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht256
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht256/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht256/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht256.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_pht256_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht256.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_pht256_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_pht256_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_pht512
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht512
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_pht512
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht512
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_pht512_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512
-fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht512/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht512/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht512
-$(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_pht512/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_pht512/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_pht512_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512
+f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht512/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht512/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht512
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_pht512/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_pht512/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht512.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_pht512_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_pht512.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_pht512_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_pht512_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs16KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs16KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs16KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs16KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB
-fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs16KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs16KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs16KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs16KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs16KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs16KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs16KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs16KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs16KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs16KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs16KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs16KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs16KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs16KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs1KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs1KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs1KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs1KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB
-fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs1KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs1KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs1KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs1KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs1KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs1KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs1KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs1KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs1KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs1KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs1KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs1KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs1KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs1KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs2KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs2KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs2KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs2KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB
-fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs2KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs2KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs2KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs2KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs2KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs2KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs2KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs2KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs2KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs2KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs2KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs2KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs2KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs2KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs32KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs32KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs32KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs32KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB
-fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs32KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs32KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs32KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs32KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs32KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs32KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs32KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs32KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs32KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs32KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs32KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs32KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs32KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs32KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs512B
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs512B
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs512B
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs512B
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs512B_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B
-fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs512B/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs512B/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs512B
-$(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs512B/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs512B/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B
+f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs512B/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs512B/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs512B
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs512B/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs512B/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs512B.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs512B_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs512B.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs512B_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs512B_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs64KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs64KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs64KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs64KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB
-fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs64KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs64KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs64KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs64KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs64KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs64KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs64KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs64KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs64KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs64KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs64KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs64KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs64KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs64KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_sensitivity_rs8KB
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs8KB
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB
+# Build ID: f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs8KB
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB
 ###
 
-fef8abdf_prefetcherDgaze_sensitivity_rs8KB_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB
-fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs8KB/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs8KB/*.cc))
-$(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs8KB
-$(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_sensitivity_rs8KB/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_sensitivity_rs8KB/*.d)
+f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB
+f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs8KB/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs8KB/*.cc))
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs8KB
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_sensitivity_rs8KB/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_sensitivity_rs8KB/*.d)
 
-$(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs8KB.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0)
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0): CPPFLAGS += -include prefetcherDgaze_sensitivity_rs8KB.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_sensitivity_rs8KB_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_sensitivity_rs8KB_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDgaze_ssonly
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_ssonly
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly
+# Build ID: f4bfc7b0_prefetcherDgaze_ssonly
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_ssonly
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly
 ###
 
-fef8abdf_prefetcherDgaze_ssonly_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly
-fef8abdf_prefetcherDgaze_ssonly_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_ssonly/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_ssonly/*.cc))
-$(fef8abdf_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_ssonly
-$(fef8abdf_prefetcherDgaze_ssonly_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/gaze_ssonly/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDgaze_ssonly/*.d)
+f4bfc7b0_prefetcherDgaze_ssonly_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly
+f4bfc7b0_prefetcherDgaze_ssonly_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_ssonly/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_ssonly/*.cc))
+$(f4bfc7b0_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_ssonly
+$(f4bfc7b0_prefetcherDgaze_ssonly_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/gaze_ssonly/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDgaze_ssonly/*.d)
 
-$(fef8abdf_prefetcherDgaze_ssonly_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -include prefetcherDgaze_ssonly.inc
-module_dirs += $(fef8abdf_prefetcherDgaze_ssonly_dirs_0)
-module_objs += $(fef8abdf_prefetcherDgaze_ssonly_objs_0)
+$(f4bfc7b0_prefetcherDgaze_ssonly_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDgaze_ssonly_objs_0): CPPFLAGS += -include prefetcherDgaze_ssonly.inc
+module_dirs += $(f4bfc7b0_prefetcherDgaze_ssonly_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDgaze_ssonly_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDgaze_ssonly_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDgaze_ssonly_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDghb
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ghb
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb
+# Build ID: f4bfc7b0_prefetcherDghb
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ghb
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb
 ###
 
-fef8abdf_prefetcherDghb_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb
-fef8abdf_prefetcherDghb_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ghb/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ghb/*.cc))
-$(fef8abdf_prefetcherDghb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ghb
-$(fef8abdf_prefetcherDghb_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ghb/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDghb/*.d)
+f4bfc7b0_prefetcherDghb_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb
+f4bfc7b0_prefetcherDghb_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ghb/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ghb/*.cc))
+$(f4bfc7b0_prefetcherDghb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ghb
+$(f4bfc7b0_prefetcherDghb_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ghb/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDghb/*.d)
 
-$(fef8abdf_prefetcherDghb_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDghb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDghb_objs_0): CPPFLAGS += -include prefetcherDghb.inc
-module_dirs += $(fef8abdf_prefetcherDghb_dirs_0)
-module_objs += $(fef8abdf_prefetcherDghb_objs_0)
+$(f4bfc7b0_prefetcherDghb_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDghb_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDghb_objs_0): CPPFLAGS += -include prefetcherDghb.inc
+module_dirs += $(f4bfc7b0_prefetcherDghb_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDghb_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDghb_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDghb_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDip_stride
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ip_stride
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride
+# Build ID: f4bfc7b0_prefetcherDip_stride
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ip_stride
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride
 ###
 
-fef8abdf_prefetcherDip_stride_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride
-fef8abdf_prefetcherDip_stride_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ip_stride/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ip_stride/*.cc))
-$(fef8abdf_prefetcherDip_stride_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ip_stride
-$(fef8abdf_prefetcherDip_stride_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ip_stride/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDip_stride/*.d)
+f4bfc7b0_prefetcherDip_stride_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride
+f4bfc7b0_prefetcherDip_stride_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ip_stride/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ip_stride/*.cc))
+$(f4bfc7b0_prefetcherDip_stride_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ip_stride
+$(f4bfc7b0_prefetcherDip_stride_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ip_stride/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDip_stride/*.d)
 
-$(fef8abdf_prefetcherDip_stride_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDip_stride_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDip_stride_objs_0): CPPFLAGS += -include prefetcherDip_stride.inc
-module_dirs += $(fef8abdf_prefetcherDip_stride_dirs_0)
-module_objs += $(fef8abdf_prefetcherDip_stride_objs_0)
+$(f4bfc7b0_prefetcherDip_stride_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDip_stride_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDip_stride_objs_0): CPPFLAGS += -include prefetcherDip_stride.inc
+module_dirs += $(f4bfc7b0_prefetcherDip_stride_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDip_stride_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDip_stride_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDip_stride_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDipcp_l1
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l1
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1
+# Build ID: f4bfc7b0_prefetcherDipcp_l1
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l1
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1
 ###
 
-fef8abdf_prefetcherDipcp_l1_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1
-fef8abdf_prefetcherDipcp_l1_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l1/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l1/*.cc))
-$(fef8abdf_prefetcherDipcp_l1_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l1
-$(fef8abdf_prefetcherDipcp_l1_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l1/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l1/*.d)
+f4bfc7b0_prefetcherDipcp_l1_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1
+f4bfc7b0_prefetcherDipcp_l1_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l1/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l1/*.cc))
+$(f4bfc7b0_prefetcherDipcp_l1_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l1
+$(f4bfc7b0_prefetcherDipcp_l1_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l1/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l1/*.d)
 
-$(fef8abdf_prefetcherDipcp_l1_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDipcp_l1_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDipcp_l1_objs_0): CPPFLAGS += -include prefetcherDipcp_l1.inc
-module_dirs += $(fef8abdf_prefetcherDipcp_l1_dirs_0)
-module_objs += $(fef8abdf_prefetcherDipcp_l1_objs_0)
+$(f4bfc7b0_prefetcherDipcp_l1_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDipcp_l1_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDipcp_l1_objs_0): CPPFLAGS += -include prefetcherDipcp_l1.inc
+module_dirs += $(f4bfc7b0_prefetcherDipcp_l1_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDipcp_l1_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDipcp_l1_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDipcp_l1_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDipcp_l2
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l2
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2
+# Build ID: f4bfc7b0_prefetcherDipcp_l2
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l2
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2
 ###
 
-fef8abdf_prefetcherDipcp_l2_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2
-fef8abdf_prefetcherDipcp_l2_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l2/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l2/*.cc))
-$(fef8abdf_prefetcherDipcp_l2_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l2
-$(fef8abdf_prefetcherDipcp_l2_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/ipcp_l2/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDipcp_l2/*.d)
+f4bfc7b0_prefetcherDipcp_l2_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2
+f4bfc7b0_prefetcherDipcp_l2_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l2/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l2/*.cc))
+$(f4bfc7b0_prefetcherDipcp_l2_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l2
+$(f4bfc7b0_prefetcherDipcp_l2_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/ipcp_l2/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDipcp_l2/*.d)
 
-$(fef8abdf_prefetcherDipcp_l2_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDipcp_l2_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDipcp_l2_objs_0): CPPFLAGS += -include prefetcherDipcp_l2.inc
-module_dirs += $(fef8abdf_prefetcherDipcp_l2_dirs_0)
-module_objs += $(fef8abdf_prefetcherDipcp_l2_objs_0)
+$(f4bfc7b0_prefetcherDipcp_l2_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDipcp_l2_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDipcp_l2_objs_0): CPPFLAGS += -include prefetcherDipcp_l2.inc
+module_dirs += $(f4bfc7b0_prefetcherDipcp_l2_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDipcp_l2_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDipcp_l2_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDipcp_l2_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDnext_line
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line
+# Build ID: f4bfc7b0_prefetcherDnext_line
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line
 ###
 
-fef8abdf_prefetcherDnext_line_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line
-fef8abdf_prefetcherDnext_line_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line/*.cc))
-$(fef8abdf_prefetcherDnext_line_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line
-$(fef8abdf_prefetcherDnext_line_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line/*.d)
+f4bfc7b0_prefetcherDnext_line_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line
+f4bfc7b0_prefetcherDnext_line_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line/*.cc))
+$(f4bfc7b0_prefetcherDnext_line_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line
+$(f4bfc7b0_prefetcherDnext_line_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line/*.d)
 
-$(fef8abdf_prefetcherDnext_line_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDnext_line_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDnext_line_objs_0): CPPFLAGS += -include prefetcherDnext_line.inc
-module_dirs += $(fef8abdf_prefetcherDnext_line_dirs_0)
-module_objs += $(fef8abdf_prefetcherDnext_line_objs_0)
+$(f4bfc7b0_prefetcherDnext_line_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDnext_line_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDnext_line_objs_0): CPPFLAGS += -include prefetcherDnext_line.inc
+module_dirs += $(f4bfc7b0_prefetcherDnext_line_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDnext_line_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDnext_line_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDnext_line_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDnext_line_instr
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line_instr
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr
+# Build ID: f4bfc7b0_prefetcherDnext_line_instr
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line_instr
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr
 ###
 
-fef8abdf_prefetcherDnext_line_instr_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr
-fef8abdf_prefetcherDnext_line_instr_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line_instr/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line_instr/*.cc))
-$(fef8abdf_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line_instr
-$(fef8abdf_prefetcherDnext_line_instr_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/next_line_instr/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDnext_line_instr/*.d)
+f4bfc7b0_prefetcherDnext_line_instr_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr
+f4bfc7b0_prefetcherDnext_line_instr_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line_instr/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line_instr/*.cc))
+$(f4bfc7b0_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line_instr
+$(f4bfc7b0_prefetcherDnext_line_instr_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/next_line_instr/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDnext_line_instr/*.d)
 
-$(fef8abdf_prefetcherDnext_line_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -include prefetcherDnext_line_instr.inc
-module_dirs += $(fef8abdf_prefetcherDnext_line_instr_dirs_0)
-module_objs += $(fef8abdf_prefetcherDnext_line_instr_objs_0)
+$(f4bfc7b0_prefetcherDnext_line_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDnext_line_instr_objs_0): CPPFLAGS += -include prefetcherDnext_line_instr.inc
+module_dirs += $(f4bfc7b0_prefetcherDnext_line_instr_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDnext_line_instr_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDnext_line_instr_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDnext_line_instr_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDno
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno
+# Build ID: f4bfc7b0_prefetcherDno
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno
 ###
 
-fef8abdf_prefetcherDno_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno
-fef8abdf_prefetcherDno_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/*.cc))
-$(fef8abdf_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no
-$(fef8abdf_prefetcherDno_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno/*.d)
+f4bfc7b0_prefetcherDno_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno
+f4bfc7b0_prefetcherDno_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/*.cc))
+$(f4bfc7b0_prefetcherDno_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
+$(f4bfc7b0_prefetcherDno_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno/*.d)
 
-$(fef8abdf_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
-module_dirs += $(fef8abdf_prefetcherDno_dirs_0)
-module_objs += $(fef8abdf_prefetcherDno_objs_0)
+$(f4bfc7b0_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDno_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
+module_dirs += $(f4bfc7b0_prefetcherDno_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDno_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDno_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDno_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDno_instr
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr
+# Build ID: f4bfc7b0_prefetcherDno_instr
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr
 ###
 
-fef8abdf_prefetcherDno_instr_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr
-fef8abdf_prefetcherDno_instr_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/*.cc))
-$(fef8abdf_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr
-$(fef8abdf_prefetcherDno_instr_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/no_instr/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDno_instr/*.d)
+f4bfc7b0_prefetcherDno_instr_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr
+f4bfc7b0_prefetcherDno_instr_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/*.cc))
+$(f4bfc7b0_prefetcherDno_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
+$(f4bfc7b0_prefetcherDno_instr_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDno_instr/*.d)
 
-$(fef8abdf_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
-module_dirs += $(fef8abdf_prefetcherDno_instr_dirs_0)
-module_objs += $(fef8abdf_prefetcherDno_instr_objs_0)
+$(f4bfc7b0_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDno_instr_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
+module_dirs += $(f4bfc7b0_prefetcherDno_instr_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDno_instr_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDno_instr_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDno_instr_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDpc
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pc
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc
+# Build ID: f4bfc7b0_prefetcherDpc
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pc
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc
 ###
 
-fef8abdf_prefetcherDpc_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc
-fef8abdf_prefetcherDpc_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pc/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pc/*.cc))
-$(fef8abdf_prefetcherDpc_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pc
-$(fef8abdf_prefetcherDpc_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pc/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpc/*.d)
+f4bfc7b0_prefetcherDpc_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc
+f4bfc7b0_prefetcherDpc_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pc/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pc/*.cc))
+$(f4bfc7b0_prefetcherDpc_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pc
+$(f4bfc7b0_prefetcherDpc_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pc/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpc/*.d)
 
-$(fef8abdf_prefetcherDpc_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDpc_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDpc_objs_0): CPPFLAGS += -include prefetcherDpc.inc
-module_dirs += $(fef8abdf_prefetcherDpc_dirs_0)
-module_objs += $(fef8abdf_prefetcherDpc_objs_0)
+$(f4bfc7b0_prefetcherDpc_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDpc_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDpc_objs_0): CPPFLAGS += -include prefetcherDpc.inc
+module_dirs += $(f4bfc7b0_prefetcherDpc_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDpc_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDpc_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDpc_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDpmp
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp
+# Build ID: f4bfc7b0_prefetcherDpmp
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp
 ###
 
-fef8abdf_prefetcherDpmp_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp
-fef8abdf_prefetcherDpmp_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/*.cc))
-$(fef8abdf_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp
-$(fef8abdf_prefetcherDpmp_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/pmp/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDpmp/*.d)
+f4bfc7b0_prefetcherDpmp_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp
+f4bfc7b0_prefetcherDpmp_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/*.cc))
+$(f4bfc7b0_prefetcherDpmp_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp
+$(f4bfc7b0_prefetcherDpmp_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp/*.d)
 
-$(fef8abdf_prefetcherDpmp_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDpmp_objs_0): CPPFLAGS += -include prefetcherDpmp.inc
-module_dirs += $(fef8abdf_prefetcherDpmp_dirs_0)
-module_objs += $(fef8abdf_prefetcherDpmp_objs_0)
+$(f4bfc7b0_prefetcherDpmp_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDpmp_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDpmp_objs_0): CPPFLAGS += -include prefetcherDpmp.inc
+module_dirs += $(f4bfc7b0_prefetcherDpmp_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDpmp_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDpmp_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDpmp_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDregion_num
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/region_num
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num
+# Build ID: f4bfc7b0_prefetcherDpmp_enhanced
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced
 ###
 
-fef8abdf_prefetcherDregion_num_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num
-fef8abdf_prefetcherDregion_num_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/region_num/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/region_num/*.cc))
-$(fef8abdf_prefetcherDregion_num_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/region_num
-$(fef8abdf_prefetcherDregion_num_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/region_num/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDregion_num/*.d)
+f4bfc7b0_prefetcherDpmp_enhanced_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced
+f4bfc7b0_prefetcherDpmp_enhanced_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/*.cc))
+$(f4bfc7b0_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced
+$(f4bfc7b0_prefetcherDpmp_enhanced_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp_enhanced/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDpmp_enhanced/*.d)
 
-$(fef8abdf_prefetcherDregion_num_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDregion_num_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDregion_num_objs_0): CPPFLAGS += -include prefetcherDregion_num.inc
-module_dirs += $(fef8abdf_prefetcherDregion_num_dirs_0)
-module_objs += $(fef8abdf_prefetcherDregion_num_objs_0)
+$(f4bfc7b0_prefetcherDpmp_enhanced_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDpmp_enhanced_objs_0): CPPFLAGS += -include prefetcherDpmp_enhanced.inc
+module_dirs += $(f4bfc7b0_prefetcherDpmp_enhanced_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDpmp_enhanced_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDregion_num_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDpmp_enhanced_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDsms
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/sms
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms
+# Build ID: f4bfc7b0_prefetcherDregion_num
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/region_num
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num
 ###
 
-fef8abdf_prefetcherDsms_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms
-fef8abdf_prefetcherDsms_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/sms/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/sms/*.cc))
-$(fef8abdf_prefetcherDsms_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/sms
-$(fef8abdf_prefetcherDsms_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/sms/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDsms/*.d)
+f4bfc7b0_prefetcherDregion_num_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num
+f4bfc7b0_prefetcherDregion_num_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/region_num/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/region_num/*.cc))
+$(f4bfc7b0_prefetcherDregion_num_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/region_num
+$(f4bfc7b0_prefetcherDregion_num_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/region_num/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDregion_num/*.d)
 
-$(fef8abdf_prefetcherDsms_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDsms_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDsms_objs_0): CPPFLAGS += -include prefetcherDsms.inc
-module_dirs += $(fef8abdf_prefetcherDsms_dirs_0)
-module_objs += $(fef8abdf_prefetcherDsms_objs_0)
+$(f4bfc7b0_prefetcherDregion_num_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDregion_num_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDregion_num_objs_0): CPPFLAGS += -include prefetcherDregion_num.inc
+module_dirs += $(f4bfc7b0_prefetcherDregion_num_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDregion_num_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDsms_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDregion_num_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDspp_dev
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_dev
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev
+# Build ID: f4bfc7b0_prefetcherDsms
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/sms
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms
 ###
 
-fef8abdf_prefetcherDspp_dev_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev
-fef8abdf_prefetcherDspp_dev_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_dev/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_dev/*.cc))
-$(fef8abdf_prefetcherDspp_dev_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_dev
-$(fef8abdf_prefetcherDspp_dev_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_dev/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_dev/*.d)
+f4bfc7b0_prefetcherDsms_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms
+f4bfc7b0_prefetcherDsms_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/sms/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/sms/*.cc))
+$(f4bfc7b0_prefetcherDsms_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/sms
+$(f4bfc7b0_prefetcherDsms_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/sms/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDsms/*.d)
 
-$(fef8abdf_prefetcherDspp_dev_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDspp_dev_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDspp_dev_objs_0): CPPFLAGS += -include prefetcherDspp_dev.inc
-module_dirs += $(fef8abdf_prefetcherDspp_dev_dirs_0)
-module_objs += $(fef8abdf_prefetcherDspp_dev_objs_0)
+$(f4bfc7b0_prefetcherDsms_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDsms_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDsms_objs_0): CPPFLAGS += -include prefetcherDsms.inc
+module_dirs += $(f4bfc7b0_prefetcherDsms_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDsms_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDspp_dev_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDsms_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDspp_ppf
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_ppf
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf
+# Build ID: f4bfc7b0_prefetcherDspp_dev
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_dev
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev
 ###
 
-fef8abdf_prefetcherDspp_ppf_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf
-fef8abdf_prefetcherDspp_ppf_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_ppf/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_ppf/*.cc))
-$(fef8abdf_prefetcherDspp_ppf_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_ppf
-$(fef8abdf_prefetcherDspp_ppf_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/spp_ppf/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDspp_ppf/*.d)
+f4bfc7b0_prefetcherDspp_dev_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev
+f4bfc7b0_prefetcherDspp_dev_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_dev/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_dev/*.cc))
+$(f4bfc7b0_prefetcherDspp_dev_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_dev
+$(f4bfc7b0_prefetcherDspp_dev_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_dev/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_dev/*.d)
 
-$(fef8abdf_prefetcherDspp_ppf_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDspp_ppf_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDspp_ppf_objs_0): CPPFLAGS += -include prefetcherDspp_ppf.inc
-module_dirs += $(fef8abdf_prefetcherDspp_ppf_dirs_0)
-module_objs += $(fef8abdf_prefetcherDspp_ppf_objs_0)
+$(f4bfc7b0_prefetcherDspp_dev_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDspp_dev_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDspp_dev_objs_0): CPPFLAGS += -include prefetcherDspp_dev.inc
+module_dirs += $(f4bfc7b0_prefetcherDspp_dev_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDspp_dev_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDspp_ppf_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDspp_dev_objs_0)
 ###
-# Build ID: fef8abdf_prefetcherDva_ampm_lite
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/va_ampm_lite
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite
+# Build ID: f4bfc7b0_prefetcherDspp_ppf
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_ppf
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf
 ###
 
-fef8abdf_prefetcherDva_ampm_lite_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite
-fef8abdf_prefetcherDva_ampm_lite_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/va_ampm_lite/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/va_ampm_lite/*.cc))
-$(fef8abdf_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/va_ampm_lite
-$(fef8abdf_prefetcherDva_ampm_lite_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/prefetcher/va_ampm_lite/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/prefetcherDva_ampm_lite/*.d)
+f4bfc7b0_prefetcherDspp_ppf_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf
+f4bfc7b0_prefetcherDspp_ppf_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_ppf/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_ppf/*.cc))
+$(f4bfc7b0_prefetcherDspp_ppf_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_ppf
+$(f4bfc7b0_prefetcherDspp_ppf_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/spp_ppf/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDspp_ppf/*.d)
 
-$(fef8abdf_prefetcherDva_ampm_lite_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -include prefetcherDva_ampm_lite.inc
-module_dirs += $(fef8abdf_prefetcherDva_ampm_lite_dirs_0)
-module_objs += $(fef8abdf_prefetcherDva_ampm_lite_objs_0)
+$(f4bfc7b0_prefetcherDspp_ppf_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDspp_ppf_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDspp_ppf_objs_0): CPPFLAGS += -include prefetcherDspp_ppf.inc
+module_dirs += $(f4bfc7b0_prefetcherDspp_ppf_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDspp_ppf_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_prefetcherDva_ampm_lite_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDspp_ppf_objs_0)
 ###
-# Build ID: fef8abdf_replacementDdrrip
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/drrip
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip
+# Build ID: f4bfc7b0_prefetcherDva_ampm_lite
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/va_ampm_lite
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite
 ###
 
-fef8abdf_replacementDdrrip_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip
-fef8abdf_replacementDdrrip_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/drrip/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/drrip/*.cc))
-$(fef8abdf_replacementDdrrip_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/drrip
-$(fef8abdf_replacementDdrrip_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/drrip/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDdrrip/*.d)
+f4bfc7b0_prefetcherDva_ampm_lite_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite
+f4bfc7b0_prefetcherDva_ampm_lite_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/va_ampm_lite/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/va_ampm_lite/*.cc))
+$(f4bfc7b0_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/va_ampm_lite
+$(f4bfc7b0_prefetcherDva_ampm_lite_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/va_ampm_lite/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/prefetcherDva_ampm_lite/*.d)
 
-$(fef8abdf_replacementDdrrip_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_replacementDdrrip_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_replacementDdrrip_objs_0): CPPFLAGS += -include replacementDdrrip.inc
-module_dirs += $(fef8abdf_replacementDdrrip_dirs_0)
-module_objs += $(fef8abdf_replacementDdrrip_objs_0)
+$(f4bfc7b0_prefetcherDva_ampm_lite_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_prefetcherDva_ampm_lite_objs_0): CPPFLAGS += -include prefetcherDva_ampm_lite.inc
+module_dirs += $(f4bfc7b0_prefetcherDva_ampm_lite_dirs_0)
+module_objs += $(f4bfc7b0_prefetcherDva_ampm_lite_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_replacementDdrrip_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_prefetcherDva_ampm_lite_objs_0)
 ###
-# Build ID: fef8abdf_replacementDlru
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru
+# Build ID: f4bfc7b0_replacementDdrrip
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/drrip
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip
 ###
 
-fef8abdf_replacementDlru_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru
-fef8abdf_replacementDlru_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/*.cc))
-$(fef8abdf_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru
-$(fef8abdf_replacementDlru_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/lru/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDlru/*.d)
+f4bfc7b0_replacementDdrrip_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip
+f4bfc7b0_replacementDdrrip_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/drrip/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/drrip/*.cc))
+$(f4bfc7b0_replacementDdrrip_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/drrip
+$(f4bfc7b0_replacementDdrrip_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/drrip/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDdrrip/*.d)
 
-$(fef8abdf_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
-module_dirs += $(fef8abdf_replacementDlru_dirs_0)
-module_objs += $(fef8abdf_replacementDlru_objs_0)
+$(f4bfc7b0_replacementDdrrip_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_replacementDdrrip_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_replacementDdrrip_objs_0): CPPFLAGS += -include replacementDdrrip.inc
+module_dirs += $(f4bfc7b0_replacementDdrrip_dirs_0)
+module_objs += $(f4bfc7b0_replacementDdrrip_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_replacementDlru_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_replacementDdrrip_objs_0)
 ###
-# Build ID: fef8abdf_replacementDship
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/ship
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship
+# Build ID: f4bfc7b0_replacementDlru
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru
 ###
 
-fef8abdf_replacementDship_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship
-fef8abdf_replacementDship_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/ship/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/ship/*.cc))
-$(fef8abdf_replacementDship_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/ship
-$(fef8abdf_replacementDship_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/ship/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDship/*.d)
+f4bfc7b0_replacementDlru_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru
+f4bfc7b0_replacementDlru_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/*.cc))
+$(f4bfc7b0_replacementDlru_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
+$(f4bfc7b0_replacementDlru_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDlru/*.d)
 
-$(fef8abdf_replacementDship_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_replacementDship_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_replacementDship_objs_0): CPPFLAGS += -include replacementDship.inc
-module_dirs += $(fef8abdf_replacementDship_dirs_0)
-module_objs += $(fef8abdf_replacementDship_objs_0)
+$(f4bfc7b0_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_replacementDlru_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
+module_dirs += $(f4bfc7b0_replacementDlru_dirs_0)
+module_objs += $(f4bfc7b0_replacementDlru_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_replacementDship_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_replacementDlru_objs_0)
 ###
-# Build ID: fef8abdf_replacementDsrrip
-# Source: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/srrip
-# Destination: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip
+# Build ID: f4bfc7b0_replacementDship
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/ship
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship
 ###
 
-fef8abdf_replacementDsrrip_dirs_0 = /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip
-fef8abdf_replacementDsrrip_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/srrip/%.cc, /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/srrip/*.cc))
-$(fef8abdf_replacementDsrrip_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/srrip
-$(fef8abdf_replacementDsrrip_objs_0): /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip/%.o: /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/replacement/srrip/%.cc | /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/replacementDsrrip/*.d)
+f4bfc7b0_replacementDship_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship
+f4bfc7b0_replacementDship_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/ship/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/ship/*.cc))
+$(f4bfc7b0_replacementDship_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/ship
+$(f4bfc7b0_replacementDship_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/ship/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDship/*.d)
 
-$(fef8abdf_replacementDsrrip_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(fef8abdf_replacementDsrrip_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/.csconfig/test/fef8abdf/inc
-$(fef8abdf_replacementDsrrip_objs_0): CPPFLAGS += -include replacementDsrrip.inc
-module_dirs += $(fef8abdf_replacementDsrrip_dirs_0)
-module_objs += $(fef8abdf_replacementDsrrip_objs_0)
+$(f4bfc7b0_replacementDship_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_replacementDship_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_replacementDship_objs_0): CPPFLAGS += -include replacementDship.inc
+module_dirs += $(f4bfc7b0_replacementDship_dirs_0)
+module_objs += $(f4bfc7b0_replacementDship_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/Gaze-Spatial-Prefetcher/ChampSim/test/bin/000-test-main: $(fef8abdf_replacementDsrrip_objs_0)
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_replacementDship_objs_0)
+###
+# Build ID: f4bfc7b0_replacementDsrrip
+# Source: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/srrip
+# Destination: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip
+###
+
+f4bfc7b0_replacementDsrrip_dirs_0 = /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip
+f4bfc7b0_replacementDsrrip_objs_0 = $(patsubst /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/srrip/%.cc, /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip/%.o, $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/srrip/*.cc))
+$(f4bfc7b0_replacementDsrrip_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/srrip
+$(f4bfc7b0_replacementDsrrip_objs_0): /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip/%.o: /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/replacement/srrip/%.cc | /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip
+-include $(wildcard /home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/replacementDsrrip/*.d)
+
+$(f4bfc7b0_replacementDsrrip_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(f4bfc7b0_replacementDsrrip_objs_0): CPPFLAGS += -I/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/test/f4bfc7b0/inc
+$(f4bfc7b0_replacementDsrrip_objs_0): CPPFLAGS += -include replacementDsrrip.inc
+module_dirs += $(f4bfc7b0_replacementDsrrip_dirs_0)
+module_objs += $(f4bfc7b0_replacementDsrrip_objs_0)
+
+/home/manish/Architecture_Project/PatternMergingPrefetcherEnhanced/ChampSim/test/bin/000-test-main: $(f4bfc7b0_replacementDsrrip_objs_0)

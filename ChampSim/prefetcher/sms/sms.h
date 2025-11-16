@@ -5,6 +5,7 @@
 
 #include "custom_util.h"
 #include "cache.h"
+#include <cstdint>
 
 namespace {
 /* SMS settings */

@@ -9,7 +9,7 @@ def main():
     
     print('Making prefetchers used to generate the results of fig. 16')
     
-    for prefetcher in ['no', 'spp_ppf', 'vberti', 'bingo', 'dspatch', 'pmp', 'gaze']:
+    for prefetcher in ['no', 'spp_ppf', 'vberti', 'bingo', 'dspatch', 'pmp', 'pmp_prefetch', 'gaze']:
         make_1core_system_sensitivity(prefetcher)
     
     print('Done.')

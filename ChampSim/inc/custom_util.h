@@ -128,8 +128,8 @@ public:
 */
 class Table {
 public:
-    Table(int width, int height) :
-        width(width), height(height), cells(height, std::vector<std::string>(width)) {}
+    Table(int m_width, int m_height) :
+        width(m_width), height(m_height), cells(m_height, std::vector<std::string>(m_width)) {}
 
     void set_row(int row, const std::vector<std::string>& data, int start_col = 0);
     void set_col(int col, const std::vector<std::string>& data, int start_row = 0);
@@ -156,8 +156,8 @@ template <class T>
 class InfiniteCache {
 public:
     // Fake parameters for key generation
-    InfiniteCache(int size, int num_ways, int debug_level = 0) :
-        size(size), num_ways(num_ways), num_sets(size / num_ways), debug_level(debug_level) {
+    InfiniteCache(int m_size, int m_num_ways, int m_debug_level = 0) :
+        size(m_size), num_ways(m_num_ways), num_sets(m_size / m_num_ways), debug_level(m_debug_level) {
         /* calculate `index_len` (number of bits required to store the index) */
         for (int max_index = num_sets - 1; max_index > 0; max_index >>= 1)
             this->index_len += 1;
@@ -237,7 +237,7 @@ public:
     }
 
     int get_index_len() { return this->index_len; }
-    void set_debug_level(int debug_level) { this->debug_level = debug_level; }
+    void set_debug_level(int m_debug_level) { this->debug_level = m_debug_level; }
 
 protected:
     virtual void write_data(Entry& entry, Table& table, int row) {}
@@ -257,9 +257,9 @@ template <class T>
 class InfiniteWayCache {
 public:
     // Fake parameters for key generation
-    InfiniteWayCache(int size, int num_ways, int debug_level = 0) :
-        size(size), num_ways(num_ways), num_sets(size / num_ways),
-        debug_level(debug_level), entries(size / num_ways) {
+    InfiniteWayCache(int m_size, int m_num_ways, int m_debug_level = 0) :
+        size(m_size), num_ways(m_num_ways), num_sets(m_size / m_num_ways),
+        debug_level(m_debug_level), entries(m_size / m_num_ways) {
         /* calculate `index_len` (number of bits required to store the index) */
         for (int max_index = num_sets - 1; max_index > 0; max_index >>= 1)
             this->index_len += 1;
@@ -349,7 +349,7 @@ public:
     }
 
     int get_index_len() { return this->index_len; }
-    void set_debug_level(int debug_level) { this->debug_level = debug_level; }
+    void set_debug_level(int m_debug_level) { this->debug_level = m_debug_level; }
 
 protected:
     virtual void write_data(Entry& entry, Table& table, int row) {}
@@ -377,9 +377,9 @@ public:
         T data;
     };
 
-    SetAssociativeCache(int size, int num_ways, int debug_level = 0) :
-        size(size), num_ways(num_ways), num_sets(size / num_ways), entries(num_sets, std::vector<Entry>(num_ways)),
-        cams(num_sets, std::unordered_map<uint64_t, int>(num_ways)), debug_level(debug_level) {
+    SetAssociativeCache(int m_size, int m_num_ways, int m_debug_level = 0) :
+        size(m_size), num_ways(m_num_ways), num_sets(m_size / m_num_ways), entries(num_sets, std::vector<Entry>(m_num_ways)),
+        cams(num_sets, std::unordered_map<uint64_t, int>(m_num_ways)), debug_level(m_debug_level) {
         // assert(size % num_ways == 0);
         for (int i = 0; i < num_sets; i += 1)
             for (int j = 0; j < num_ways; j += 1)
@@ -478,7 +478,7 @@ public:
 
     int get_index_len() { return this->index_len; }
 
-    void set_debug_level(int debug_level) { this->debug_level = debug_level; }
+    void set_debug_level(int m_debug_level) { this->debug_level = m_debug_level; }
 
 protected:
     /* should be overriden in children */
@@ -585,8 +585,8 @@ class DynIndexSetAssociativeCache : public SetAssociativeCache<T> {
     typedef SetAssociativeCache<T> Super;
 
 public:
-    DynIndexSetAssociativeCache(int size, int num_ways, uint64_t dyn_index_mask, int max_dyn_index_score, int debug_level = 0) :
-        dynamic_index_(size / num_ways, -1), dyn_index_mask_(dyn_index_mask), max_dyn_index_score_(max_dyn_index_score) {}
+    DynIndexSetAssociativeCache(int size, int num_ways, uint64_t m_dyn_index_mask, int m_max_dyn_index_score, int debug_level = 0) :
+        dynamic_index_(size / num_ways, -1), dyn_index_mask_(m_dyn_index_mask), max_dyn_index_score_(m_max_dyn_index_score) {}
 
     int get_index(uint64_t key) {
         if (dynamic_index_.cam.find(key) != dynamic_index_.cam.end()) {
@@ -655,9 +655,9 @@ class SRRIPSetAssociativeCache : public SetAssociativeCache<T> {
     typedef SetAssociativeCache<T> Super;
 
 public:
-    SRRIPSetAssociativeCache(int size, int num_ways, int debug_level = 0, int max_rrpv = 3) :
+    SRRIPSetAssociativeCache(int size, int num_ways, int debug_level = 0, int m_max_rrpv = 3) :
         Super(size, num_ways, debug_level), rrpv(this->num_sets, std::vector<uint64_t>(num_ways)),
-        max_rrpv(max_rrpv) {}
+        max_rrpv(m_max_rrpv) {}
 
     void rp_promote(uint64_t key) { *this->get_rrpv(key) = 0; }
 
@@ -741,9 +741,9 @@ class BRRIPSetAssociativeCache : public SetAssociativeCache<T> {
     typedef SetAssociativeCache<T> Super;
 
 public:
-    BRRIPSetAssociativeCache(int size, int num_ways, int debug_level = 0, int max_rrpv = 3, double epsilon = 0.1) :
+    BRRIPSetAssociativeCache(int size, int num_ways, int debug_level = 0, int m_max_rrpv = 3, double epsilon = 0.1) :
         Super(size, num_ways, debug_level), rrpv(this->num_sets, std::vector<uint64_t>(num_ways)),
-        max_rrpv(max_rrpv), b_dist(epsilon) {}
+        max_rrpv(m_max_rrpv), b_dist(epsilon) {}
 
     void rp_promote(uint64_t key) { *this->get_rrpv(key) = 0; }
 
@@ -844,8 +844,8 @@ public:
 class ShiftRegister {
 public:
     /* the maximum total capacity of this shift register is 64 bits */
-    ShiftRegister(unsigned size = 4) :
-        size(size), width(64 / size) {}
+    ShiftRegister(unsigned m_size = 4) :
+        size(m_size), width(64 / m_size) {}
 
     void insert(int x);
     uint64_t get_code(unsigned le, unsigned ri);
@@ -860,8 +860,8 @@ private:
 
 class SaturatingCounter {
 public:
-    SaturatingCounter(int size = 2, int value = 0) :
-        size(size), max((1 << size) - 1), cnt(value) {}
+    SaturatingCounter(int m_size = 2, int value = 0) :
+        size(m_size), max((1 << m_size) - 1), cnt(value) {}
 
     int inc();
     int dec();
@@ -882,8 +882,8 @@ class AddrMappingCache : public LRUSetAssociativeCache<std::vector<C>> {
     typedef LRUSetAssociativeCache<std::vector<C>> Super;
 
 public:
-    AddrMappingCache(int size, int num_ways, int entry_size) :
-        Super(size, num_ways), entry_size(entry_size) {}
+    AddrMappingCache(int size, int num_ways, int m_entry_size) :
+        Super(size, num_ways), entry_size(m_entry_size) {}
 
     uint64_t get_entry_group_key(uint64_t addr) {
         return addr / entry_size;

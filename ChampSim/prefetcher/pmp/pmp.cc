@@ -40,8 +40,8 @@ void pmp::PMP::access(uint64_t block_number, uint64_t pc) {
         std::cerr << "[ PMP] access(block_number=0x" << std::hex << block_number << ", pc=0x" << pc << ")" << std::dec << std::endl;
 
     uint64_t region_number = block_number >> OFFSET_BITS;
-    int region_offset = __fine_offset(block_number);
-    bool success = this->accumulation_table.set_pattern(region_number, __coarse_offset(region_offset));
+    int region_offset = fine_offset(block_number);
+    bool success = this->accumulation_table.set_pattern(region_number, coarse_offset(region_offset));
     if (success)
         return;
     FilterTable::Entry* entry = this->filter_table.find(region_number);
@@ -58,7 +58,7 @@ void pmp::PMP::access(uint64_t block_number, uint64_t pc) {
         uint64_t region_number = custom_util::hash_index(entry->key, this->filter_table.get_index_len());
         AccumulationTable::Entry victim =
             this->accumulation_table.insert(region_number, entry->data.pc, entry->data.offset, region_offset);
-        this->accumulation_table.set_pattern(region_number, __coarse_offset(region_offset));
+        this->accumulation_table.set_pattern(region_number, coarse_offset(region_offset));
         this->filter_table.erase(region_number);
         if (victim.valid) {
             invalid_by_max++;
@@ -119,47 +119,100 @@ void pmp::PMP::log() {
     std::cerr << "Prefetch buffer end" << std::endl;
 }
 
+// std::vector<int> pmp::PMP::find_in_opt(uint64_t pc, uint64_t block_number) {
+//     if (this->debug_level >= 2) {
+//         std::cerr << "[ PMP] find_in_opt(pc=0x" << std::hex << pc << ", address=0x" << block_number << ")" << std::dec << std::endl;
+//     }
+//     std::vector<OffsetPatternTableData> matches = this->opt.find(pc, block_number);
+//     std::vector<OffsetPatternTableData> matches_pc = this->ppt.find(pc, block_number);
+//     std::vector<int> pattern;
+//     std::vector<int> pattern_pc;
+//     std::vector<int> result_pattern(this->pattern_len, 0);
+//     if (!matches.empty()) {
+//         pattern = this->vote(matches);
+//         pattern_pc = this->vote(matches_pc, true);
+//         // if (pattern_pc.empty()) {
+//         //     for (int i = 0; i < this->pattern_len; i++) {
+//         //         result_pattern[i] = pattern[i] == FILL_L1_PMP ? FILL_L2_PMP : pattern[i] == FILL_L2_PMP ? FILL_LLC_PMP : 0;
+//         //     }
+//         // } else {
+//         //     for (int i = 0; i < this->pattern_len; i++) {
+//         //         if (pattern[i] == FILL_L1_PMP && pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L1_PMP) {
+//         //             result_pattern[i] = FILL_L1_PMP;
+//         //         } else if (pattern[i] == FILL_L1_PMP || pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L1_PMP || pattern[i] == FILL_L2_PMP || pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L2_PMP) {
+//         //             result_pattern[i] = FILL_L2_PMP;
+//         //         }
+//         //     }
+//         // }
+//         // better performance
+//         if (pattern_pc.empty()) {
+//             for (int i = 0; i < this->pattern_len; i++) {
+//                 result_pattern[i] = pattern[i];
+//             }
+//         } else {
+//             for (int i = 0; i < this->pattern_len; i++) {
+//                 result_pattern[i] = pattern[i];
+//             }
+//         }
+//     }
+
+//     int offset = coarse_offset(fine_offset(block_number));
+//     result_pattern = custom_util::my_rotate(result_pattern, +offset);
+//     return result_pattern;
+// }
+
+/// Added Manish Kumar 
 std::vector<int> pmp::PMP::find_in_opt(uint64_t pc, uint64_t block_number) {
-    if (this->debug_level >= 2) {
-        std::cerr << "[ PMP] find_in_opt(pc=0x" << std::hex << pc << ", address=0x" << block_number << ")" << std::dec << std::endl;
+   if (this->debug_level >= 2) {
+        std::cerr << "[ PMP] find_in_opt(pc=0x" << std::hex << pc 
+                  << ", address=0x" << block_number << ")" << std::dec << std::endl;
     }
+    
     std::vector<OffsetPatternTableData> matches = this->opt.find(pc, block_number);
     std::vector<OffsetPatternTableData> matches_pc = this->ppt.find(pc, block_number);
-    std::vector<int> pattern;
-    std::vector<int> pattern_pc;
     std::vector<int> result_pattern(this->pattern_len, 0);
+    
     if (!matches.empty()) {
-        pattern = this->vote(matches);
-        pattern_pc = this->vote(matches_pc, true);
-        // if (pattern_pc.empty()) {
-        //     for (int i = 0; i < this->pattern_len; i++) {
-        //         result_pattern[i] = pattern[i] == FILL_L1_PMP ? FILL_L2_PMP : pattern[i] == FILL_L2_PMP ? FILL_LLC_PMP : 0;
-        //     }
-        // } else {
-        //     for (int i = 0; i < this->pattern_len; i++) {
-        //         if (pattern[i] == FILL_L1_PMP && pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L1_PMP) {
-        //             result_pattern[i] = FILL_L1_PMP;
-        //         } else if (pattern[i] == FILL_L1_PMP || pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L1_PMP || pattern[i] == FILL_L2_PMP || pattern_pc[i / PATTERN_DEGRADE_LEVEL] == FILL_L2_PMP) {
-        //             result_pattern[i] = FILL_L2_PMP;
-        //         }
-        //     }
-        // }
-        // better performance
-        if (pattern_pc.empty()) {
+        std::vector<int> pattern = this->vote(matches, false);
+        
+        if (!matches_pc.empty()) {
+            std::vector<int> pattern_pc = this->vote(matches_pc, true);
+            
+            // Combine OPT and PPT patterns with full cache hierarchy support
             for (int i = 0; i < this->pattern_len; i++) {
-                result_pattern[i] = pattern[i];
+                int pc_idx = i / PATTERN_DEGRADE_LEVEL;
+                int opt_level = pattern[i];
+                int ppt_level = pattern_pc[pc_idx];
+                
+                // Both agree on L1 → highest confidence, prefetch to L1
+                if (opt_level == FILL_L1_PMP && ppt_level == FILL_L1_PMP) {
+                    result_pattern[i] = FILL_L1_PMP;
+                }
+                // At least one wants L1 or L2 → medium confidence, prefetch to L2
+                else if (opt_level == FILL_L1_PMP || ppt_level == FILL_L1_PMP ||
+                         opt_level == FILL_L2_PMP || ppt_level == FILL_L2_PMP) {
+                    result_pattern[i] = FILL_L2_PMP;
+                }
+                // At least one wants LLC → low confidence, prefetch to LLC
+                else if (opt_level == FILL_LLC_PMP || ppt_level == FILL_LLC_PMP) {
+                    result_pattern[i] = FILL_LLC_PMP;
+                }
+                // Both weak or disagree → don't prefetch
+                else {
+                    result_pattern[i] = 0;
+                }
             }
         } else {
-            for (int i = 0; i < this->pattern_len; i++) {
-                result_pattern[i] = pattern[i];
-            }
+            // No PC pattern available, use OPT pattern directly (includes LLC)
+            result_pattern = pattern;
         }
     }
-
-    int offset = __coarse_offset(__fine_offset(block_number));
+    
+    int offset = coarse_offset(fine_offset(block_number));
     result_pattern = custom_util::my_rotate(result_pattern, +offset);
     return result_pattern;
 }
+/// Added Manish Kumar Ends here
 
 void pmp::PMP::insert_in_opt(const pmp::AccumulationTable::Entry& entry) {
     uint64_t region_number = custom_util::hash_index(entry.key, this->accumulation_table.get_index_len());

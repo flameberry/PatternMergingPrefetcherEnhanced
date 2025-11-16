@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "cache.h"
+#include <cstdint>
 
 void CACHE::prefetcher_initialize() { std::cout << NAME << " next line prefetcher" << std::endl; }
 

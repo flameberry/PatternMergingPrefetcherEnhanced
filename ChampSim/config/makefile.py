@@ -123,7 +123,33 @@ def get_makefile_lines(objdir, build_id, executable, source_dirs, module_info, c
     executable_path = os.path.abspath(executable)
 
     dir_varnames, obj_varnames = yield from executable_opts(os.path.abspath(objdir), build_id, executable_path, source_dirs)
+    # print("\n[DEBUG] Listing modules in configuration:")
     for k,v in module_info.items():
+    #     print(f"  - module name: {k}")
+    #     print(f"    source dirs (v['fname']): {v.get('fname')}")
+    #     print(f"    options (v['opts']): {v.get('opts')}\n")
+        # if "pmp_enhanced" in k:
+        #     champsim_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        #     pmp_source_dir = os.path.join(champsim_root, "prefetcher", "pmp")
+        #     if os.path.exists(pmp_source_dir):
+        #         existing_fnames = v.get('fname', ())
+        #         if not isinstance(existing_fnames, (list, tuple)):
+        #             existing_fnames = (existing_fnames,)
+
+        #         # Flatten any accidental nesting
+        #         flattened = []
+        #         for f in existing_fnames:
+        #             if isinstance(f, (list, tuple)):
+        #                 flattened.extend(f)
+        #             else:
+        #                 flattened.append(f)
+
+        #         v['fname'] = tuple(flattened) + (pmp_source_dir,)
+        #         print(f"[Config] Added pmp source dir for {k}: {pmp_source_dir}")
+
+        # src_dirs = v['fname']
+        # if isinstance(src_dirs, str):
+        #     src_dirs = (src_dirs,)
         module_dir_varnames, module_obj_varnames = yield from module_opts(os.path.abspath(objdir), build_id, k, (v['fname'],), v['opts'])
         yield dependency(executable_path, *map(dereference, module_obj_varnames))
         dir_varnames.extend(module_dir_varnames)

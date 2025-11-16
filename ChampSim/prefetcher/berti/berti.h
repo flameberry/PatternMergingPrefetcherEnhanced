@@ -45,6 +45,7 @@
 #include <cmath>
 #include <cstdio>
 #include <iostream>
+#include <cstdint>
 #include <map>
 #include <queue>
 #include <stdlib.h>

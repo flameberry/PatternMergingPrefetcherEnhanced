@@ -2,6 +2,7 @@
 #define SMS_H
 
 #include <vector>
+#include <cstdint>
 
 #include "custom_util.h"
 #include "cache.h"

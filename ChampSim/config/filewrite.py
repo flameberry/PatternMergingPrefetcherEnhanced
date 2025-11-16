@@ -101,6 +101,17 @@ class FileWriter:
         ))
 
         joined_module_info = util.chain(*module_info.values()) # remove module type tag
+        ##/// Added Manish Kumar 
+          # --- Conditionally include pmp.cc for pmp_enhanced ---
+        # if os.environ.get("EXTRA_PMP_SOURCE") == "1":
+        # for module_name, module_data in joined_module_info.items():
+        #         if module_name == "pmp_enhanced":
+        #             champsim_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        #             pmp_source = os.path.join(champsim_root, "prefetcher", "pmp", "pmp.cc")
+        #             if os.path.exists(pmp_source):
+        #                 module_data.setdefault("sources", []).append(pmp_source)
+        #                 print(f"[Config] Added pmp.cc as extra source for {module_name}")
+        ##/// Added Manish Kumar Ends here
         self.fileparts.extend((os.path.join(inc_dir, m['name'] + '.inc'), get_map_lines(m['func_map'])) for m in joined_module_info.values())
         self.fileparts.append((makefile_file_name, makefile.get_makefile_lines(local_objdir_name, build_id, os.path.normpath(os.path.join(local_bindir_name, executable)), local_srcdir_names, joined_module_info, env)))
 

@@ -14,7 +14,7 @@ def main():
             make_1core_multi_level([prefetcher_l1, prefetcher_l2])
             
     for prefetcher_l1 in ['ip_stride']:
-        for prefetcher_l2 in ['berti', 'bingo', 'pmp', 'sms', 'dspatch', 'gaze']:
+        for prefetcher_l2 in ['berti', 'bingo', 'pmp', 'pmp_prefetch', 'sms', 'dspatch', 'gaze']:
             make_1core_multi_level([prefetcher_l1, prefetcher_l2])
     
     print('Done.')

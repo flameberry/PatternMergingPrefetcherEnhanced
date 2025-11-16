@@ -5,6 +5,7 @@
 #include <deque>
 #include <limits.h>
 #include "bitmap.h"
+#include <cstdint>
 #include "prefetcher.h"
 #include "cache.h"
 

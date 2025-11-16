@@ -409,5 +409,5 @@ workloads_name_map = {
     'srv_69': 'srv.69',  'srv_75': 'srv.75',  'srv_76': 'srv.76',
 }
 
-trace_dir = os.path.abspath("../../traces")
+trace_dir = os.path.abspath("../../../traces")
 workloads_all = [[file, file.removesuffix('.champsimtrace.xz'), False] for file in os.listdir(trace_dir) if os.path.isfile(os.path.join(trace_dir, file))]

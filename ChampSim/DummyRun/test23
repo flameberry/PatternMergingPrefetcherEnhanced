@@ -1,0 +1,1042 @@
+32 32 32
+Available num physical pages: 35184372088576
+WARNING: physical memory size is smaller than virtual memory size
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 50000000
+Simulation Instructions: 100000000
+Number of CPUs: 1
+Page size: 4096
+
+Basic BTB sets: 1024 ways: 8 indirect buffer size: 4096 RAS size: 64
+cpu0_L1D PMP Enhanced (with CLIP)
+Off-chip DRAM Size: 8 GiB Channels: 1 Width: 32-bit Data Rate: 2133 MT/s
+Heartbeat CPU 0 instructions: 10000000 cycles: 2528135 heartbeat IPC: 3.95549 cumulative IPC: 3.95549 (Simulation time: 0 hr 0 min 24 sec) 
+Heartbeat CPU 0 instructions: 20000003 cycles: 5207727 heartbeat IPC: 3.73192 cumulative IPC: 3.84045 (Simulation time: 0 hr 0 min 49 sec) 
+Heartbeat CPU 0 instructions: 30000000 cycles: 7820618 heartbeat IPC: 3.82718 cumulative IPC: 3.83602 (Simulation time: 0 hr 1 min 11 sec) 
+Heartbeat CPU 0 instructions: 40000000 cycles: 10351627 heartbeat IPC: 3.951 cumulative IPC: 3.86413 (Simulation time: 0 hr 1 min 30 sec) 
+Heartbeat CPU 0 instructions: 50000000 cycles: 12919834 heartbeat IPC: 3.89377 cumulative IPC: 3.87002 (Simulation time: 0 hr 1 min 51 sec) 
+Max paddr 19M
+Warmup finished CPU 0 instructions: 50000000 cycles: 12919835 cumulative IPC: 3.87002 (Simulation time: 0 hr 1 min 51 sec) 
+
+Warmup complete CPU 0 instructions: 50000000 cycles: 12919835 (Simulation time: 0 hr 1 min 51 sec) 
+
+Heartbeat CPU 0 instructions: 60000002 cycles: 50027848 heartbeat IPC: 0.269484 cumulative IPC: 0.269484 (Simulation time: 0 hr 4 min 24 sec) 
+Heartbeat CPU 0 instructions: 70000000 cycles: 69506474 heartbeat IPC: 0.513384 cumulative IPC: 0.353441 (Simulation time: 0 hr 5 min 40 sec) 
+Heartbeat CPU 0 instructions: 80000002 cycles: 102597265 heartbeat IPC: 0.302199 cumulative IPC: 0.334533 (Simulation time: 0 hr 7 min 59 sec) 
+Heartbeat CPU 0 instructions: 90000003 cycles: 126381955 heartbeat IPC: 0.420439 cumulative IPC: 0.352541 (Simulation time: 0 hr 9 min 35 sec) 
+Heartbeat CPU 0 instructions: 100000004 cycles: 150183613 heartbeat IPC: 0.420139 cumulative IPC: 0.364263 (Simulation time: 0 hr 11 min 6 sec) 
+Heartbeat CPU 0 instructions: 110000002 cycles: 168196702 heartbeat IPC: 0.555152 cumulative IPC: 0.386407 (Simulation time: 0 hr 12 min 14 sec) 
+Heartbeat CPU 0 instructions: 120000001 cycles: 177930635 heartbeat IPC: 1.02734 cumulative IPC: 0.424215 (Simulation time: 0 hr 12 min 50 sec) 
+Heartbeat CPU 0 instructions: 130000000 cycles: 206588235 heartbeat IPC: 0.348948 cumulative IPC: 0.413078 (Simulation time: 0 hr 14 min 45 sec) 
+Heartbeat CPU 0 instructions: 140000003 cycles: 222752411 heartbeat IPC: 0.618653 cumulative IPC: 0.428914 (Simulation time: 0 hr 15 min 47 sec) 
+Heartbeat CPU 0 instructions: 150000004 cycles: 256697669 heartbeat IPC: 0.294592 cumulative IPC: 0.41021 (Simulation time: 0 hr 18 min 11 sec) 
+Max paddr 51M
+Simulation finished CPU 0 instructions: 100000004 cycles: 243777835 cumulative IPC: 0.41021 (Simulation time: 0 hr 18 min 11 sec) 
+
+Simulation complete CPU 0 instructions: 100000004 cycles: 243777835 (Simulation time: 0 hr 18 min 11 sec) 
+
+
+ChampSim completed all CPUs
+
+[
+  {
+    "name": "Simulation",
+    "traces": [
+      "../../traces/429.mcf-217B.champsimtrace.xz"
+    ],
+    "roi": {
+      "cores": [
+        {
+          "instructions": 100000004,
+          "cycles": 243777835,
+          "Avg ROB occupancy at mispredict": 79.5148, 
+          "mispredict": {
+            "BRANCH_DIRECT_JUMP": 0,
+            "BRANCH_INDIRECT": 0,
+            "BRANCH_CONDITIONAL": 258874,
+            "BRANCH_DIRECT_CALL": 0,
+            "BRANCH_INDIRECT_CALL": 0,
+            "BRANCH_RETURN": 0
+          }
+        }
+      ],
+      "cpu0_L1I": {
+        "LOAD": {
+          "hit":0,
+          "miss":0
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": null,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 0,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_ITLB": {
+        "LOAD": {
+          "hit":0,
+          "miss":0
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": null,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 0,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_DTLB": {
+        "LOAD": {
+          "hit":42503671,
+          "miss":1559835
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 43,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 0.398499,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 44493382,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 429870,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_STLB": {
+        "LOAD": {
+          "hit":186909,
+          "miss":94074
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 5.13266,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 280983,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L1D": {
+        "LOAD": {
+          "hit":18866155,
+          "miss":6929134
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":137465,
+          "miss":1051253
+        },
+        "WRITE": {
+          "hit":19542660,
+          "miss":6120
+        },
+        "TRANSLATION": {
+          "hit":67081,
+          "miss":27031
+        },
+        "mshr full": 296540432,
+        "prefetch requested": 1188735,
+        "prefetch issued": 1188735,
+        "prefetch filled": 280542,
+        "prefetch useful": 389318,
+        "prefetch useless": 83427,
+        "prefetch late": 192196,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          1,
+        "pf_fill_this_level":     280534,
+        "miss latency": 24.5063,
+        "cache queues": {
+          "PQ_ACCESS": 1188735,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 1188735,
+          "PQ_MERGED": 30,
+          "RQ_ACCESS": 4238509441,
+          "RQ_MERGED": 3053635,
+          "RQ_FULL": 4209660517,
+          "WQ_ACCESS": 20749835,
+          "WQ_MERGED": 1201051,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L2C": {
+        "LOAD": {
+          "hit":119145,
+          "miss":4827147
+        },
+        "RFO": {
+          "hit":1614,
+          "miss":100
+        },
+        "PREFETCH": {
+          "hit":64888,
+          "miss":785726
+        },
+        "WRITE": {
+          "hit":115950,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":16162,
+          "miss":10869
+        },
+        "mshr full": 191872,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 745423,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":     123581,
+        "pf_late_at_l2_from_l1":      39648,
+        "pf_useless_at_l2_from_l1":     203660,
+        "pf_at_l2_to_l1":       1108,
+        "pf_fill_this_level":     288655,
+        "miss latency": 37.4528,
+        "cache queues": {
+          "PQ_ACCESS": 865190,
+          "PQ_FULL": 14572,
+          "PQ_TO_CACHE": 850618,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 4975143,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 116834,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "LLC": {
+        "LOAD": {
+          "hit": [4458],
+          "miss": [4783042]
+        },
+        "RFO": {
+          "hit": [8],
+          "miss": [91]
+        },
+        "PREFETCH": {
+          "hit": [7999],
+          "miss": [777072]
+        },
+        "WRITE": {
+          "hit": [86362],
+          "miss": [0]
+        },
+        "TRANSLATION": {
+          "hit": [3647],
+          "miss": [7222]
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 777072,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":        369,
+        "pf_fill_this_level":          0,
+        "miss latency": 36.6315,
+        "cache queues": {
+          "PQ_ACCESS": 785071,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 785071,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 4798468,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 87140,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "DRAM": [
+        {
+          "RQ ROW_BUFFER_HIT": 5140382,
+          "RQ ROW_BUFFER_MISS": 425670,
+          "PQ FULL": 0,
+          "WQ ROW_BUFFER_HIT": 12118,
+          "WQ ROW_BUFFER_MISS": 70264,
+          "WQ FULL": 0,
+          "AVG DBUS CONGESTED CYCLE": 7.98166
+        }
+      ]
+
+    },
+    "sim": {
+      "cores": [
+        {
+          "instructions": 100000004,
+          "cycles": 243777835,
+          "Avg ROB occupancy at mispredict": 79.5148, 
+          "mispredict": {
+            "BRANCH_DIRECT_JUMP": 0,
+            "BRANCH_INDIRECT": 0,
+            "BRANCH_CONDITIONAL": 258874,
+            "BRANCH_DIRECT_CALL": 0,
+            "BRANCH_INDIRECT_CALL": 0,
+            "BRANCH_RETURN": 0
+          }
+        }
+      ],
+      "cpu0_L1I": {
+        "LOAD": {
+          "hit":0,
+          "miss":0
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": null,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 0,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_ITLB": {
+        "LOAD": {
+          "hit":0,
+          "miss":0
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": null,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 0,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_DTLB": {
+        "LOAD": {
+          "hit":42503671,
+          "miss":1559835
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 43,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 0.398499,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 44493382,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 429870,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_STLB": {
+        "LOAD": {
+          "hit":186909,
+          "miss":94074
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 5.13266,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 280983,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L1D": {
+        "LOAD": {
+          "hit":18866155,
+          "miss":6929134
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":137465,
+          "miss":1051253
+        },
+        "WRITE": {
+          "hit":19542660,
+          "miss":6120
+        },
+        "TRANSLATION": {
+          "hit":67081,
+          "miss":27031
+        },
+        "mshr full": 296540432,
+        "prefetch requested": 1188735,
+        "prefetch issued": 1188735,
+        "prefetch filled": 280542,
+        "prefetch useful": 389318,
+        "prefetch useless": 83427,
+        "prefetch late": 192196,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          1,
+        "pf_fill_this_level":     280534,
+        "miss latency": 24.5063,
+        "cache queues": {
+          "PQ_ACCESS": 1188735,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 1188735,
+          "PQ_MERGED": 30,
+          "RQ_ACCESS": 4238509441,
+          "RQ_MERGED": 3053635,
+          "RQ_FULL": 4209660517,
+          "WQ_ACCESS": 20749835,
+          "WQ_MERGED": 1201051,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L2C": {
+        "LOAD": {
+          "hit":119145,
+          "miss":4827147
+        },
+        "RFO": {
+          "hit":1614,
+          "miss":100
+        },
+        "PREFETCH": {
+          "hit":64888,
+          "miss":785726
+        },
+        "WRITE": {
+          "hit":115950,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":16162,
+          "miss":10869
+        },
+        "mshr full": 191872,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 745423,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":     123581,
+        "pf_late_at_l2_from_l1":      39648,
+        "pf_useless_at_l2_from_l1":     203660,
+        "pf_at_l2_to_l1":       1108,
+        "pf_fill_this_level":     288655,
+        "miss latency": 37.4528,
+        "cache queues": {
+          "PQ_ACCESS": 865190,
+          "PQ_FULL": 14572,
+          "PQ_TO_CACHE": 850618,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 4975143,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 116834,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "LLC": {
+        "LOAD": {
+          "hit": [4458],
+          "miss": [4783042]
+        },
+        "RFO": {
+          "hit": [8],
+          "miss": [91]
+        },
+        "PREFETCH": {
+          "hit": [7999],
+          "miss": [777072]
+        },
+        "WRITE": {
+          "hit": [86362],
+          "miss": [0]
+        },
+        "TRANSLATION": {
+          "hit": [3647],
+          "miss": [7222]
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 777072,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":        369,
+        "pf_fill_this_level":          0,
+        "miss latency": 36.6315,
+        "cache queues": {
+          "PQ_ACCESS": 785071,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 785071,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 4798468,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 87140,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "DRAM": [
+        {
+          "RQ ROW_BUFFER_HIT": 5140382,
+          "RQ ROW_BUFFER_MISS": 425670,
+          "PQ FULL": 0,
+          "WQ ROW_BUFFER_HIT": 12118,
+          "WQ ROW_BUFFER_MISS": 70264,
+          "WQ FULL": 0,
+          "AVG DBUS CONGESTED CYCLE": 7.98166
+        }
+      ]
+
+    }
+  }
+]
+cpu0_ITLB
+cpu0_DTLB
+cpu0_STLB
+
+=== PMP Statistics ===
+Prefetch to L1: 734370
+Prefetch to L2: 454365
+Invalid by Eviction: 296687
+Invalid by Max: 136403
+
+=== CLIP Statistics (CPU 0) ===
+Enabled: Yes
+Exploration windows completed: 3013
+Currently in exploration: No
+Total prefetch candidates: 3357003
+Dropped by CLIP: 1839436 (54.80%)
+Critical IPs tracked: 26
+Critical and accurate IPs: 6
+  Static-critical: 6
+  Dynamic-critical: 0
+Predictor entries: 512
+
+Top 10 Critical IPs:
+  IP 0x31: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x2d: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x20: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x29: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x26: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x2: crit=63, acc=1.000 (63/63) [ACTIVE]
+  IP 0x2b: crit=63, acc=0.125 (2/16)
+  IP 0x6: crit=63, acc=0.125 (2/16)
+  IP 0x3c: crit=53, acc=0.063 (1/16)
+  IP 0x1f: crit=16, acc=0.250 (4/16)
+
+=== CLIP-PMP Integration Diagnostics ===
+Total IPs tracked by CLIP: 26
+Critical IPs (crit >= 4): 13
+Critical AND accurate IPs: 6
+Critical IPs with prefetches issued: 13
+Critical IPs WITHOUT prefetches: 0
+Average issues per critical IP: 38.924
+Average hits per critical IP: 30.847
+
+PMP Pattern Buffer Usage: 32 entries
+
+=== Critical IPs Detailed Analysis ===
+      IP      Crit    Issues      Hits    Accuracy      Status
+--------------------------------------------------------------
+0x    26        63        63        63       1.000      ACTIVE
+0x     6        63        16         2       0.125     LOW-ACC
+0x    2b        63        16         2       0.125     LOW-ACC
+0x     2        63        63        63       1.000      ACTIVE
+0x    29        63        63        63       1.000      ACTIVE
+0x    20        63        63        63       1.000      ACTIVE
+0x    2d        63        63        63       1.000      ACTIVE
+0x    31        63        63        63       1.000      ACTIVE
+0x    3c        53        16         1       0.063     LOW-ACC
+0x    1f        16        16         4       0.250     LOW-ACC
+0x    25        14        16         1       0.063     LOW-ACC
+0x    17        13        11         0       0.000     LOW-ACC
+0x    2c        10        37        13       0.352     LOW-ACC
+
+=== CLIP Filtering Effectiveness ===
+Total prefetch candidates: 3357003
+Dropped by CLIP: 1839436 (54.80%)
+Issued after filtering: 1517567 (45.21%)
+
+=== Sanity Checks ===
+
+Filter table begin
+ ┌────────────────────┬─────────────┐
+ | Region             | Offset      |
+ ├────────────────────┼─────────────┤
+ | 0x00000000000012c3 | 31          |
+ ├────────────────────┼─────────────┤
+ | 0x000000000000021b | 1           |
+ ├────────────────────┼─────────────┤
+ | 0x0000000000004891 | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x0000000000004c00 | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x0000000000000452 | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x000000000000029c | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x0000000000001b87 | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x00000000000002f1 | 0           |
+ ├────────────────────┼─────────────┤
+ | 0x000000000000651d | 31          |
+ ├────────────────────┼─────────────┤
+ | 0x0000000000000247 | 30          |
+ ├────────────────────┼─────────────┤
+ | 0x00000000000056d0 | 24          |
+ └────────────────────┴─────────────┘
+Filter table end
+Accumulation table begin
+ ┌────────────────────┬─────────────┬─────────────┬──────────────────────────────────────────────────────────────────┐
+ | Region             | Offset      | Second      | Pattern                                                          |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000641f | 6           | 5           | 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000006560 | 26          | 25          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066d4 | 2           | 1           | 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000249 | 16          | 15          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004b9 | 30          | 31          | 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066c3 | 0           | 2           | 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000489c | 26          | 25          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000243 | 22          | 21          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066e8 | 0           | 2           | 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004bf | 30          | 31          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 1 0 1 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000240 | 16          | 15          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000064f2 | 0           | 2           | 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000668d | 10          | 9           | 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004b6 | 31          | 28          | 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066db | 0           | 2           | 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066de | 22          | 21          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000024b | 14          | 13          | 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004aa | 29          | 30          | 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000024e | 28          | 27          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000248 | 2           | 1           | 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000006250 | 16          | 15          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000547e | 6           | 5           | 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000006079 | 12          | 11          | 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066c2 | 31          | 30          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066a4 | 16          | 15          | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004b2 | 30          | 31          | 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004b7 | 29          | 30          | 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066e5 | 2           | 1           | 0 1 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066e3 | 0           | 2           | 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x000000000000024d | 8           | 7           | 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000066e6 | 2           | 1           | 0 1 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼─────────────┼─────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000004b1 | 31          | 29          | 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1  |
+ └────────────────────┴─────────────┴─────────────┴──────────────────────────────────────────────────────────────────┘
+Accumulation table end
+Offset pattern table begin
+ ┌────────────────────┬─────────────┬──────────────────────────────────────────────────────────────────────────────────────────────────┐
+ | Key                | Second      | Pattern                                                                                          |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000000 | 5           | 21 20 20 16 17 18 18 18 18 18 18 17 18 16 17 16 16 16 16 10 11 13 15 15 15 15 15 13 13 13 13 13  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000001 | 2           | 27 23 0 3 2 0 3 2 0 3 2 0 3 2 0 20 19 17 3 2 0 3 2 0 3 2 0 3 2 0 3 4                             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000002 | 1           | 31 4 4 7 7 4 4 15 15 16 16 3 4 3 3 22 22 3 3 2 3 5 5 4 4 18 18 4 4 4 7 30                        |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000003 | 2           | 19 16 2 5 2 2 4 2 1 4 2 2 4 2 1 4 2 2 4 2 1 4 2 1 4 2 1 4 2 6 3 6                                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000004 | 3           | 20 6 5 1 1 0 1 2 1 1 1 0 1 1 0 1 0 0 1 1 0 1 1 0 1 1 1 2 0 1 13 18                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000005 | 6           | 27 26 0 2 1 0 2 1 0 2 1 0 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0 4 0 5 4 2                                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000006 | 5           | 29 9 9 4 4 3 3 1 1 2 2 3 3 0 1 1 1 2 2 0 0 2 2 0 1 0 0 0 5 6 14 28                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000007 | 6           | 23 9 11 17 6 11 17 6 11 17 6 11 17 6 11 17 6 11 17 6 11 17 6 11 17 13 19 7 12 20 8 14            |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000008 | 7           | 18 5 4 2 2 0 1 1 0 1 1 0 0 0 0 1 1 0 1 1 0 0 0 0 0 0 1 1 0 1 12 17                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000009 | 8           | 30 21 9 29 20 8 29 20 8 29 20 8 29 20 8 29 20 8 29 20 8 29 20 29 20 8 29 20 8 29 20 9            |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000a | 9           | 23 16 14 5 5 0 2 11 9 1 1 0 1 3 1 3 3 7 9 3 1 3 0 2 5 3 6 3 5 8 12 21                            |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000b | 12          | 21 18 2 18 16 2 18 16 2 18 17 2 18 17 2 18 17 1 18 17 1 17 2 18 17 3 18 17 2 19 17 3             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000c | 11          | 28 10 8 6 6 7 8 2 0 2 2 0 2 2 0 6 6 2 4 2 1 1 0 1 1 0 2 1 0 1 13 26                              |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000d | 12          | 19 9 9 18 9 9 18 9 9 17 9 9 18 9 8 18 9 9 18 9 18 9 9 18 9 9 18 9 8 18 9 9                       |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000e | 13          | 21 8 8 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 6 16 20                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000000f | 16          | 17 13 3 11 8 3 11 8 3 11 8 3 11 8 3 11 8 11 8 3 11 8 3 11 8 3 11 8 3 11 8 3                      |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000010 | 15          | 29 12 11 8 8 4 5 2 0 1 1 0 1 1 0 1 0 1 4 5 6 1 1 2 2 0 5 7 5 1 21 27                             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000011 | 18          | 20 16 3 19 16 3 19 16 3 19 16 3 19 16 3 16 3 19 16 3 19 16 3 19 16 3 19 16 3 19 16 3             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000012 | 17          | 18 7 5 5 4 1 4 3 0 3 2 1 3 2 3 3 3 6 6 1 4 2 0 3 7 5 8 3 4 7 12 15                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000013 | 18          | 23 19 5 19 18 5 19 18 6 20 18 5 18 4 19 18 5 19 17 5 17 18 5 19 18 5 19 20 6 21 19 5             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000014 | 19          | 26 7 7 3 3 2 2 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 12 25                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000015 | 20          | 19 16 5 9 14 14 9 8 6 9 8 10 8 7 10 9 6 10 8 7 10 7 7 9 9 6 10 8 7 10 9 14                       |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000016 | 21          | 24 7 7 3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 6 12 23                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000017 | 24          | 21 14 10 17 13 11 17 12 11 15 11 19 14 10 19 13 11 19 14 11 18 14 11 19 14 10 19 14 10 19 14 11  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000018 | 23          | 24 9 9 6 5 3 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 4 5 2 11 23                               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000019 | 24          | 21 16 10 18 14 11 19 10 19 14 10 19 15 11 19 15 10 18 15 11 18 15 10 18 15 11 19 15 11 18 14 11  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001a | 25          | 31 9 9 4 4 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 6 7 1 7 10 22 30                              |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001b | 28          | 17 13 8 15 11 15 13 7 15 13 7 15 13 7 14 12 8 15 13 8 15 12 8 14 13 8 14 12 8 15 13 8            |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001c | 27          | 28 9 11 7 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 1 0 0 0 20 27                              |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001d | 30          | 23 22 0 22 0 22 22 0 22 22 0 22 22 0 22 22 0 22 22 0 22 22 0 22 22 0 22 22 0 22 22 0             |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001e | 31          | 30 22 17 19 7 18 19 5 19 19 6 19 19 6 19 17 7 19 18 7 17 19 8 17 19 7 18 19 9 24 27 17           |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────┤
+ | 0x000000000000001f | 28          | 26 8 15 14 8 15 15 7 15 15 7 14 14 6 16 14 7 16 14 8 16 15 9 16 13 8 14 16 10 18 15 16           |
+ └────────────────────┴─────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────┘
+Offset pattern table end
+PC pattern table begin
+ ┌────────────────────┬─────────────┬──────────────────────────────────────────────────┐
+ | Key                | Second      | Pattern                                          |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000000 | 15          | 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 30                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000003 | 30          | 20 17 17 17 17 17 18 18 18 18 19 19 19 19 19 19  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000008 | 3           | 25 24 13 0 0 0 0 0 0 0 0 0 0 0 0 0               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000000b | 20          | 28 25 2 0 0 0 0 0 0 0 1 1 1 1 1 2                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000000f | 2           | 31 24 19 19 1 1 1 1 1 0 0 0 0 0 0 5              |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000010 | 21          | 23 21 0 0 0 0 0 0 2 2 0 0 0 0 0 0                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000011 | 7           | 17 8 5 6 6 5 3 6 6 5 4 4 5 5 5 15                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000012 | 11          | 20 19 19 17 9 9 9 9 9 9 9 9 9 10 10 12           |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000014 | 16          | 31 2 0 0 0 0 0 0 0 0 0 0 0 0 0 28                |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000017 | 30          | 19 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x0000000000000019 | 1           | 24 13 0 0 1 1 0 0 0 0 0 0 0 0 2 11               |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000001a | 15          | 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3                  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000001b | 2           | 27 26 26 26 26 26 26 26 26 26 26 26 26 26 26 26  |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000001c | 28          | 23 0 0 0 0 0 0 0 0 0 2 4 1 0 6 7                 |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000001e | 9           | 22 12 3 5 6 7 9 11 12 14 15 16 17 18 19 21       |
+ ├────────────────────┼─────────────┼──────────────────────────────────────────────────┤
+ | 0x000000000000001f | 30          | 25 24 23 23 24 24 24 24 24 24 24 24 24 24 24 24  |
+ └────────────────────┴─────────────┴──────────────────────────────────────────────────┘
+PC pattern table end
+Filter by PPT: 0
+cpu0_L2C
+Num Con Filled: 0
+Num Con Useful: 0 Useless:0 Accuracy: -nan
+LLC

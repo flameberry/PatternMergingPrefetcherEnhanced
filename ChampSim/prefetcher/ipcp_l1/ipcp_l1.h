@@ -2,6 +2,7 @@
 #define IPCP_L1_H
 
 #include "cache.h"
+#include <cstdint>
 
 namespace ipcp_l1 {
 

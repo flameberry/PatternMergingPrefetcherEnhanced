@@ -134,14 +134,17 @@ def modify_config_multicore(num_cores, branch, prefetcher, name):
     # default: 1core -> 4 GB, 4core -> 2 channels
     # default: 1 1 8 65536 128
     # DRAM_CHANNELS * DRAM_RANKS * DRAM_BANKS * DRAM_ROWS * DRAM_COLUMNS * BLOCK_SIZE
-    if num_cores == 2:
-        load_dict['physical_memory']['channels'] = 2
-    elif num_cores == 4:
-        load_dict['physical_memory']['channels'] = 2
-        load_dict['physical_memory']['ranks'] = 2
-    elif num_cores == 8:
-        load_dict['physical_memory']['channels'] = 4
-        load_dict['physical_memory']['ranks'] = 2
+
+    ## /// Commented Manish Kumar
+    # if num_cores == 2:
+    #     load_dict['physical_memory']['channels'] = 2
+    # elif num_cores == 4:
+    #     load_dict['physical_memory']['channels'] = 2
+    #     load_dict['physical_memory']['ranks'] = 2
+    # elif num_cores == 8:
+    #     load_dict['physical_memory']['channels'] = 4
+    #     load_dict['physical_memory']['ranks'] = 2
+     ## /// Commented Manish Kumar Ends 
     # rq_size, wq_size are per channel parameterss
 
     with open("./champsim_config_auto.json", "w") as f:
@@ -150,7 +153,7 @@ def modify_config_multicore(num_cores, branch, prefetcher, name):
 
 
 def make_multicore(num_cores, prefetcher):
-    name = 'champsim_' + str(num_cores) + 'core_' + prefetcher
+    name = 'champsim_' + str(num_cores) + 'core__' + prefetcher
     modify_config_multicore(num_cores, 'hashed_perceptron', prefetcher, name)
     os.system('./config.sh champsim_config_auto.json')
     os.system('make clean && make -j16')

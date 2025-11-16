@@ -1,4 +1,5 @@
 #include "cache.h"
+#include <cstdint>
 
 void CACHE::prefetcher_initialize() {}
 

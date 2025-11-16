@@ -20,6 +20,7 @@
 #include <sstream>
 #include <utility>
 #include <vector>
+#include <cstdint>
 
 #include "stats_printer.h"
 

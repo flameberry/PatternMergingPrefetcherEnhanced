@@ -22,6 +22,7 @@
 #include <signal.h>
 #include <string>
 #include <vector>
+#include <cstdint>
 
 #include "champsim.h"
 #include "champsim_constants.h"

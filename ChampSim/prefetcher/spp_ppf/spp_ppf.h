@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <cstdint>
 
 // SPP functional knobs
 #define LOOKAHEAD_ON

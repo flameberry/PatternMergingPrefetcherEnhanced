@@ -1,7 +1,7 @@
 #include <bitset>
 #include <map>
 #include <vector>
-
+#include <cstdint>
 #include "cache.h"
 
 namespace

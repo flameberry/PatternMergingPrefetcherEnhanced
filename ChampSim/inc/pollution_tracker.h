@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <bitset>
+#include <cstdint>
 
 namespace pollution_tracker {
 

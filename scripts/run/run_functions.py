@@ -22,6 +22,7 @@ def run_1core(prefetcher, prefix, num_warmup, num_simulation, begin, num):
         run_command += trace
         run_command += f'> ../log/1core/{prefetcher}/{prefix}-{workload[1]}.log'
         run_command += " 2>& 1&"
+        print(f"run_command : {run_command}")
         os.system(run_command)
         
         

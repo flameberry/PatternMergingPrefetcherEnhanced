@@ -10,6 +10,7 @@
 #include <bits/stdc++.h>
 #include <unordered_map>
 #include <sstream>
+#include <cstdint>
 #include <algorithm>
 #include <math.h>
 

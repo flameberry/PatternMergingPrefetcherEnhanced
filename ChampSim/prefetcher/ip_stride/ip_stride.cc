@@ -3,7 +3,7 @@
 #include <iostream>
 #include <map>
 #include <optional>
-
+#include <cstdint>
 #include "cache.h"
 #include "msl/lru_table.h"
 
