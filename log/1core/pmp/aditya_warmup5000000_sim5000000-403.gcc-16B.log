@@ -13,15 +13,15 @@ Basic BTB sets: 1024 ways: 8 indirect buffer size: 4096 RAS size: 64
 cpu0_L1D PMP prefetcher
 Off-chip DRAM Size: 4 GiB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
 Max paddr 2M
-Warmup finished CPU 0 instructions: 5000000 cycles: 1994086 cumulative IPC: 2.50742 (Simulation time: 0 hr 2 min 43 sec) 
+Warmup finished CPU 0 instructions: 5000000 cycles: 1994086 cumulative IPC: 2.50742 (Simulation time: 0 hr 2 min 45 sec) 
 
-Warmup complete CPU 0 instructions: 5000000 cycles: 1994086 (Simulation time: 0 hr 2 min 43 sec) 
+Warmup complete CPU 0 instructions: 5000000 cycles: 1994086 (Simulation time: 0 hr 2 min 45 sec) 
 
-Heartbeat CPU 0 instructions: 10000000 cycles: 4159862 heartbeat IPC: 2.40393 cumulative IPC: 2.30865 (Simulation time: 0 hr 5 min 27 sec) 
+Heartbeat CPU 0 instructions: 10000000 cycles: 4159625 heartbeat IPC: 2.40407 cumulative IPC: 2.3089 (Simulation time: 0 hr 5 min 35 sec) 
 Max paddr 3M
-Simulation finished CPU 0 instructions: 5000000 cycles: 2165777 cumulative IPC: 2.30865 (Simulation time: 0 hr 5 min 27 sec) 
+Simulation finished CPU 0 instructions: 5000000 cycles: 2165540 cumulative IPC: 2.3089 (Simulation time: 0 hr 5 min 35 sec) 
 
-Simulation complete CPU 0 instructions: 5000000 cycles: 2165777 (Simulation time: 0 hr 5 min 27 sec) 
+Simulation complete CPU 0 instructions: 5000000 cycles: 2165540 (Simulation time: 0 hr 5 min 35 sec) 
 
 
 ChampSim completed all CPUs
@@ -36,8 +36,8 @@ ChampSim completed all CPUs
       "cores": [
         {
           "instructions": 5000000,
-          "cycles": 2165777,
-          "Avg ROB occupancy at mispredict": 42.8403, 
+          "cycles": 2165540,
+          "Avg ROB occupancy at mispredict": 43.2041, 
           "mispredict": {
             "BRANCH_DIRECT_JUMP": 60,
             "BRANCH_INDIRECT": 186,
@@ -81,7 +81,7 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 1.68976,
+        "miss latency": 1.60313,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
@@ -97,7 +97,7 @@ ChampSim completed all CPUs
       },
       "cpu0_ITLB": {
         "LOAD": {
-          "hit":16046,
+          "hit":16044,
           "miss":89
         },
         "RFO": {
@@ -134,7 +134,7 @@ ChampSim completed all CPUs
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 16135,
+          "RQ_ACCESS": 16133,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -144,8 +144,8 @@ ChampSim completed all CPUs
       },
       "cpu0_DTLB": {
         "LOAD": {
-          "hit":2048687,
-          "miss":39314
+          "hit":2048685,
+          "miss":39306
         },
         "RFO": {
           "hit":0,
@@ -175,13 +175,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 0.133363,
+        "miss latency": 0.133321,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 2088006,
+          "RQ_ACCESS": 2087996,
           "RQ_MERGED": 0,
           "RQ_FULL": 5,
           "WQ_ACCESS": 0,
@@ -222,7 +222,7 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 32.2971,
+        "miss latency": 32.263,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
@@ -238,45 +238,45 @@ ChampSim completed all CPUs
       },
       "cpu0_L1D": {
         "LOAD": {
-          "hit":50250,
-          "miss":5676
+          "hit":49924,
+          "miss":5993
         },
         "RFO": {
           "hit":0,
           "miss":0
         },
         "PREFETCH": {
-          "hit":397,
-          "miss":14150
+          "hit":324,
+          "miss":13058
         },
         "WRITE": {
-          "hit":42112,
-          "miss":1989923
+          "hit":41831,
+          "miss":1990204
         },
         "TRANSLATION": {
           "hit":2,
           "miss":83
         },
-        "mshr full": 5,
-        "prefetch requested": 14547,
-        "prefetch issued": 14547,
-        "prefetch filled": 835,
-        "prefetch useful": 335,
-        "prefetch useless": 533,
-        "prefetch late": 38,
+        "mshr full": 2,
+        "prefetch requested": 13382,
+        "prefetch issued": 13382,
+        "prefetch filled": 260,
+        "prefetch useful": 112,
+        "prefetch useless": 169,
+        "prefetch late": 21,
         "pf_useful_at_l2_from_l1":          0,
         "pf_late_at_l2_from_l1":          0,
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
-        "pf_fill_this_level":        835,
-        "miss latency": 1.63309,
+        "pf_fill_this_level":        260,
+        "miss latency": 1.61102,
         "cache queues": {
-          "PQ_ACCESS": 14547,
+          "PQ_ACCESS": 13382,
           "PQ_FULL": 0,
-          "PQ_TO_CACHE": 14547,
+          "PQ_TO_CACHE": 13382,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 55961,
-          "RQ_MERGED": 35,
+          "RQ_ACCESS": 55951,
+          "RQ_MERGED": 34,
           "RQ_FULL": 0,
           "WQ_ACCESS": 2032040,
           "WQ_MERGED": 1,
@@ -285,47 +285,47 @@ ChampSim completed all CPUs
       },
       "cpu0_L2C": {
         "LOAD": {
-          "hit":1338,
-          "miss":1782
+          "hit":1505,
+          "miss":1794
         },
         "RFO": {
-          "hit":59764,
-          "miss":189524
+          "hit":62775,
+          "miss":186557
         },
         "PREFETCH": {
-          "hit":1234,
-          "miss":12725
+          "hit":1168,
+          "miss":11697
         },
         "WRITE": {
-          "hit":249572,
+          "hit":249587,
           "miss":0
         },
         "TRANSLATION": {
           "hit":0,
           "miss":83
         },
-        "mshr full": 1060,
+        "mshr full": 1046,
         "prefetch requested": 0,
         "prefetch issued": 0,
-        "prefetch filled": 12699,
+        "prefetch filled": 11663,
         "prefetch useful": 0,
         "prefetch useless": 0,
         "prefetch late": 0,
-        "pf_useful_at_l2_from_l1":       1358,
-        "pf_late_at_l2_from_l1":         19,
-        "pf_useless_at_l2_from_l1":      10590,
-        "pf_at_l2_to_l1":         32,
-        "pf_fill_this_level":      12008,
-        "miss latency": 2.96458,
+        "pf_useful_at_l2_from_l1":       1483,
+        "pf_late_at_l2_from_l1":         27,
+        "pf_useless_at_l2_from_l1":       9916,
+        "pf_at_l2_to_l1":         19,
+        "pf_fill_this_level":      11437,
+        "miss latency": 2.93314,
         "cache queues": {
-          "PQ_ACCESS": 14006,
-          "PQ_FULL": 47,
-          "PQ_TO_CACHE": 13959,
+          "PQ_ACCESS": 12897,
+          "PQ_FULL": 32,
+          "PQ_TO_CACHE": 12865,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 252491,
+          "RQ_ACCESS": 252714,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 249573,
+          "WQ_ACCESS": 249588,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
@@ -333,18 +333,18 @@ ChampSim completed all CPUs
       "LLC": {
         "LOAD": {
           "hit": [1573],
-          "miss": [193]
+          "miss": [196]
         },
         "RFO": {
-          "hit": [189489],
-          "miss": [29]
+          "hit": [186522],
+          "miss": [30]
         },
         "PREFETCH": {
-          "hit": [10547],
-          "miss": [2171]
+          "hit": [9659],
+          "miss": [2031]
         },
         "WRITE": {
-          "hit": [190112],
+          "hit": [187114],
           "miss": [0]
         },
         "TRANSLATION": {
@@ -354,38 +354,38 @@ ChampSim completed all CPUs
         "mshr full": 0,
         "prefetch requested": 0,
         "prefetch issued": 0,
-        "prefetch filled": 2171,
+        "prefetch filled": 2031,
         "prefetch useful": 0,
         "prefetch useless": 0,
         "prefetch late": 0,
         "pf_useful_at_l2_from_l1":          0,
         "pf_late_at_l2_from_l1":          0,
         "pf_useless_at_l2_from_l1":          0,
-        "pf_at_l2_to_l1":         86,
+        "pf_at_l2_to_l1":         29,
         "pf_fill_this_level":          0,
-        "miss latency": 51.7073,
+        "miss latency": 49.8324,
         "cache queues": {
-          "PQ_ACCESS": 12718,
+          "PQ_ACCESS": 11690,
           "PQ_FULL": 0,
-          "PQ_TO_CACHE": 12718,
+          "PQ_TO_CACHE": 11690,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 191370,
+          "RQ_ACCESS": 188407,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 190114,
+          "WQ_ACCESS": 187116,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "DRAM": [
         {
-          "RQ ROW_BUFFER_HIT": 1262,
-          "RQ ROW_BUFFER_MISS": 1203,
+          "RQ ROW_BUFFER_HIT": 1157,
+          "RQ ROW_BUFFER_MISS": 1172,
           "PQ FULL": 0,
           "WQ ROW_BUFFER_HIT": 0,
           "WQ ROW_BUFFER_MISS": 0,
           "WQ FULL": 0,
-          "AVG DBUS CONGESTED CYCLE": 3.93404
+          "AVG DBUS CONGESTED CYCLE": 3.92759
         }
       ]
 
@@ -394,8 +394,8 @@ ChampSim completed all CPUs
       "cores": [
         {
           "instructions": 5000000,
-          "cycles": 2165777,
-          "Avg ROB occupancy at mispredict": 42.8403, 
+          "cycles": 2165540,
+          "Avg ROB occupancy at mispredict": 43.2041, 
           "mispredict": {
             "BRANCH_DIRECT_JUMP": 60,
             "BRANCH_INDIRECT": 186,
@@ -439,7 +439,7 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 1.68976,
+        "miss latency": 1.60313,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
@@ -455,7 +455,7 @@ ChampSim completed all CPUs
       },
       "cpu0_ITLB": {
         "LOAD": {
-          "hit":16046,
+          "hit":16044,
           "miss":89
         },
         "RFO": {
@@ -492,7 +492,7 @@ ChampSim completed all CPUs
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 16135,
+          "RQ_ACCESS": 16133,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
           "WQ_ACCESS": 0,
@@ -502,8 +502,8 @@ ChampSim completed all CPUs
       },
       "cpu0_DTLB": {
         "LOAD": {
-          "hit":2048687,
-          "miss":39314
+          "hit":2048685,
+          "miss":39306
         },
         "RFO": {
           "hit":0,
@@ -533,13 +533,13 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 0.133363,
+        "miss latency": 0.133321,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
           "PQ_TO_CACHE": 0,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 2088006,
+          "RQ_ACCESS": 2087996,
           "RQ_MERGED": 0,
           "RQ_FULL": 5,
           "WQ_ACCESS": 0,
@@ -580,7 +580,7 @@ ChampSim completed all CPUs
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
         "pf_fill_this_level":          0,
-        "miss latency": 32.2971,
+        "miss latency": 32.263,
         "cache queues": {
           "PQ_ACCESS": 0,
           "PQ_FULL": 0,
@@ -596,45 +596,45 @@ ChampSim completed all CPUs
       },
       "cpu0_L1D": {
         "LOAD": {
-          "hit":50250,
-          "miss":5676
+          "hit":49924,
+          "miss":5993
         },
         "RFO": {
           "hit":0,
           "miss":0
         },
         "PREFETCH": {
-          "hit":397,
-          "miss":14150
+          "hit":324,
+          "miss":13058
         },
         "WRITE": {
-          "hit":42112,
-          "miss":1989923
+          "hit":41831,
+          "miss":1990204
         },
         "TRANSLATION": {
           "hit":2,
           "miss":83
         },
-        "mshr full": 5,
-        "prefetch requested": 14547,
-        "prefetch issued": 14547,
-        "prefetch filled": 835,
-        "prefetch useful": 335,
-        "prefetch useless": 533,
-        "prefetch late": 38,
+        "mshr full": 2,
+        "prefetch requested": 13382,
+        "prefetch issued": 13382,
+        "prefetch filled": 260,
+        "prefetch useful": 112,
+        "prefetch useless": 169,
+        "prefetch late": 21,
         "pf_useful_at_l2_from_l1":          0,
         "pf_late_at_l2_from_l1":          0,
         "pf_useless_at_l2_from_l1":          0,
         "pf_at_l2_to_l1":          0,
-        "pf_fill_this_level":        835,
-        "miss latency": 1.63309,
+        "pf_fill_this_level":        260,
+        "miss latency": 1.61102,
         "cache queues": {
-          "PQ_ACCESS": 14547,
+          "PQ_ACCESS": 13382,
           "PQ_FULL": 0,
-          "PQ_TO_CACHE": 14547,
+          "PQ_TO_CACHE": 13382,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 55961,
-          "RQ_MERGED": 35,
+          "RQ_ACCESS": 55951,
+          "RQ_MERGED": 34,
           "RQ_FULL": 0,
           "WQ_ACCESS": 2032040,
           "WQ_MERGED": 1,
@@ -643,47 +643,47 @@ ChampSim completed all CPUs
       },
       "cpu0_L2C": {
         "LOAD": {
-          "hit":1338,
-          "miss":1782
+          "hit":1505,
+          "miss":1794
         },
         "RFO": {
-          "hit":59764,
-          "miss":189524
+          "hit":62775,
+          "miss":186557
         },
         "PREFETCH": {
-          "hit":1234,
-          "miss":12725
+          "hit":1168,
+          "miss":11697
         },
         "WRITE": {
-          "hit":249572,
+          "hit":249587,
           "miss":0
         },
         "TRANSLATION": {
           "hit":0,
           "miss":83
         },
-        "mshr full": 1060,
+        "mshr full": 1046,
         "prefetch requested": 0,
         "prefetch issued": 0,
-        "prefetch filled": 12699,
+        "prefetch filled": 11663,
         "prefetch useful": 0,
         "prefetch useless": 0,
         "prefetch late": 0,
-        "pf_useful_at_l2_from_l1":       1358,
-        "pf_late_at_l2_from_l1":         19,
-        "pf_useless_at_l2_from_l1":      10590,
-        "pf_at_l2_to_l1":         32,
-        "pf_fill_this_level":      12008,
-        "miss latency": 2.96458,
+        "pf_useful_at_l2_from_l1":       1483,
+        "pf_late_at_l2_from_l1":         27,
+        "pf_useless_at_l2_from_l1":       9916,
+        "pf_at_l2_to_l1":         19,
+        "pf_fill_this_level":      11437,
+        "miss latency": 2.93314,
         "cache queues": {
-          "PQ_ACCESS": 14006,
-          "PQ_FULL": 47,
-          "PQ_TO_CACHE": 13959,
+          "PQ_ACCESS": 12897,
+          "PQ_FULL": 32,
+          "PQ_TO_CACHE": 12865,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 252491,
+          "RQ_ACCESS": 252714,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 249573,
+          "WQ_ACCESS": 249588,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
@@ -691,18 +691,18 @@ ChampSim completed all CPUs
       "LLC": {
         "LOAD": {
           "hit": [1573],
-          "miss": [193]
+          "miss": [196]
         },
         "RFO": {
-          "hit": [189489],
-          "miss": [29]
+          "hit": [186522],
+          "miss": [30]
         },
         "PREFETCH": {
-          "hit": [10547],
-          "miss": [2171]
+          "hit": [9659],
+          "miss": [2031]
         },
         "WRITE": {
-          "hit": [190112],
+          "hit": [187114],
           "miss": [0]
         },
         "TRANSLATION": {
@@ -712,38 +712,38 @@ ChampSim completed all CPUs
         "mshr full": 0,
         "prefetch requested": 0,
         "prefetch issued": 0,
-        "prefetch filled": 2171,
+        "prefetch filled": 2031,
         "prefetch useful": 0,
         "prefetch useless": 0,
         "prefetch late": 0,
         "pf_useful_at_l2_from_l1":          0,
         "pf_late_at_l2_from_l1":          0,
         "pf_useless_at_l2_from_l1":          0,
-        "pf_at_l2_to_l1":         86,
+        "pf_at_l2_to_l1":         29,
         "pf_fill_this_level":          0,
-        "miss latency": 51.7073,
+        "miss latency": 49.8324,
         "cache queues": {
-          "PQ_ACCESS": 12718,
+          "PQ_ACCESS": 11690,
           "PQ_FULL": 0,
-          "PQ_TO_CACHE": 12718,
+          "PQ_TO_CACHE": 11690,
           "PQ_MERGED": 0,
-          "RQ_ACCESS": 191370,
+          "RQ_ACCESS": 188407,
           "RQ_MERGED": 0,
           "RQ_FULL": 0,
-          "WQ_ACCESS": 190114,
+          "WQ_ACCESS": 187116,
           "WQ_MERGED": 0,
           "WQ_FULL": 0
         }
       },
       "DRAM": [
         {
-          "RQ ROW_BUFFER_HIT": 1262,
-          "RQ ROW_BUFFER_MISS": 1203,
+          "RQ ROW_BUFFER_HIT": 1157,
+          "RQ ROW_BUFFER_MISS": 1172,
           "PQ FULL": 0,
           "WQ ROW_BUFFER_HIT": 0,
           "WQ ROW_BUFFER_MISS": 0,
           "WQ FULL": 0,
-          "AVG DBUS CONGESTED CYCLE": 3.93404
+          "AVG DBUS CONGESTED CYCLE": 3.92759
         }
       ]
 
@@ -753,8 +753,8 @@ ChampSim completed all CPUs
 cpu0_ITLB
 cpu0_DTLB
 cpu0_STLB
-Prefetch Request to L1: 1038, Prefetch Request to L2: 13509
-Invalid by Eviction: 1160
+Prefetch Request to L1: 345, Prefetch Request to L2: 13037
+Invalid by Eviction: 1162
 Invalid by Max: 370
 Filter table begin
  ┌────────────────────┬─────────────┐
@@ -790,7 +790,7 @@ Offset pattern table begin
  ┌────────────────────┬─────────────┬─────────────────────────────────────────────────────────────────────────────┐
  | Key                | Second      | Pattern                                                                     |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
- | 0x0000000000000000 | 1           | 31 17 17 8 9 9 7 5 4 5 2 2 4 2 4 2 3 1 1 1 2 1 1 0 2 2 0 0 1 0 1 1          |
+ | 0x0000000000000000 | 1           | 17 9 10 4 4 4 3 2 2 2 1 1 2 1 2 1 1 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0           |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
  | 0x0000000000000001 | 2           | 28 19 12 6 8 5 6 4 5 2 3 9 3 3 1 0 1 2 4 2 2 0 2 2 3 2 3 1 4 2 5 18         |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
@@ -828,9 +828,9 @@ Offset pattern table begin
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
  | 0x0000000000000012 | 14          | 18 6 5 2 6 4 1 0 0 4 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 2 4 3            |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
- | 0x0000000000000013 | 20          | 19 13 4 1 4 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 1 0 1           |
+ | 0x0000000000000013 | 20          | 20 14 5 2 5 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 1 1 2           |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
- | 0x0000000000000014 | 26          | 12 7 7 4 1 1 3 1 1 1 2 1 1 1 1 0 1 1 0 1 0 1 0 0 1 1 2 3 2 5 5 5            |
+ | 0x0000000000000014 | 26          | 11 6 6 3 1 1 3 1 1 1 2 1 1 1 1 0 1 1 0 1 0 1 0 0 1 1 2 3 2 4 4 4            |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
  | 0x0000000000000015 | 22          | 17 13 10 2 2 0 0 2 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 2 3 3 11         |
  ├────────────────────┼─────────────┼─────────────────────────────────────────────────────────────────────────────┤
@@ -859,13 +859,13 @@ PC pattern table begin
  ┌────────────────────┬─────────────┬─────────────────────────────────────────┐
  | Key                | Second      | Pattern                                 |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
- | 0x0000000000000000 | 25          | 28 6 3 1 3 2 1 0 0 1 1 2 1 1 2 22       |
+ | 0x0000000000000000 | 25          | 27 5 3 1 3 2 1 0 0 1 1 2 1 1 1 21       |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
  | 0x0000000000000001 | 3           | 27 22 0 7 0 0 0 0 0 0 0 0 0 0 0 3       |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
  | 0x0000000000000002 | 5           | 3 3 3 3 3 3 3 3 3 3 3 3 3 1 0 0         |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
- | 0x0000000000000003 | 12          | 26 14 12 14 0 3 0 0 0 0 1 2 1 12 1 2    |
+ | 0x0000000000000003 | 12          | 27 15 13 14 0 3 0 0 0 0 1 2 1 12 1 3    |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
  | 0x0000000000000004 | 25          | 19 6 3 0 0 0 4 7 8 3 1 0 0 1 1 5        |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
@@ -893,7 +893,7 @@ PC pattern table begin
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
  | 0x0000000000000010 | 4           | 9 2 2 2 3 0 1 0 1 1 1 2 0 3 2 0         |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
- | 0x0000000000000011 | 23          | 23 8 2 1 0 0 0 0 0 0 0 0 1 0 5 12       |
+ | 0x0000000000000011 | 23          | 25 10 2 1 0 0 0 0 0 0 0 0 1 0 6 12      |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
  | 0x0000000000000012 | 16          | 28 11 3 1 0 0 0 0 0 0 0 1 1 1 1 14      |
  ├────────────────────┼─────────────┼─────────────────────────────────────────┤
@@ -928,45 +928,39 @@ Prefetch buffer begin
  ┌────────────────────┬──────────────────────────────────────────────────────────────────┐
  | Region             | Pattern                                                          |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x000000000000033f | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 0 0 2 2 0  |
- ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000317 | 0 1 1 2 2 2 2 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ | 0x0000000000000384 | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 2 2 0 2 0 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
  | 0x0000000000000572 | 0 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 2 2 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000384 | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 2 2 0 2 2 0 0 0 2 0 0 0 0  |
+ | 0x0000000000000317 | 0 2 2 2 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000538 | 0 0 0 0 0 0 0 0 0 0 2 2 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2  |
+ | 0x000000000000034c | 0 0 0 0 0 0 0 0 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x00000000000005d3 | 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ | 0x0000000000000375 | 0 2 0 2 2 2 0 0 2 2 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 2 2 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000375 | 2 2 2 2 2 2 2 0 2 2 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 2 2 0 0  |
+ | 0x00000000000005d3 | 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
  | 0x0000000000000319 | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 2 2 2  |
- ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x000000000000034c | 0 0 0 0 0 0 0 0 2 2 2 2 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
  | 0x00000000000004aa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 2 2 2 2 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
  | 0x000000000000034f | 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 2 0 0 2 0 0 0 0 0 0 0 0 0 2 2 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x00000000000005a7 | 2 2 0 0 0 0 0 0 2 2 0 0 2 2 0 0 0 0 2 2 2 2 2 2 0 2 2 2 2 2 2 2  |
+ | 0x00000000000002cc | 2 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000351 | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0  |
+ | 0x0000000000000376 | 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x00000000000002cc | 2 0 0 0 2 2 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2  |
+ | 0x000000000000034a | 2 2 2 0 0 0 2 2 2 2 2 2 2 0 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 2  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000376 | 0 0 0 0 0 0 0 0 0 0 0 2 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2  |
+ | 0x0000000000000354 | 2 0 0 0 2 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 2 2 2  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x000000000000034a | 2 2 2 0 0 0 2 2 2 2 2 2 2 0 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 0 0 2  |
- ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000354 | 2 0 0 0 1 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 2 2 2  |
- ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x00000000000005e2 | 0 0 0 0 0 2 2 0 0 2 2 0 0 0 0 0 0 2 2 2 2 0 0 2 2 2 2 2 2 2 0 2  |
- ├────────────────────┼──────────────────────────────────────────────────────────────────┤
- | 0x0000000000000382 | 2 2 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 2 2 2 2 2 2 0 2 2 2 2 2 2 2  |
+ | 0x00000000000005a7 | 2 2 0 0 0 0 0 0 2 2 0 0 2 2 0 0 0 0 0 0 2 2 2 2 0 2 2 2 2 2 2 2  |
  ├────────────────────┼──────────────────────────────────────────────────────────────────┤
  | 0x00000000000002ae | 0 0 0 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  |
+ ├────────────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x00000000000005e2 | 0 0 0 0 0 2 2 0 0 2 2 0 0 0 0 0 0 0 2 2 2 0 0 2 2 2 0 0 0 0 0 0  |
+ ├────────────────────┼──────────────────────────────────────────────────────────────────┤
+ | 0x0000000000000382 | 2 2 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 2 2 2 2 2 0 0 0 2 2 2 2 2 2  |
  └────────────────────┴──────────────────────────────────────────────────────────────────┘
 Prefetch buffer end
 Filter by PPT: 0

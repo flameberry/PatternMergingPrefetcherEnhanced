@@ -10,6 +10,13 @@
 
 namespace pmp {
 
+	// (Aditya): Forward-declare PMP class for the callback pointer.
+	class PMP;
+	// (Aditya): Moved constants from pmp.cc to make them visible in the header.
+	constexpr int PF_BUFFER_SIZE = 32;
+	constexpr int PF_BUFFER_WAY = 8;
+	// (Aditya): End of change.
+
 #define DEBUG(x)
 
 #define __fine_offset(addr) (addr & OFFSET_MASK)
@@ -30,6 +37,29 @@ namespace pmp {
 	constexpr int START_CONF = 0;
 
 	constexpr int PATTERN_DEGRADE_LEVEL = 2;
+
+	// (Aditya): A tracker for in-flight prefetches to measure accuracy.
+	class InflightPFData {
+	public:
+		bool used = false;
+	};
+
+	class InflightPFTracker : public custom_util::LRUSetAssociativeCache<InflightPFData> {
+		typedef custom_util::LRUSetAssociativeCache<InflightPFData> Super;
+
+	public:
+		InflightPFTracker(int size, int num_ways) : Super(size, num_ways) {}
+
+		void write_data(Entry& entry, custom_util::Table& table, int row) override {
+			table.set_cell(row, 0, entry.key);
+			table.set_cell(row, 1, entry.data.used);
+		}
+
+		uint64_t build_key(uint64_t key) {
+			return custom_util::hash_index(key, this->index_len);
+		}
+	};
+	// (Aditya): End of change.
 
 	int filter_by_ppt = 0;
 	int prefetch_to_l1, prefetch_to_l2 = 0;
@@ -306,87 +336,7 @@ namespace pmp {
 			Super::rp_insert(key);
 		}
 
-		int prefetch(CACHE* cache, uint64_t block_address) {
-			if (this->debug_level >= 2) {
-				std::cerr << "PrefetchBuffer::prefetch(cache=" << cache->NAME << ", block_address=0x" << std::hex << block_address
-						  << ")" << std::dec << std::endl;
-				std::cerr << "[PrefetchBuffer::prefetch] " << cache->get_occupancy(3, 0) << "/" << cache->get_size(3, 0)
-						  << " PQ entries occupied." << std::dec << std::endl;
-				std::cerr << "[PrefetchBuffer::prefetch] " << cache->get_occupancy(0, 0) << "/" << cache->get_size(0, 0)
-						  << " MSHR entries occupied." << std::dec << std::endl;
-			}
-			uint64_t base_addr = block_address << BOTTOM_BITS;
-			int region_offset = __coarse_offset(__fine_offset(block_address));
-			uint64_t region_number = block_address >> OFFSET_BITS;
-			uint64_t key = this->build_key(region_number);
-			Entry* entry = Super::find(key);
-			if (!entry) {
-				if (this->debug_level >= 2)
-					std::cerr << "[PrefetchBuffer::prefetch] No entry found." << std::dec << std::endl;
-				return 0;
-			}
-			Super::rp_promote(key);
-			int pf_issued = 0;
-			std::vector<int>& pattern = entry->data.pattern;
-			pattern[region_offset] = 0;
-			int pf_offset;
-			DEBUG(cout << "[Prefetch Begin] base_addr " << std::hex << base_addr << ", " << std::dec;)
-			for (int d = 1; d < this->pattern_len; d += 1) { // d: 1 -> 64
-				for (int sgn = +1; sgn >= -1; sgn -= 2) {	 // sgn: -1, 1
-					pf_offset = region_offset + sgn * d;
-					if (0 <= pf_offset && pf_offset < this->pattern_len && pattern[pf_offset] > 0) {
-						DEBUG(cout << pf_offset << " ";)
-						uint64_t pf_address = (region_number * this->pattern_len + pf_offset) << LOG2_BLOCK_SIZE;
-						// MSHR + PQ < MSHR - 1 && PQ is not full
-						if (cache->get_occupancy(3, 0) + cache->get_occupancy(0, 0) < cache->get_size(0, 0) - 1 && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
-							uint32_t pf_metadata = 0;
-							pf_metadata = __add_pf_sour_level(pf_metadata, 1);
-							if (pattern[pf_offset] == 1) { // FILL_L1_PMP = 1
-								pf_metadata = __add_pf_dest_level(pf_metadata, 1);
-							} else {
-								pf_metadata = __add_pf_dest_level(pf_metadata, 2);
-							}
-							int ok = cache->prefetch_line(0, base_addr, pf_address, pattern[pf_offset] == 1 ? true : false, pf_metadata);
-							pf_issued += ok;
-							if (ok && !cache->warmup) {
-								if (pattern[pf_offset] == 1) {
-									prefetch_to_l1++;
-								} else {
-									prefetch_to_l2++;
-								}
-							}
-							pattern[pf_offset] = 0;
-						} else {
-							DEBUG(cout << std::endl;)
-							return pf_issued;
-						}
-					}
-				}
-			}
-			DEBUG(cout << std::endl;)
-
-#if 0
-			// (Aditya): Only erase the entry from the Prefetch Buffer if all prefetches in the pattern have been issued.
-			// This implements the "fire-and-resume" strategy from the paper, allowing the prefetcher to continue
-			// issuing from a partially-used pattern on a subsequent trigger.
-			bool all_prefetches_issued = true;
-			for (int p : pattern) {
-				if (p > 0) {
-					all_prefetches_issued = false;
-					break;
-				}
-			}
-
-			if (all_prefetches_issued) {
-				Super::erase(key);
-			}
-            // (Aditya): End of change.
-#else
-			Super::erase(key);
-#endif
-
-			return pf_issued;
-		}
+		int prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_address);
 
 		std::string log() {
 			std::vector<std::string> headers({ "Region", "Pattern" });
@@ -414,7 +364,17 @@ namespace pmp {
 			int ppt_size, int ppt_max_conf, int ppt_ways, int filter_table_size, int ft_way,
 			int accumulation_table_size, int at_way, int pf_buffer_size, int pf_buffer_way,
 			int FILL_L1, int FILL_L2, int FILL_LLC,
-			int debug_level = 0, int cpu = 0) : pattern_len(pattern_len), opt(opt_size, pattern_len, offset_width, opt_ways, opt_max_conf, debug_level, cpu), ppt(ppt_size, pattern_len / PATTERN_DEGRADE_LEVEL, pc_width, ppt_ways, ppt_max_conf, debug_level, cpu), filter_table(filter_table_size, debug_level, ft_way), accumulation_table(accumulation_table_size, pattern_len, debug_level, at_way), pf_buffer(pf_buffer_size, pattern_len, debug_level, pf_buffer_way), FILL_L1_PMP(1), FILL_L2_PMP(2), FILL_LLC_PMP(3), debug_level(debug_level), cpu(cpu) {
+			int debug_level = 0, int cpu = 0) : pattern_len(pattern_len), opt(opt_size, pattern_len, offset_width, opt_ways, opt_max_conf, debug_level, cpu), ppt(ppt_size, pattern_len / PATTERN_DEGRADE_LEVEL, pc_width, ppt_ways, ppt_max_conf, debug_level, cpu), filter_table(filter_table_size, debug_level, ft_way), accumulation_table(accumulation_table_size, pattern_len, debug_level, at_way), pf_buffer(pf_buffer_size, pattern_len, debug_level, pf_buffer_way)
+											  // (Aditya): Initialize adaptive thresholds and the in-flight tracker.
+											  , L1D_THRESH(0.50)
+											  , L2C_THRESH(0.150)
+											  , inflight_pf_tracker(pf_buffer_size * 2, pf_buffer_way * 2)
+											  // (Aditya): End of change.
+											  , FILL_L1_PMP(1)
+											  , FILL_L2_PMP(2)
+											  , FILL_LLC_PMP(3)
+											  , debug_level(debug_level)
+											  , cpu(cpu) {
 			if (this->debug_level >= 1)
 				std::cerr << " PMP:: PMP(pattern_len=" << pattern_len
 						  << ", filter_table_size=" << filter_table_size
@@ -429,6 +389,11 @@ namespace pmp {
 		void set_debug_level(int debug_level);
 		void log();
 
+		// (Aditya): Add public methods for the adaptive feedback loop.
+		void cycle_operate();
+		void record_prefetch_issue(uint64_t pf_addr);
+		// (Aditya): End of change.
+
 		int FILL_L1_PMP;
 		int FILL_L2_PMP;
 		int FILL_LLC_PMP;
@@ -441,8 +406,9 @@ namespace pmp {
 		void insert_in_opt(const AccumulationTable::Entry& entry);
 		std::vector<int> vote(const std::vector<OffsetPatternTableData>& x, bool is_pc_opt = false);
 
-		const double L1D_THRESH = 0.50;
-		const double L2C_THRESH = 0.150;
+		// (Aditya): Make thresholds non-const and add members for the adaptive mechanism.
+		double L1D_THRESH;
+		double L2C_THRESH;
 		const double LLC_THRESH = 1; /* off */
 
 		const double PC_L1D_THRESH = 0.50;
@@ -459,6 +425,15 @@ namespace pmp {
 		PrefetchBuffer pf_buffer;
 		int debug_level = 0;
 		int cpu;
+
+		// Adaptive mechanism members
+		uint64_t cycle_count = 0;
+		uint64_t useful_prefetches = 0;
+		uint64_t useless_prefetches = 0;
+		InflightPFTracker inflight_pf_tracker;
+		const double L2C_THRESH_RATIO = 0.3; // Keep L2C threshold proportional to L1D's
+
+		// (Aditya): End of change.
 	};
 
 } // namespace pmp

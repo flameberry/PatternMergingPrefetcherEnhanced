@@ -27,14 +27,85 @@ namespace {
 	constexpr int PPT_SIZE = (1 << pmp::PC_BITS) * PPT_WAYS;
 
 	constexpr int PC_MAX_CONF = 32;
-	constexpr int PF_BUFFER_SIZE = 32;
-	constexpr int PF_BUFFER_WAY = 8;
 
 	static std::vector<pmp::PMP> prefetchers;
 
 } // namespace
 
+// (Aditya): Implement the PrefetchBuffer::prefetch method body here in the .cc file
+int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_address) {
+	if (this->debug_level >= 2) {
+		std::cerr << "PrefetchBuffer::prefetch(cache=" << cache->NAME << ", block_address=0x" << std::hex << block_address
+				  << ")" << std::dec << std::endl;
+		std::cerr << "[PrefetchBuffer::prefetch] " << cache->get_occupancy(3, 0) << "/" << cache->get_size(3, 0)
+				  << " PQ entries occupied." << std::dec << std::endl;
+		std::cerr << "[PrefetchBuffer::prefetch] " << cache->get_occupancy(0, 0) << "/" << cache->get_size(0, 0)
+				  << " MSHR entries occupied." << std::dec << std::endl;
+	}
+	uint64_t base_addr = block_address << BOTTOM_BITS;
+	int region_offset = __coarse_offset(__fine_offset(block_address));
+	uint64_t region_number = block_address >> OFFSET_BITS;
+	uint64_t key = this->build_key(region_number);
+	Entry* entry = Super::find(key);
+	if (!entry) {
+		if (this->debug_level >= 2)
+			std::cerr << "[PrefetchBuffer::prefetch] No entry found." << std::dec << std::endl;
+		return 0;
+	}
+	Super::rp_promote(key);
+	int pf_issued = 0;
+	std::vector<int>& pattern = entry->data.pattern;
+	pattern[region_offset] = 0;
+	int pf_offset;
+	DEBUG(cout << "[Prefetch Begin] base_addr " << std::hex << base_addr << ", " << std::dec;)
+	for (int d = 1; d < this->pattern_len; d += 1) { // d: 1 -> 64
+		for (int sgn = +1; sgn >= -1; sgn -= 2) {	 // sgn: -1, 1
+			pf_offset = region_offset + sgn * d;
+			if (0 <= pf_offset && pf_offset < this->pattern_len && pattern[pf_offset] > 0) {
+				DEBUG(cout << pf_offset << " ";)
+				uint64_t pf_address = (region_number * this->pattern_len + pf_offset) << LOG2_BLOCK_SIZE;
+				// MSHR + PQ < MSHR - 1 && PQ is not full
+				if (cache->get_occupancy(3, 0) + cache->get_occupancy(0, 0) < cache->get_size(0, 0) - 1 && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
+					uint32_t pf_metadata = 0;
+					pf_metadata = __add_pf_sour_level(pf_metadata, 1);
+					if (pattern[pf_offset] == 1) { // FILL_L1_PMP = 1
+						pf_metadata = __add_pf_dest_level(pf_metadata, 1);
+					} else {
+						pf_metadata = __add_pf_dest_level(pf_metadata, 2);
+					}
+
+					int ok = cache->prefetch_line(pf_address, pattern[pf_offset] == 1 ? true : false, pf_metadata);
+					pf_issued += ok;
+					if (ok && !cache->warmup) {
+						pmp_parent->record_prefetch_issue(pf_address);
+						if (pattern[pf_offset] == 1) {
+							prefetch_to_l1++;
+						} else {
+							prefetch_to_l2++;
+						}
+					}
+					pattern[pf_offset] = 0;
+				} else {
+					DEBUG(cout << std::endl;)
+					return pf_issued;
+				}
+			}
+		}
+	}
+	DEBUG(cout << std::endl;)
+	Super::erase(key);
+	return pf_issued;
+}
+
 void pmp::PMP::access(uint64_t block_number, uint64_t pc) {
+	// (Aditya): Check if the current access is a useful prefetch.
+	auto* inflight_entry = this->inflight_pf_tracker.find(this->inflight_pf_tracker.build_key(block_number));
+	if (inflight_entry && !inflight_entry->data.used) {
+		this->useful_prefetches++;
+		inflight_entry->data.used = true;
+	}
+	// (Aditya): End of change.
+
 	if (this->debug_level >= 2)
 		std::cerr << "[ PMP] access(block_number=0x" << std::hex << block_number << ", pc=0x" << pc << ")" << std::dec << std::endl;
 
@@ -82,7 +153,9 @@ int pmp::PMP::prefetch(CACHE* cache, uint64_t block_number) {
 	if (this->debug_level >= 2)
 		std::cerr << " PMP::prefetch(cache=" << cache->NAME << ", block_number=" << std::hex << block_number << ")" << std::dec
 				  << std::endl;
-	int pf_issued = this->pf_buffer.prefetch(cache, block_number);
+	// (Aditya): Pass 'this' to the prefetch buffer to establish a callback path.
+	int pf_issued = this->pf_buffer.prefetch(this, cache, block_number);
+	// (Aditya): End of change.
 	if (this->debug_level >= 2)
 		std::cerr << "[ PMP::prefetch] pf_issued=" << pf_issued << std::dec << std::endl;
 	return pf_issued;
@@ -283,10 +356,62 @@ std::vector<int> pmp::PMP::vote(const std::vector<pmp::OffsetPatternTableData>& 
 	return res;
 }
 
+// (Aditya): Implement the adaptive threshold feedback loop and prefetch recording.
+void pmp::PMP::record_prefetch_issue(uint64_t pf_addr) {
+	uint64_t pf_block = pf_addr >> LOG2_BLOCK_SIZE;
+	auto evicted = this->inflight_pf_tracker.insert(this->inflight_pf_tracker.build_key(pf_block), {});
+	if (evicted.valid && !evicted.data.used) {
+		// An unused prefetch was evicted from our tracker, count it as useless
+		this->useless_prefetches++;
+	}
+}
+
+void pmp::PMP::cycle_operate() {
+	// Define constants for the adaptive mechanism
+	const uint64_t ADAPTIVE_INTERVAL = 10000;
+	const double HIGH_ACCURACY_TARGET = 0.75;
+	const double LOW_ACCURACY_TARGET = 0.40;
+	const double THRESHOLD_STEP = 0.01;
+	const double MAX_L1D_THRESH = 0.90;
+	const double MIN_L1D_THRESH = 0.10;
+
+	cycle_count++;
+	if (cycle_count < ADAPTIVE_INTERVAL) {
+		return;
+	}
+
+	// Interval reached, perform adaptation
+	uint64_t total_evaluated = useful_prefetches + useless_prefetches;
+	if (total_evaluated > 50) { // Only adapt if we have a meaningful number of samples
+		double current_accuracy = (double)useful_prefetches / total_evaluated;
+
+		if (current_accuracy > HIGH_ACCURACY_TARGET) {
+			// Too conservative, get more aggressive
+			this->L1D_THRESH = std::max(MIN_L1D_THRESH, this->L1D_THRESH - THRESHOLD_STEP);
+		} else if (current_accuracy < LOW_ACCURACY_TARGET) {
+			// Too aggressive, get more conservative
+			this->L1D_THRESH = std::min(MAX_L1D_THRESH, this->L1D_THRESH + THRESHOLD_STEP);
+		}
+
+		// Update L2C threshold to be proportional
+		this->L2C_THRESH = this->L1D_THRESH * this->L2C_THRESH_RATIO;
+	}
+
+	// Reset for the next interval
+	this->useful_prefetches = 0;
+	this->useless_prefetches = 0;
+	this->cycle_count = 0;
+}
+// (Aditya): End of change.
+
 void CACHE::prefetcher_initialize() {
 	std::cout << NAME << " PMP prefetcher" << std::endl;
-	prefetchers = std::vector<pmp::PMP>(
-		NUM_CPUS, pmp::PMP(PATTERN_LEN, pmp::OFFSET_BITS, OPT_SIZE, OFFSET_MAX_CONF, OPT_WAYS, pmp::PC_BITS, PPT_SIZE, PC_MAX_CONF, PPT_WAYS, FT_SIZE, FT_WAY, AT_SIZE, AT_WAY, PF_BUFFER_SIZE, PF_BUFFER_WAY, FILL_L1, FILL_L2, FILL_LLC, DEBUG_LEVEL, cpu));
+	prefetchers = std::vector<pmp::PMP>(NUM_CPUS,
+		pmp::PMP(PATTERN_LEN, pmp::OFFSET_BITS, OPT_SIZE, OFFSET_MAX_CONF, OPT_WAYS, pmp::PC_BITS, PPT_SIZE,
+			PC_MAX_CONF, PPT_WAYS, FT_SIZE, FT_WAY, AT_SIZE, AT_WAY, pmp::PF_BUFFER_SIZE, pmp::PF_BUFFER_WAY,
+			FILL_L1, FILL_L2, FILL_LLC,
+			DEBUG_LEVEL,
+			cpu));
 }
 
 uint32_t CACHE::prefetcher_cache_operate(uint64_t addr, uint64_t ip, uint8_t cache_hit, uint8_t type, uint32_t metadata_in) {
@@ -326,7 +451,11 @@ uint32_t CACHE::prefetcher_cache_fill(uint64_t addr, uint32_t set, uint32_t way,
 	return metadata_in;
 }
 
-void CACHE::prefetcher_cycle_operate() {}
+void CACHE::prefetcher_cycle_operate() {
+	// (Aditya): Call the prefetcher's cycle_operate to run the adaptive logic.
+	prefetchers[cpu].cycle_operate();
+	// (Aditya): End of change.
+}
 
 void CACHE::prefetcher_final_stats() {
 	std::cout << "Prefetch Request to L1: " << pmp::prefetch_to_l1 << ", "
