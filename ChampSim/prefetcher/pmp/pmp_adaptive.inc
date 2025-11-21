@@ -1,4 +1,4 @@
-#include "pmp.h"
+#include "pmp_adaptive.h"
 #include "custom_util.h"
 
 #include <bits/stdc++.h>
@@ -65,7 +65,7 @@ int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_
 				DEBUG(cout << pf_offset << " ";)
 				uint64_t pf_address = (region_number * this->pattern_len + pf_offset) << LOG2_BLOCK_SIZE;
 				// MSHR + PQ < MSHR - 1 && PQ is not full
-				if (cache->get_occupancy(3, 0) + cache->get_occupancy(0, 0) < cache->get_size(0, 0) - 1 && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
+				if (cache->get_occupancy(0, 0) < (cache->get_size(0, 0) - pmp_parent->reserved_mshrs) && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
 					uint32_t pf_metadata = 0;
 					pf_metadata = __add_pf_sour_level(pf_metadata, 1);
 					if (pattern[pf_offset] == 1) { // FILL_L1_PMP = 1
@@ -388,9 +388,13 @@ void pmp::PMP::cycle_operate() {
 		if (current_accuracy > HIGH_ACCURACY_TARGET) {
 			// Too conservative, get more aggressive
 			this->L1D_THRESH = std::max(MIN_L1D_THRESH, this->L1D_THRESH - THRESHOLD_STEP);
+			this->reserved_mshrs = 1; // High accuracy -> Be aggressive
 		} else if (current_accuracy < LOW_ACCURACY_TARGET) {
 			// Too aggressive, get more conservative
 			this->L1D_THRESH = std::min(MAX_L1D_THRESH, this->L1D_THRESH + THRESHOLD_STEP);
+			this->reserved_mshrs = 4; // Low accuracy -> Be conservative
+		} else {
+			this->reserved_mshrs = 2; // Moderate accuracy -> Default
 		}
 
 		// Update L2C threshold to be proportional

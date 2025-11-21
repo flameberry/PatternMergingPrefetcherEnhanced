@@ -11,6 +11,7 @@
 import os
 import sys
 import datetime
+import argparse
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -99,6 +100,8 @@ def generate_reports(output_dir):
         try:
             cycles_no = cycles["no"][workload][0]
             cycles_pmp = cycles["pmp"][workload][0]
+            ipc_no = ipc["no"][workload][0]
+            ipc_pmp = ipc["pmp"][workload][0]
             speedup = (
                 cycles_no / cycles_pmp if cycles_no > 0 and cycles_pmp > 0 else 1.0
             )
@@ -131,6 +134,8 @@ def generate_reports(output_dir):
             per_workload_data.append(
                 {
                     "workload": clean_name,
+                    "ipc_no": ipc_no,
+                    "ipc_pmp": ipc_pmp,
                     "pmp_Speedup": speedup,
                     "pmp_Overall_Accuracy": overall_accuracy,
                     "pmp_LLC_Coverage": coverage,
@@ -171,6 +176,8 @@ def generate_reports(output_dir):
 
     summary_data = {
         "pmp_GMean_Speedup": gmean_speedup,
+        "pmp_Mean_Baseline_IPC": df_detail["ipc_no"].mean(),
+        "pmp_Mean_PMP_IPC": df_detail["ipc_pmp"].mean(),
         "pmp_Mean_Overall_Accuracy": df_detail["pmp_Overall_Accuracy"].mean(),
         "pmp_Mean_LLC_Coverage": df_detail["pmp_LLC_Coverage"].mean(),
         "pmp_Mean_Late_Ratio": mean_late_ratio,
@@ -420,11 +427,55 @@ def plot_l1_l2_accuracy_bar(df, output_image):
     print(f"Saved {os.path.basename(output_image)}")
 
 
+def plot_ipc_comparison_bar(df, output_image):
+    if df.empty or not all(c in df.columns for c in ["workload", "ipc_no", "ipc_pmp"]):
+        print(
+            "Warning: IPC data missing. Skipping IPC comparison bar chart.",
+            file=sys.stderr,
+        )
+        return
+
+    df = df.sort_values(by="pmp_Speedup", ascending=False)
+    n_workloads = len(df["workload"])
+    index = np.arange(n_workloads)
+    bar_width = 0.35
+
+    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 8))
+    ax.bar(
+        index - bar_width / 2,
+        df["ipc_no"],
+        bar_width,
+        label="Baseline IPC (no prefetcher)",
+        color="#cc3300",
+    )
+    ax.bar(
+        index + bar_width / 2,
+        df["ipc_pmp"],
+        bar_width,
+        label="PMP IPC",
+        color="#007acc",
+    )
+
+    ax.set_xlabel("Workload", fontsize=12)
+    ax.set_ylabel("Instructions Per Cycle (IPC)", fontsize=12)
+    ax.set_title("Baseline IPC vs. PMP IPC", fontsize=16, fontweight="bold")
+    ax.set_xticks(index)
+    ax.set_xticklabels(df["workload"], rotation=90, fontsize=8)
+    ax.legend()
+    ax.grid(axis="y", linestyle=":", alpha=0.7)
+
+    fig.tight_layout()
+    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
 def generate_graphs(df_detail, df_summary, output_dir):
     """Generates and saves all plots."""
     print("\n--- 5. Generating All PMP Graphs ---")
 
     plot_functions = {
+        "pmp_ipc_comparison.png": (plot_ipc_comparison_bar, df_detail),
         "pmp_speedup_per_workload.png": (plot_speedup_bar, df_detail),
         "pmp_speedup_distribution.png": (plot_speedup_distribution, df_detail),
         "pmp_accuracy_vs_speedup.png": (plot_accuracy_vs_speedup, df_detail),
@@ -449,6 +500,319 @@ def generate_graphs(df_detail, df_summary, output_dir):
     print("\nGraph generation complete.")
 
 
+def generate_comparison_graphs(merged_df, output_dir):
+    """Generates all comparison plots."""
+    print("--- 7. Generating Comparison Graphs ---")
+
+    comparison_plots = {
+        "comparison_ipc_3way.png": plot_ipc_comparison_3way,
+        "comparison_speedup.png": plot_speedup_comparison,
+        "comparison_accuracy.png": plot_accuracy_comparison,
+        "comparison_coverage.png": plot_coverage_comparison,
+    }
+
+    for filename, plot_func in comparison_plots.items():
+        if not merged_df.empty:
+            plot_func(merged_df, os.path.join(output_dir, filename))
+        else:
+            print(
+                f"Warning: Merged dataframe for {filename} is empty. Skipping comparison plot.",
+                file=sys.stderr,
+            )
+
+
+def plot_ipc_comparison_3way(df, output_image):
+    if not all(
+        c in df.columns for c in ["workload", "ipc_no", "ipc_default", "ipc_adaptive"]
+    ):
+        print(
+            "Warning: Missing data for 3-way IPC comparison. Skipping plot.",
+            file=sys.stderr,
+        )
+        return
+
+    df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
+    n_workloads = len(df_sorted)
+    index = np.arange(n_workloads)
+    bar_width = 0.25
+
+    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
+    ax.bar(
+        index - bar_width,
+        df_sorted["ipc_no"],
+        bar_width,
+        label="Baseline (no)",
+        color="#6c757d",
+    )
+    ax.bar(
+        index, df_sorted["ipc_default"], bar_width, label="Default PMP", color="#ffc107"
+    )
+    ax.bar(
+        index + bar_width,
+        df_sorted["ipc_adaptive"],
+        bar_width,
+        label="Adaptive PMP",
+        color="#007acc",
+    )
+
+    ax.set_xlabel("Workload", fontsize=12)
+    ax.set_ylabel("Instructions Per Cycle (IPC)", fontsize=12)
+    ax.set_title(
+        "IPC Comparison: Baseline vs. Default PMP vs. Adaptive PMP",
+        fontsize=16,
+        fontweight="bold",
+    )
+    ax.set_xticks(index)
+    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
+    ax.legend()
+    ax.grid(axis="y", linestyle=":", alpha=0.7)
+    fig.tight_layout()
+    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
+def plot_speedup_comparison(df, output_image):
+    if not all(
+        c in df.columns for c in ["workload", "speedup_default", "speedup_adaptive"]
+    ):
+        print(
+            "Warning: Missing data for speedup comparison. Skipping plot.",
+            file=sys.stderr,
+        )
+        return
+
+    df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
+    n_workloads = len(df_sorted)
+    index = np.arange(n_workloads)
+    bar_width = 0.35
+
+    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
+    ax.bar(
+        index - bar_width / 2,
+        df_sorted["speedup_default"],
+        bar_width,
+        label="Default PMP Speedup",
+        color="#ffc107",
+    )
+    ax.bar(
+        index + bar_width / 2,
+        df_sorted["speedup_adaptive"],
+        bar_width,
+        label="Adaptive PMP Speedup",
+        color="#007acc",
+    )
+
+    ax.axhline(y=1.0, color="grey", linestyle="--", linewidth=0.8)
+    ax.set_xlabel("Workload", fontsize=12)
+    ax.set_ylabel("Speedup (over baseline)", fontsize=12)
+    ax.set_title(
+        "Speedup Comparison: Default PMP vs. Adaptive PMP",
+        fontsize=16,
+        fontweight="bold",
+    )
+    ax.set_xticks(index)
+    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
+    ax.legend()
+    ax.grid(axis="y", linestyle=":", alpha=0.7)
+    fig.tight_layout()
+    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
+def plot_accuracy_comparison(df, output_image):
+    if not all(
+        c in df.columns
+        for c in [
+            "workload",
+            "accuracy_l1d_default",
+            "accuracy_l1d_adaptive",
+            "accuracy_l2c_default",
+            "accuracy_l2c_adaptive",
+            "accuracy_overall_default",
+            "accuracy_overall_adaptive",
+        ]
+    ):
+        print(
+            "Warning: Missing data for accuracy comparison. Skipping plot.",
+            file=sys.stderr,
+        )
+        return
+
+    df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
+    n_workloads = len(df_sorted)
+    index = np.arange(n_workloads)
+    bar_width = 0.35
+
+    fig, axes = plt.subplots(
+        3, 1, figsize=(max(12, n_workloads * 0.4), 18), sharex=True
+    )
+    metrics = [
+        ("L1D Accuracy", "accuracy_l1d"),
+        ("L2C Accuracy", "accuracy_l2c"),
+        ("Overall Accuracy", "accuracy_overall"),
+    ]
+
+    for i, (title, metric_base) in enumerate(metrics):
+        axes[i].bar(
+            index - bar_width / 2,
+            df_sorted[f"{metric_base}_default"],
+            bar_width,
+            label="Default",
+            color="#ffc107",
+        )
+        axes[i].bar(
+            index + bar_width / 2,
+            df_sorted[f"{metric_base}_adaptive"],
+            bar_width,
+            label="Adaptive",
+            color="#007acc",
+        )
+        axes[i].set_ylabel("Accuracy")
+        axes[i].set_title(title)
+        axes[i].legend()
+        axes[i].grid(axis="y", linestyle=":", alpha=0.7)
+        axes[i].yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        axes[i].set_ylim(
+            0,
+            max(
+                1.0,
+                df_sorted[[f"{metric_base}_default", f"{metric_base}_adaptive"]]
+                .max()
+                .max()
+                * 1.1,
+            ),
+        )
+
+    plt.xlabel("Workload")
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    fig.suptitle(
+        "PMP Accuracy Comparison: Default vs. Adaptive", fontsize=16, fontweight="bold"
+    )
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
+    plt.savefig(output_image, dpi=300)
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
+def plot_coverage_comparison(df, output_image):
+    if not all(
+        c in df.columns
+        for c in ["workload", "coverage_llc_default", "coverage_llc_adaptive"]
+    ):
+        print(
+            "Warning: Missing data for coverage comparison. Skipping plot.",
+            file=sys.stderr,
+        )
+        return
+
+    df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
+    n_workloads = len(df_sorted)
+    index = np.arange(n_workloads)
+    bar_width = 0.35
+
+    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
+    ax.bar(
+        index - bar_width / 2,
+        df_sorted["coverage_llc_default"],
+        bar_width,
+        label="Default PMP",
+        color="#ffc107",
+    )
+    ax.bar(
+        index + bar_width / 2,
+        df_sorted["coverage_llc_adaptive"],
+        bar_width,
+        label="Adaptive PMP",
+        color="#007acc",
+    )
+
+    ax.set_xlabel("Workload", fontsize=12)
+    ax.set_ylabel("LLC Coverage", fontsize=12)
+    ax.set_title(
+        "LLC Coverage Comparison: Default PMP vs. Adaptive PMP",
+        fontsize=16,
+        fontweight="bold",
+    )
+    ax.set_xticks(index)
+    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
+    ax.legend()
+    ax.grid(axis="y", linestyle=":", alpha=0.7)
+    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    ax.set_ylim(0, 1)
+    fig.tight_layout()
+    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
+def generate_comparison_report(current_df, compare_dir, output_dir):
+    """Loads a previous report and generates comparison graphs."""
+    print("\n--- 6. Generating Comparison Report ---")
+    comparison_csv_path = os.path.join(compare_dir, "pmp_per_workload_metrics.csv")
+    if not os.path.exists(comparison_csv_path):
+        print(
+            f"Error: Could not find 'pmp_per_workload_metrics.csv' in '{compare_dir}'",
+            file=sys.stderr,
+        )
+        return
+
+    # Load and process the comparison dataframe (default PMP)
+    default_df = pd.read_csv(comparison_csv_path)
+    rename_dict_default = {
+        "ipc_pmp": "ipc_default",
+        "pmp_Speedup": "speedup_default",
+        "pmp_Overall_Accuracy": "accuracy_overall_default",
+        "pmp_LLC_Coverage": "coverage_llc_default",
+        "pmp_L1D_Accuracy": "accuracy_l1d_default",
+        "pmp_L2C_Accuracy": "accuracy_l2c_default",
+    }
+    default_df = default_df.rename(columns=rename_dict_default)
+
+    # Load and process the current run's dataframe (adaptive PMP)
+    adaptive_df = current_df.rename(
+        columns={
+            "ipc_pmp": "ipc_adaptive",
+            "pmp_Speedup": "speedup_adaptive",
+            "pmp_Overall_Accuracy": "accuracy_overall_adaptive",
+            "pmp_LLC_Coverage": "coverage_llc_adaptive",
+            "pmp_L1D_Accuracy": "accuracy_l1d_adaptive",
+            "pmp_L2C_Accuracy": "accuracy_l2c_adaptive",
+        }
+    )
+
+    # Merge dataframes
+    cols_to_merge = [
+        "workload",
+        "ipc_default",
+        "speedup_default",
+        "accuracy_overall_default",
+        "coverage_llc_default",
+        "accuracy_l1d_default",
+        "accuracy_l2c_default",
+    ]
+    # Use only the necessary columns from the default dataframe
+    merged_df = pd.merge(
+        adaptive_df, default_df[cols_to_merge], on="workload", how="inner"
+    )
+
+    if merged_df.empty:
+        print(
+            "Warning: No common workloads found between current and comparison data. Skipping comparison.",
+            file=sys.stderr,
+        )
+        return
+
+    # Save merged data to a new CSV
+    comparison_csv_path = os.path.join(output_dir, "pmp_comparison_per_workload.csv")
+    merged_df.to_csv(comparison_csv_path, index=False, float_format="%.4f")
+    print(f"Saved comparison metrics to {comparison_csv_path}")
+
+    # Generate comparison graphs
+    generate_comparison_graphs(merged_df, output_dir)
+
+
 def create_output_directory():
     """Creates a timestamped directory for the results at the project root."""
     timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -468,6 +832,16 @@ def create_output_directory():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate PMP evaluation reports and graphs."
+    )
+    parser.add_argument(
+        "--compare",
+        metavar="PATH",
+        help="Path to a previous result directory to compare against.",
+    )
+    args = parser.parse_args()
+
     output_directory = create_output_directory()
     if not output_directory:
         sys.exit(1)
@@ -480,5 +854,15 @@ if __name__ == "__main__":
         print(
             "Could not generate graphs because data generation failed.", file=sys.stderr
         )
+
+    # If a comparison directory is provided, run the comparison
+    if args.compare:
+        if df_detail is not None:
+            generate_comparison_report(df_detail, args.compare, output_directory)
+        else:
+            print(
+                "Could not generate comparison report because initial data generation failed.",
+                file=sys.stderr,
+            )
 
     print("\n--- PMP Report Generation Complete ---")
