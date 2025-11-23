@@ -270,8 +270,8 @@ def plot_speedup_bar(df, output_image):
     )
     plt.ylabel("Speedup", fontsize=10)
     plt.xlabel("Workload", fontsize=10)
-    plt.xticks(rotation=90, fontsize=4)
-    plt.yticks(fontsize=8)
+    plt.xticks(rotation=90, fontsize=12)
+    plt.yticks(fontsize=12)
     plt.grid(axis="y", linestyle=":", alpha=0.5)
     plt.tight_layout()
     plt.savefig(output_image, dpi=300, bbox_inches="tight")
@@ -323,6 +323,8 @@ def plot_accuracy_vs_speedup(df, output_image):
     plt.xlabel("Per-Workload Accuracy", fontsize=12)
     plt.ylabel("Per-Workload Speedup", fontsize=12)
     plt.gca().xaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
     plt.grid(True, linestyle=":", alpha=0.7)
     plt.tight_layout()
     plt.savefig(output_image, dpi=300)
@@ -351,10 +353,11 @@ def plot_radar_chart(df, output_image):
     ax.fill(angles, values, color="#007acc", alpha=0.25)
     ax.plot(angles, values, color="#007acc", linewidth=2)
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    ax.tick_params(axis="y", labelsize=12)
     max_val = max(values) if values else 0
     ax.set_ylim(0, max(max_val * 1.2, 0.1))
     ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(labels, fontsize=12)
+    ax.set_xticklabels(labels, fontsize=14)
     for angle, value in zip(angles[:-1], values[:-1]):
         ax.text(
             angle,
@@ -375,17 +378,17 @@ def plot_accuracy_coverage_summary(df, output_image):
         # Reconstruct metrics dictionary in the requested order:
         # L1D Acc, L1D Cov, L2C Acc, L2C Cov, LLC Cov
         metrics = {}
-        
+
         metrics["L1D Accuracy"] = df["pmp_Mean_L1D_Accuracy"].iloc[0]
-        
+
         if "pmp_Mean_L1D_Coverage" in df.columns:
             metrics["L1D Coverage"] = df["pmp_Mean_L1D_Coverage"].iloc[0]
-            
+
         metrics["L2C Accuracy"] = df["pmp_Mean_L2C_Accuracy"].iloc[0]
-        
+
         if "pmp_Mean_L2C_Coverage" in df.columns:
             metrics["L2C Coverage"] = df["pmp_Mean_L2C_Coverage"].iloc[0]
-            
+
         metrics["LLC Coverage"] = df["pmp_Mean_LLC_Coverage"].iloc[0]
 
     except (KeyError, IndexError) as e:
@@ -406,6 +409,8 @@ def plot_accuracy_coverage_summary(df, output_image):
     plt.title("Overall Coverage and Accuracy", fontsize=16, fontweight="bold")
     plt.ylabel("Rate", fontsize=12)
     plt.gca().yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    plt.yticks(fontsize=12)
+    plt.xticks(fontsize=12)
     plt.ylim(0, 1.0)
     for bar in bars:
         yval = bar.get_height()
@@ -444,6 +449,8 @@ def plot_useful_useless_summary(df, output_image):
     plt.yscale("log")
     plt.title("Average Useful and Useless Prefetches", fontsize=16, fontweight="bold")
     plt.ylabel("Number (Log Scale)", fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.xticks(fontsize=12)
     for bar in plt.gca().patches:
         yval = bar.get_height()
         if yval > 0:
@@ -467,11 +474,15 @@ def plot_l1_l2_accuracy_bar(df, output_image):
     ):
         print("Warning: L1/L2 Accuracy data missing. Skipping chart.", file=sys.stderr)
         return
+
     df = df.sort_values(by="pmp_Overall_Accuracy", ascending=False)
+
     n_workloads = len(df["workload"])
     index = np.arange(n_workloads)
     bar_width = 0.35
+
     fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 8))
+
     ax.bar(
         index - bar_width / 2,
         df["pmp_L1D_Accuracy"],
@@ -486,17 +497,26 @@ def plot_l1_l2_accuracy_bar(df, output_image):
         label="L2C Accuracy",
         color="#009966",
     )
+
     ax.set_xlabel("Workload", fontsize=12)
     ax.set_ylabel("Accuracy", fontsize=12)
     ax.set_title("PMP L1D vs L2C Prefetch Accuracy", fontsize=16, fontweight="bold")
+
     ax.set_xticks(index)
-    ax.set_xticklabels(df["workload"], rotation=90, fontsize=8)
+    ax.set_xticklabels(df["workload"], rotation=90, fontsize=14)
     ax.legend()
+
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.grid(axis="y", linestyle=":", alpha=0.7)
+
+    # >>> KEY LINE TO REMOVE EMPTY SIDES <<<
+    ax.set_xlim(-0.5, n_workloads - 0.5)
+
     fig.tight_layout()
+    plt.subplots_adjust(left=0.03, right=0.995)
     plt.savefig(output_image, dpi=300, bbox_inches="tight")
     plt.close()
+
     print(f"Saved {os.path.basename(output_image)}")
 
 
@@ -533,7 +553,7 @@ def plot_ipc_comparison_bar(df, output_image):
     ax.set_ylabel("Instructions Per Cycle (IPC)", fontsize=12)
     ax.set_title("Baseline IPC vs. PMP IPC", fontsize=16, fontweight="bold")
     ax.set_xticks(index)
-    ax.set_xticklabels(df["workload"], rotation=90, fontsize=8)
+    ax.set_xticklabels(df["workload"], rotation=90, fontsize=14)
     ax.legend()
     ax.grid(axis="y", linestyle=":", alpha=0.7)
 
@@ -615,7 +635,7 @@ def plot_summary_comparison(df, output_image):
     for label, base in desired_metrics:
         col_def = f"{base}_default"
         col_adap = f"{base}_adaptive"
-        
+
         if col_def in df.columns and col_adap in df.columns:
             labels.append(label)
             default_means.append(df[col_def].mean())
@@ -629,28 +649,39 @@ def plot_summary_comparison(df, output_image):
     width = 0.35
 
     fig, ax = plt.subplots(figsize=(max(10, len(labels) * 2), 6))
-    
-    rects1 = ax.bar(x - width/2, default_means, width, label='Default', color='#ffc107')
-    rects2 = ax.bar(x + width/2, adaptive_means, width, label='Adaptive', color='#007acc')
 
-    ax.set_ylabel('Rate')
-    ax.set_title('Overall Performance Summary Comparison', fontsize=16, fontweight='bold')
+    rects1 = ax.bar(
+        x - width / 2, default_means, width, label="Default", color="#ffc107"
+    )
+    rects2 = ax.bar(
+        x + width / 2, adaptive_means, width, label="Adaptive", color="#007acc"
+    )
+
+    ax.set_ylabel("Rate")
+    ax.set_title(
+        "Overall Performance Summary Comparison", fontsize=16, fontweight="bold"
+    )
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
     ax.set_ylim(0, 1.05)
-    ax.grid(axis='y', linestyle=':', alpha=0.7)
+    ax.grid(axis="y", linestyle=":", alpha=0.7)
 
     # Add value labels on top of bars
     def autolabel(rects):
         for rect in rects:
             height = rect.get_height()
-            ax.annotate(f'{height:.1%}',
-                        xy=(rect.get_x() + rect.get_width() / 2, height),
-                        xytext=(0, 3),  # 3 points vertical offset
-                        textcoords="offset points",
-                        ha='center', va='bottom', fontsize=9, fontweight='bold')
+            ax.annotate(
+                f"{height:.1%}",
+                xy=(rect.get_x() + rect.get_width() / 2, height),
+                xytext=(0, 3),  # 3 points vertical offset
+                textcoords="offset points",
+                ha="center",
+                va="bottom",
+                fontsize=9,
+                fontweight="bold",
+            )
 
     autolabel(rects1)
     autolabel(rects2)
@@ -727,7 +758,7 @@ def plot_l1_l2_accuracy_comparison(df, output_image):
         axes[i].set_ylim(0, max(1.0, max_val * 1.1))
 
     plt.xlabel("Workload")
-    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=14)
     fig.suptitle(
         "PMP L1D & L2C Accuracy Comparison: Default vs. Adaptive",
         fontsize=16,
@@ -751,10 +782,14 @@ def plot_ipc_comparison_3way(df, output_image):
 
     df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
     n_workloads = len(df_sorted)
-    index = np.arange(n_workloads)
-    bar_width = 0.25
 
-    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
+    # Add padding of 1 index on each side
+    index = np.arange(n_workloads) + 1
+    bar_width = 0.28
+
+    fig_width = max(10, n_workloads * 0.28)
+    fig, ax = plt.subplots(figsize=(fig_width, 4))
+
     ax.bar(
         index - bar_width,
         df_sorted["ipc_no"],
@@ -773,19 +808,27 @@ def plot_ipc_comparison_3way(df, output_image):
         color="#007acc",
     )
 
-    ax.set_xlabel("Workload", fontsize=12)
-    ax.set_ylabel("Instructions Per Cycle (IPC)", fontsize=12)
+    # Set x-ticks including the blank padding at both ends
+    ax.set_xticks(index)
+    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=10)
+
+    ax.set_xlabel("Workload", fontsize=11)
+    ax.set_ylabel("Instructions Per Cycle (IPC)", fontsize=11)
     ax.set_title(
         "IPC Comparison: Baseline vs. Default PMP vs. Adaptive PMP",
-        fontsize=16,
+        fontsize=13,
         fontweight="bold",
     )
-    ax.set_xticks(index)
-    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
-    ax.legend()
+
     ax.grid(axis="y", linestyle=":", alpha=0.7)
-    fig.tight_layout()
-    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    ax.legend(fontsize=9)
+
+    # Add uniform horizontal padding around the axes
+    ax.set_xlim(0, n_workloads + 1)
+
+    plt.subplots_adjust(bottom=0.32, left=0.06, right=0.99, top=0.88)
+
+    plt.savefig(output_image, dpi=350, bbox_inches="tight")
     plt.close()
     print(f"Saved {os.path.basename(output_image)}")
 
@@ -802,39 +845,60 @@ def plot_speedup_comparison(df, output_image):
 
     df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
     n_workloads = len(df_sorted)
-    index = np.arange(n_workloads)
+
+    # Shift indices by +1 to create padding at left and right ends
+    index = np.arange(n_workloads) + 1
+
     bar_width = 0.35
 
-    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
+    # Compact figure size
+    fig_width = max(14, n_workloads * 0.22)
+    fig, ax = plt.subplots(figsize=(fig_width, 3.6))
+
     ax.bar(
         index - bar_width / 2,
         df_sorted["speedup_default"],
         bar_width,
-        label="Default PMP Speedup",
+        label="Default PMP",
         color="#ffc107",
     )
     ax.bar(
         index + bar_width / 2,
         df_sorted["speedup_adaptive"],
         bar_width,
-        label="Adaptive PMP Speedup",
+        label="Adaptive PMP",
         color="#007acc",
     )
 
-    ax.axhline(y=1.0, color="grey", linestyle="--", linewidth=0.8)
-    ax.set_xlabel("Workload", fontsize=12)
-    ax.set_ylabel("Speedup (over baseline)", fontsize=12)
+    ax.axhline(y=1.0, color="grey", linestyle="--", linewidth=0.7)
+
+    ax.set_ylabel("Speedup", fontsize=9)
     ax.set_title(
         "Speedup Comparison: Default PMP vs. Adaptive PMP",
-        fontsize=16,
+        fontsize=12,
         fontweight="bold",
+        pad=10,
     )
-    ax.set_xticks(index)
-    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
-    ax.legend()
-    ax.grid(axis="y", linestyle=":", alpha=0.7)
-    fig.tight_layout()
-    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+
+    # Show fewer xtick labels
+    step = max(1, n_workloads // 50)
+    ax.set_xticks(index[::step])
+    ax.set_xticklabels(
+        df_sorted["workload"].iloc[::step],
+        rotation=90,
+        fontsize=8,
+    )
+
+    ax.grid(axis="y", linestyle=":", alpha=0.6)
+    ax.legend(fontsize=8, loc="upper right")
+
+    # **Add spacing around bars**
+    ax.set_xlim(0, n_workloads + 1)
+
+    # Adjust bottom padding for rotated labels
+    plt.subplots_adjust(bottom=0.32, left=0.06, right=0.98, top=0.88)
+
+    plt.savefig(output_image, dpi=400, bbox_inches="tight")
     plt.close()
     print(f"Saved {os.path.basename(output_image)}")
 
@@ -909,7 +973,7 @@ def plot_accuracy_comparison(df, output_image):
         axes[i].set_ylim(0, max(1.0, max_val * 1.1))
 
     plt.xlabel("Workload")
-    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=14)
     fig.suptitle(
         "PMP Accuracy & L1/L2 Coverage Comparison: Default vs. Adaptive",
         fontsize=16,
@@ -979,7 +1043,7 @@ def plot_coverage_comparison(df, output_image):
         axes[i].set_ylim(0, 1.05)
 
     plt.xlabel("Workload")
-    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=14)
     fig.suptitle(
         "PMP Coverage Comparison: Default vs. Adaptive", fontsize=16, fontweight="bold"
     )
