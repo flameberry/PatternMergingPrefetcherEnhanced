@@ -1,0 +1,778 @@
+41 41 41
+Available num physical pages: 35184372088576
+WARNING: physical memory size is smaller than virtual memory size
+
+*** ChampSim Multicore Out-of-Order Simulator ***
+
+Warmup Instructions: 5000000
+Simulation Instructions: 200000000
+Number of CPUs: 1
+Page size: 4096
+
+Basic BTB sets: 1024 ways: 8 indirect buffer size: 4096 RAS size: 64
+Off-chip DRAM Size: 4 GiB Channels: 1 Width: 64-bit Data Rate: 3200 MT/s
+Max paddr 12M
+Warmup finished CPU 0 instructions: 5000002 cycles: 1271741 cumulative IPC: 3.93162 (Simulation time: 0 hr 2 min 14 sec) 
+
+Warmup complete CPU 0 instructions: 5000002 cycles: 1271741 (Simulation time: 0 hr 2 min 14 sec) 
+
+Heartbeat CPU 0 instructions: 10000002 cycles: 5281475 heartbeat IPC: 1.89342 cumulative IPC: 1.24697 (Simulation time: 0 hr 7 min 47 sec) 
+Heartbeat CPU 0 instructions: 20000004 cycles: 15033044 heartbeat IPC: 1.02548 cumulative IPC: 1.09002 (Simulation time: 0 hr 20 min 46 sec) 
+Heartbeat CPU 0 instructions: 30000003 cycles: 23716561 heartbeat IPC: 1.15161 cumulative IPC: 1.11385 (Simulation time: 0 hr 33 min 46 sec) 
+Heartbeat CPU 0 instructions: 40000002 cycles: 32953646 heartbeat IPC: 1.0826 cumulative IPC: 1.10474 (Simulation time: 0 hr 47 min 14 sec) 
+Heartbeat CPU 0 instructions: 50000000 cycles: 41419653 heartbeat IPC: 1.1812 cumulative IPC: 1.12086 (Simulation time: 0 hr 59 min 51 sec) 
+Heartbeat CPU 0 instructions: 60000003 cycles: 51300720 heartbeat IPC: 1.01204 cumulative IPC: 1.09937 (Simulation time: 1 hr 13 min 50 sec) 
+Heartbeat CPU 0 instructions: 70000004 cycles: 60664494 heartbeat IPC: 1.06795 cumulative IPC: 1.09441 (Simulation time: 1 hr 26 min 54 sec) 
+Heartbeat CPU 0 instructions: 80000003 cycles: 70853659 heartbeat IPC: 0.981435 cumulative IPC: 1.07787 (Simulation time: 1 hr 40 min 37 sec) 
+Heartbeat CPU 0 instructions: 90000002 cycles: 81804262 heartbeat IPC: 0.913192 cumulative IPC: 1.05548 (Simulation time: 1 hr 54 min 52 sec) 
+Heartbeat CPU 0 instructions: 100000001 cycles: 91994317 heartbeat IPC: 0.981349 cumulative IPC: 1.04715 (Simulation time: 2 hr 6 min 44 sec) 
+Heartbeat CPU 0 instructions: 110000004 cycles: 102172445 heartbeat IPC: 0.9825 cumulative IPC: 1.04063 (Simulation time: 2 hr 16 min 17 sec) 
+Heartbeat CPU 0 instructions: 120000003 cycles: 112778550 heartbeat IPC: 0.942854 cumulative IPC: 1.03133 (Simulation time: 2 hr 23 min 47 sec) 
+Heartbeat CPU 0 instructions: 130000002 cycles: 122765172 heartbeat IPC: 1.00134 cumulative IPC: 1.02887 (Simulation time: 2 hr 29 min 47 sec) 
+Heartbeat CPU 0 instructions: 140000002 cycles: 132967604 heartbeat IPC: 0.980159 cumulative IPC: 1.02509 (Simulation time: 2 hr 35 min 31 sec) 
+Heartbeat CPU 0 instructions: 150000001 cycles: 143292815 heartbeat IPC: 0.968504 cumulative IPC: 1.02098 (Simulation time: 2 hr 40 min 58 sec) 
+Heartbeat CPU 0 instructions: 160000004 cycles: 153786425 heartbeat IPC: 0.952962 cumulative IPC: 1.0163 (Simulation time: 2 hr 45 min 47 sec) 
+Heartbeat CPU 0 instructions: 170000002 cycles: 164131535 heartbeat IPC: 0.966641 cumulative IPC: 1.01315 (Simulation time: 2 hr 50 min 20 sec) 
+Heartbeat CPU 0 instructions: 180000000 cycles: 174386908 heartbeat IPC: 0.975099 cumulative IPC: 1.01089 (Simulation time: 2 hr 54 min 34 sec) 
+Heartbeat CPU 0 instructions: 190000000 cycles: 184496642 heartbeat IPC: 0.989146 cumulative IPC: 1.00969 (Simulation time: 2 hr 58 min 38 sec) 
+Heartbeat CPU 0 instructions: 200000001 cycles: 193873809 heartbeat IPC: 1.06643 cumulative IPC: 1.01246 (Simulation time: 3 hr 2 min 9 sec) 
+Max paddr 17M
+Simulation finished CPU 0 instructions: 200000001 cycles: 197642975 cumulative IPC: 1.01193 (Simulation time: 3 hr 3 min 53 sec) 
+
+Simulation complete CPU 0 instructions: 200000001 cycles: 197642975 (Simulation time: 3 hr 3 min 53 sec) 
+
+
+ChampSim completed all CPUs
+
+[
+  {
+    "name": "Simulation",
+    "traces": [
+      "../traces/482.sphinx3-417B.champsimtrace.xz"
+    ],
+    "roi": {
+      "cores": [
+        {
+          "instructions": 200000001,
+          "cycles": 197642975,
+          "Avg ROB occupancy at mispredict": 189.614, 
+          "mispredict": {
+            "BRANCH_DIRECT_JUMP": 55,
+            "BRANCH_INDIRECT": 0,
+            "BRANCH_CONDITIONAL": 1010958,
+            "BRANCH_DIRECT_CALL": 74,
+            "BRANCH_INDIRECT_CALL": 5,
+            "BRANCH_RETURN": 263
+          }
+        }
+      ],
+      "cpu0_L1I": {
+        "LOAD": {
+          "hit":30285,
+          "miss":854
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 6.96824,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 31765,
+          "RQ_MERGED": 626,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_ITLB": {
+        "LOAD": {
+          "hit":25645,
+          "miss":21
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 15.7917,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 25666,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_DTLB": {
+        "LOAD": {
+          "hit":56185149,
+          "miss":1972743
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 3744,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 0.448473,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 58355465,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 197573,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_STLB": {
+        "LOAD": {
+          "hit":281987,
+          "miss":130146
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 5.13664,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 412133,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L1D": {
+        "LOAD": {
+          "hit":25856754,
+          "miss":25647487
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":5163366,
+          "miss":1137539
+        },
+        "TRANSLATION": {
+          "hit":46505,
+          "miss":81578
+        },
+        "mshr full": 856563,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 1.79629,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 52201296,
+          "RQ_MERGED": 398535,
+          "RQ_FULL": 298522,
+          "WQ_ACCESS": 6483438,
+          "WQ_MERGED": 2,
+          "WQ_FULL": 182530
+        }
+      },
+      "cpu0_L2C": {
+        "LOAD": {
+          "hit":847003,
+          "miss":2624312
+        },
+        "RFO": {
+          "hit":36249,
+          "miss":167879
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":321576,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":50848,
+          "miss":30730
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 16.1574,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 3757080,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 321762,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "LLC": {
+        "LOAD": {
+          "hit": [127810],
+          "miss": [2496499]
+        },
+        "RFO": {
+          "hit": [18539],
+          "miss": [149340]
+        },
+        "PREFETCH": {
+          "hit": [0],
+          "miss": [0]
+        },
+        "WRITE": {
+          "hit": [131521],
+          "miss": [0]
+        },
+        "TRANSLATION": {
+          "hit": [3772],
+          "miss": [26958]
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 15.5832,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 2822921,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 131591,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "DRAM": [
+        {
+          "RQ ROW_BUFFER_HIT": 1423412,
+          "RQ ROW_BUFFER_MISS": 1248307,
+          "PQ FULL": 0,
+          "WQ ROW_BUFFER_HIT": 10811,
+          "WQ ROW_BUFFER_MISS": 65008,
+          "WQ FULL": 0,
+          "AVG DBUS CONGESTED CYCLE": 3.89337
+        }
+      ]
+
+    },
+    "sim": {
+      "cores": [
+        {
+          "instructions": 200000001,
+          "cycles": 197642975,
+          "Avg ROB occupancy at mispredict": 189.614, 
+          "mispredict": {
+            "BRANCH_DIRECT_JUMP": 55,
+            "BRANCH_INDIRECT": 0,
+            "BRANCH_CONDITIONAL": 1010958,
+            "BRANCH_DIRECT_CALL": 74,
+            "BRANCH_INDIRECT_CALL": 5,
+            "BRANCH_RETURN": 263
+          }
+        }
+      ],
+      "cpu0_L1I": {
+        "LOAD": {
+          "hit":30285,
+          "miss":854
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 6.96824,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 31765,
+          "RQ_MERGED": 626,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_ITLB": {
+        "LOAD": {
+          "hit":25645,
+          "miss":21
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 15.7917,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 25666,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_DTLB": {
+        "LOAD": {
+          "hit":56185149,
+          "miss":1972743
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 3744,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 0.448473,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 58355465,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 197573,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_STLB": {
+        "LOAD": {
+          "hit":281987,
+          "miss":130146
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":0,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":0,
+          "miss":0
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 5.13664,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 412133,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 0,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "cpu0_L1D": {
+        "LOAD": {
+          "hit":25856754,
+          "miss":25647487
+        },
+        "RFO": {
+          "hit":0,
+          "miss":0
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":5163366,
+          "miss":1137539
+        },
+        "TRANSLATION": {
+          "hit":46505,
+          "miss":81578
+        },
+        "mshr full": 856563,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 1.79629,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 52201296,
+          "RQ_MERGED": 398535,
+          "RQ_FULL": 298522,
+          "WQ_ACCESS": 6483438,
+          "WQ_MERGED": 2,
+          "WQ_FULL": 182530
+        }
+      },
+      "cpu0_L2C": {
+        "LOAD": {
+          "hit":847003,
+          "miss":2624312
+        },
+        "RFO": {
+          "hit":36249,
+          "miss":167879
+        },
+        "PREFETCH": {
+          "hit":0,
+          "miss":0
+        },
+        "WRITE": {
+          "hit":321576,
+          "miss":0
+        },
+        "TRANSLATION": {
+          "hit":50848,
+          "miss":30730
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 16.1574,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 3757080,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 321762,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "LLC": {
+        "LOAD": {
+          "hit": [127810],
+          "miss": [2496499]
+        },
+        "RFO": {
+          "hit": [18539],
+          "miss": [149340]
+        },
+        "PREFETCH": {
+          "hit": [0],
+          "miss": [0]
+        },
+        "WRITE": {
+          "hit": [131521],
+          "miss": [0]
+        },
+        "TRANSLATION": {
+          "hit": [3772],
+          "miss": [26958]
+        },
+        "mshr full": 0,
+        "prefetch requested": 0,
+        "prefetch issued": 0,
+        "prefetch filled": 0,
+        "prefetch useful": 0,
+        "prefetch useless": 0,
+        "prefetch late": 0,
+        "pf_useful_at_l2_from_l1":          0,
+        "pf_late_at_l2_from_l1":          0,
+        "pf_useless_at_l2_from_l1":          0,
+        "pf_at_l2_to_l1":          0,
+        "pf_fill_this_level":          0,
+        "miss latency": 15.5832,
+        "cache queues": {
+          "PQ_ACCESS": 0,
+          "PQ_FULL": 0,
+          "PQ_TO_CACHE": 0,
+          "PQ_MERGED": 0,
+          "RQ_ACCESS": 2822921,
+          "RQ_MERGED": 0,
+          "RQ_FULL": 0,
+          "WQ_ACCESS": 131591,
+          "WQ_MERGED": 0,
+          "WQ_FULL": 0
+        }
+      },
+      "DRAM": [
+        {
+          "RQ ROW_BUFFER_HIT": 1423412,
+          "RQ ROW_BUFFER_MISS": 1248307,
+          "PQ FULL": 0,
+          "WQ ROW_BUFFER_HIT": 10811,
+          "WQ ROW_BUFFER_MISS": 65008,
+          "WQ FULL": 0,
+          "AVG DBUS CONGESTED CYCLE": 3.89337
+        }
+      ]
+
+    }
+  }
+]
+cpu0_ITLB
+cpu0_DTLB
+cpu0_STLB
+cpu0_L1D
+cpu0_L2C
+Num Con Filled: 0
+Num Con Useful: 0 Useless:0 Accuracy: nan
+LLC

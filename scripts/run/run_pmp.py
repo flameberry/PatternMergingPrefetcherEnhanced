@@ -12,7 +12,7 @@ def main():
     )
 
     # num_warmup, num_simulation = 200000000, 200000000
-    num_warmup, num_simulation = 5000000, 5000000
+    num_warmup, num_simulation = 5_000_000, 200_000_000
     begin, num = 0, len(workloads_all)
     prefix = f"aditya_warmup{num_warmup}_sim{num_simulation}"
 

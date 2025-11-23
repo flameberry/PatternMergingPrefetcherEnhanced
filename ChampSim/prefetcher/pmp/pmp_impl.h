@@ -1,6 +1,6 @@
 #pragma once
 
-#define PMP_IMPL_DEFAULT
+#define PMP_IMPL_ADAPTIVE
 
 #ifdef PMP_IMPL_DEFAULT
 	#include "pmp.h"

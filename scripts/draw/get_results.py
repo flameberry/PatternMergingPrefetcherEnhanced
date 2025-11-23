@@ -90,7 +90,7 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
             # print(file_lists)
             
     for file in json_file_lists['no']: 
-        workload = file[4:-5] # v00-{simplified_workload_name}.json
+        workload = file[len(prefixes['no'])+1:-5] # v00-{simplified_workload_name}.json
         workloads_simplified.append(workload)
     
     for d in [ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, l1d_load_miss, l2c_load_miss]:
@@ -102,7 +102,7 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
     for prefetcher in prefetchers:
         # print(prefetcher)
         for file in json_file_lists[prefetcher]:
-            workload = file[4:-5]
+            workload = file[len(prefixes[prefetcher])+1:-5]
             # print(file)
             json_file = f'{json_root_path}{prefetcher}/{file}'
             log_file = f'{log_root_path}{prefetcher}/{file[0:-4]}log'

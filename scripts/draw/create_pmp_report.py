@@ -37,7 +37,7 @@ except ImportError:
     sys.exit(1)
 
 # --- Configuration ---
-PREFIX = "aditya_warmup5000000_sim5000000"
+PREFIX = "aditya_warmup5000000_sim200000000"
 PREFETCHERS_TO_RUN = ["no", "pmp"]
 # --- End Configuration ---
 

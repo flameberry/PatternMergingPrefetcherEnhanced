@@ -4,142 +4,142 @@
 ###
 
 ######
-# Build ID: b438cd9a
-# Executable: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp
+# Build ID: e867d03c
+# Executable: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp
 ######
 
 ###
-# Build ID: b438cd9a
+# Build ID: e867d03c
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj
 ###
 
-b438cd9a_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj
-b438cd9a_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/*.cc))
-$(b438cd9a_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src
-$(b438cd9a_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/obj/*.d)
+e867d03c_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj
+e867d03c_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/*.cc))
+$(e867d03c_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src
+$(e867d03c_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/src/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/obj/*.d)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_objs_0) | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin
-$(b438cd9a_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-build_dirs += $(b438cd9a_dirs_0) /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin
-build_objs += $(b438cd9a_objs_0)
-executable_name += /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_objs_0) | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin
+$(e867d03c_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+build_dirs += $(e867d03c_dirs_0) /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin
+build_objs += $(e867d03c_objs_0)
+executable_name += /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp
 
 ###
-# Build ID: b438cd9a_btbDbasic_btb
+# Build ID: e867d03c_btbDbasic_btb
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb
 ###
 
-b438cd9a_btbDbasic_btb_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb
-b438cd9a_btbDbasic_btb_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/*.cc))
-$(b438cd9a_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
-$(b438cd9a_btbDbasic_btb_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/btbDbasic_btb/*.d)
+e867d03c_btbDbasic_btb_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb
+e867d03c_btbDbasic_btb_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/*.cc))
+$(e867d03c_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb
+$(e867d03c_btbDbasic_btb_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/btb/basic_btb/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/btbDbasic_btb/*.d)
 
-$(b438cd9a_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
-module_dirs += $(b438cd9a_btbDbasic_btb_dirs_0)
-module_objs += $(b438cd9a_btbDbasic_btb_objs_0)
+$(e867d03c_btbDbasic_btb_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_btbDbasic_btb_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_btbDbasic_btb_objs_0): CPPFLAGS += -include btbDbasic_btb.inc
+module_dirs += $(e867d03c_btbDbasic_btb_dirs_0)
+module_objs += $(e867d03c_btbDbasic_btb_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_btbDbasic_btb_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_btbDbasic_btb_objs_0)
 ###
-# Build ID: b438cd9a_branchDhashed_perceptron
+# Build ID: e867d03c_branchDhashed_perceptron
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron
 ###
 
-b438cd9a_branchDhashed_perceptron_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron
-b438cd9a_branchDhashed_perceptron_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/*.cc))
-$(b438cd9a_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
-$(b438cd9a_branchDhashed_perceptron_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/branchDhashed_perceptron/*.d)
+e867d03c_branchDhashed_perceptron_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron
+e867d03c_branchDhashed_perceptron_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/*.cc))
+$(e867d03c_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron
+$(e867d03c_branchDhashed_perceptron_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/branch/hashed_perceptron/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/branchDhashed_perceptron/*.d)
 
-$(b438cd9a_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
-module_dirs += $(b438cd9a_branchDhashed_perceptron_dirs_0)
-module_objs += $(b438cd9a_branchDhashed_perceptron_objs_0)
+$(e867d03c_branchDhashed_perceptron_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_branchDhashed_perceptron_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_branchDhashed_perceptron_objs_0): CPPFLAGS += -include branchDhashed_perceptron.inc
+module_dirs += $(e867d03c_branchDhashed_perceptron_dirs_0)
+module_objs += $(e867d03c_branchDhashed_perceptron_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_branchDhashed_perceptron_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_branchDhashed_perceptron_objs_0)
 ###
-# Build ID: b438cd9a_prefetcherDno
+# Build ID: e867d03c_prefetcherDno
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno
 ###
 
-b438cd9a_prefetcherDno_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno
-b438cd9a_prefetcherDno_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/*.cc))
-$(b438cd9a_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
-$(b438cd9a_prefetcherDno_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno/*.d)
+e867d03c_prefetcherDno_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno
+e867d03c_prefetcherDno_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/*.cc))
+$(e867d03c_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no
+$(e867d03c_prefetcherDno_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno/*.d)
 
-$(b438cd9a_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
-module_dirs += $(b438cd9a_prefetcherDno_dirs_0)
-module_objs += $(b438cd9a_prefetcherDno_objs_0)
+$(e867d03c_prefetcherDno_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_prefetcherDno_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_prefetcherDno_objs_0): CPPFLAGS += -include prefetcherDno.inc
+module_dirs += $(e867d03c_prefetcherDno_dirs_0)
+module_objs += $(e867d03c_prefetcherDno_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_prefetcherDno_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_prefetcherDno_objs_0)
 ###
-# Build ID: b438cd9a_prefetcherDno_instr
+# Build ID: e867d03c_prefetcherDno_instr
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr
 ###
 
-b438cd9a_prefetcherDno_instr_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr
-b438cd9a_prefetcherDno_instr_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/*.cc))
-$(b438cd9a_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
-$(b438cd9a_prefetcherDno_instr_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDno_instr/*.d)
+e867d03c_prefetcherDno_instr_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr
+e867d03c_prefetcherDno_instr_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/*.cc))
+$(e867d03c_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr
+$(e867d03c_prefetcherDno_instr_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/no_instr/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDno_instr/*.d)
 
-$(b438cd9a_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
-module_dirs += $(b438cd9a_prefetcherDno_instr_dirs_0)
-module_objs += $(b438cd9a_prefetcherDno_instr_objs_0)
+$(e867d03c_prefetcherDno_instr_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_prefetcherDno_instr_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_prefetcherDno_instr_objs_0): CPPFLAGS += -include prefetcherDno_instr.inc
+module_dirs += $(e867d03c_prefetcherDno_instr_dirs_0)
+module_objs += $(e867d03c_prefetcherDno_instr_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_prefetcherDno_instr_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_prefetcherDno_instr_objs_0)
 ###
-# Build ID: b438cd9a_prefetcherDpmp
+# Build ID: e867d03c_prefetcherDpmp
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp
 ###
 
-b438cd9a_prefetcherDpmp_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp
-b438cd9a_prefetcherDpmp_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/*.cc))
-$(b438cd9a_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp
-$(b438cd9a_prefetcherDpmp_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/prefetcherDpmp/*.d)
+e867d03c_prefetcherDpmp_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp
+e867d03c_prefetcherDpmp_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/*.cc))
+$(e867d03c_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp
+$(e867d03c_prefetcherDpmp_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/prefetcher/pmp/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/prefetcherDpmp/*.d)
 
-$(b438cd9a_prefetcherDpmp_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_prefetcherDpmp_objs_0): CPPFLAGS += -include prefetcherDpmp.inc
-module_dirs += $(b438cd9a_prefetcherDpmp_dirs_0)
-module_objs += $(b438cd9a_prefetcherDpmp_objs_0)
+$(e867d03c_prefetcherDpmp_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_prefetcherDpmp_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_prefetcherDpmp_objs_0): CPPFLAGS += -include prefetcherDpmp.inc
+module_dirs += $(e867d03c_prefetcherDpmp_dirs_0)
+module_objs += $(e867d03c_prefetcherDpmp_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_prefetcherDpmp_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_prefetcherDpmp_objs_0)
 ###
-# Build ID: b438cd9a_replacementDlru
+# Build ID: e867d03c_replacementDlru
 # Source: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
-# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru
+# Destination: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru
 ###
 
-b438cd9a_replacementDlru_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru
-b438cd9a_replacementDlru_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/*.cc))
-$(b438cd9a_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
-$(b438cd9a_replacementDlru_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru
--include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/replacementDlru/*.d)
+e867d03c_replacementDlru_dirs_0 = /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru
+e867d03c_replacementDlru_objs_0 = $(patsubst /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc, /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru/%.o, $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/*.cc))
+$(e867d03c_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru
+$(e867d03c_replacementDlru_objs_0): /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru/%.o: /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/replacement/lru/%.cc | /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru
+-include $(wildcard /Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/replacementDlru/*.d)
 
-$(b438cd9a_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
-$(b438cd9a_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/b438cd9a/inc
-$(b438cd9a_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
-module_dirs += $(b438cd9a_replacementDlru_dirs_0)
-module_objs += $(b438cd9a_replacementDlru_objs_0)
+$(e867d03c_replacementDlru_objs_0): CXXFLAGS += -Wno-unused-parameter
+$(e867d03c_replacementDlru_objs_0): CPPFLAGS += -I/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/.csconfig/e867d03c/inc
+$(e867d03c_replacementDlru_objs_0): CPPFLAGS += -include replacementDlru.inc
+module_dirs += $(e867d03c_replacementDlru_dirs_0)
+module_objs += $(e867d03c_replacementDlru_objs_0)
 
-/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_8core_pmp: $(b438cd9a_replacementDlru_objs_0)
+/Users/flameberry/Developer/IITB/CS683/PatternMergingPrefetcherEnhanced/ChampSim/bin/champsim_1core_pmp: $(e867d03c_replacementDlru_objs_0)
 
 ######
 # Build ID: b1610e75
