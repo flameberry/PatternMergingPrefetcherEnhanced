@@ -50,7 +50,7 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
     json_root_path = '../../json/'+str(num_cores)+'core/'
     log_root_path = '../../log/'+str(num_cores)+'core/'
 
-    ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless = {}, {}, {}, {}, {}, {}, {}, {}
+    ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, l1d_load_miss, l2c_load_miss = {}, {}, {}, {}, {}, {}, {}, {}, {}, {}
 
     json_file_lists = {}
     for prefetcher in prefetchers:
@@ -93,7 +93,7 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
         workload = file[4:-5] # v00-{simplified_workload_name}.json
         workloads_simplified.append(workload)
     
-    for d in [ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless]:
+    for d in [ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, l1d_load_miss, l2c_load_miss]:
         for prefetcher in prefetchers:
             d[prefetcher] = {}
             for workload in workloads_simplified:
@@ -127,6 +127,8 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
                         llc_load_miss[prefetcher][workload][i] = json_obj[0]['roi']['LLC']['LOAD']['miss'][i]
                         l2_pf_useful[prefetcher][workload][i] = json_obj[0]['roi']['cpu'+str(i)+'_L2C']['pf_useful_at_l2_from_l1']
                         l2_pf_useless[prefetcher][workload][i] = json_obj[0]['roi']['cpu'+str(i)+'_L2C']['pf_useless_at_l2_from_l1']
+                        l1d_load_miss[prefetcher][workload][i] = json_obj[0]['roi']['cpu'+str(i)+'_L1D']['LOAD']['miss']
+                        l2c_load_miss[prefetcher][workload][i] = json_obj[0]['roi']['cpu'+str(i)+'_L2C']['LOAD']['miss']
                 
                 # Catch the specific JSON error
                 except json.decoder.JSONDecodeError:
@@ -141,7 +143,7 @@ def get_raw_results(num_cores, prefetchers, prefixes, workloads, mix_type = 'hom
                 # I also recommend making this message clearer
                 print(prefetcher, 'Invalid LOG', file)
                             
-    return ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, workloads_simplified
+    return ipc, cycles, llc_load_miss, l1_pf_late, l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, workloads_simplified, l1d_load_miss, l2c_load_miss
 
 
 def calculate_l2_accuracy(l1_pf_useful, l1_pf_useless, l2_pf_useful, l2_pf_useless, prefetchers, workloads, num_cores):

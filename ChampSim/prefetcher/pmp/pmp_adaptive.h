@@ -399,7 +399,7 @@ namespace pmp {
 		int FILL_LLC_PMP;
 		int invalid_by_eviction = 0;
 		int invalid_by_max = 0;
-		uint32_t reserved_mshrs = 2; // Adaptive number of MSHRs to reserve for demand misses.
+		uint32_t reserved_mshrs = 1; // Adaptive number of MSHRs to reserve for demand misses.
 
 	private:
 		std::vector<int>
@@ -428,6 +428,13 @@ namespace pmp {
 		int cpu;
 
 		// Adaptive mechanism members
+		enum class AdaptiveDirection {
+			STABLE,
+			GET_AGGRESSIVE,
+			GET_CONSERVATIVE
+		};
+		AdaptiveDirection adaptive_direction_ = AdaptiveDirection::STABLE;
+		int direction_stable_count_ = 0;
 		uint64_t cycle_count = 0;
 		uint64_t useful_prefetches = 0;
 		uint64_t useless_prefetches = 0;

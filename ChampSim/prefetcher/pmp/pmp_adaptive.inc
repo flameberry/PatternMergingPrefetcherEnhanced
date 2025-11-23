@@ -1,5 +1,5 @@
-#include "pmp_adaptive.h"
 #include "custom_util.h"
+#include "pmp_adaptive.h"
 
 #include <bits/stdc++.h>
 #include <random>
@@ -369,9 +369,9 @@ void pmp::PMP::record_prefetch_issue(uint64_t pf_addr) {
 void pmp::PMP::cycle_operate() {
 	// Define constants for the adaptive mechanism
 	const uint64_t ADAPTIVE_INTERVAL = 10000;
-	const double HIGH_ACCURACY_TARGET = 0.75;
-	const double LOW_ACCURACY_TARGET = 0.40;
-	const double THRESHOLD_STEP = 0.01;
+	// const double HIGH_ACCURACY_TARGET = 0.75;
+	// const double LOW_ACCURACY_TARGET = 0.40;
+	// const double THRESHOLD_STEP = 0.01;
 	const double MAX_L1D_THRESH = 0.90;
 	const double MIN_L1D_THRESH = 0.10;
 
@@ -383,18 +383,44 @@ void pmp::PMP::cycle_operate() {
 	// Interval reached, perform adaptation
 	uint64_t total_evaluated = useful_prefetches + useless_prefetches;
 	if (total_evaluated > 50) { // Only adapt if we have a meaningful number of samples
+		const int ADAPTIVE_STABILITY_INTERVALS = 2;
+		const double HIGH_ACCURACY_TARGET = 0.40; // If > 40% useful, be aggressive
+		const double LOW_ACCURACY_TARGET = 0.20;  // Only back off if < 20% useful
+		const double THRESHOLD_STEP = 0.05;		  // Adapt faster
+
 		double current_accuracy = (double)useful_prefetches / total_evaluated;
 
+		// Determine the new direction based on the current accuracy
+		AdaptiveDirection new_direction = AdaptiveDirection::STABLE;
 		if (current_accuracy > HIGH_ACCURACY_TARGET) {
-			// Too conservative, get more aggressive
-			this->L1D_THRESH = std::max(MIN_L1D_THRESH, this->L1D_THRESH - THRESHOLD_STEP);
-			this->reserved_mshrs = 1; // High accuracy -> Be aggressive
+			new_direction = AdaptiveDirection::GET_AGGRESSIVE;
 		} else if (current_accuracy < LOW_ACCURACY_TARGET) {
-			// Too aggressive, get more conservative
-			this->L1D_THRESH = std::min(MAX_L1D_THRESH, this->L1D_THRESH + THRESHOLD_STEP);
-			this->reserved_mshrs = 4; // Low accuracy -> Be conservative
+			new_direction = AdaptiveDirection::GET_CONSERVATIVE;
+		}
+
+		// Update stability counter
+		if (new_direction == adaptive_direction_) {
+			direction_stable_count_++;
 		} else {
-			this->reserved_mshrs = 2; // Moderate accuracy -> Default
+			adaptive_direction_ = new_direction;
+			direction_stable_count_ = 1;
+		}
+
+		// Only apply changes if the direction has been stable for enough intervals
+		if (direction_stable_count_ >= ADAPTIVE_STABILITY_INTERVALS) {
+			if (adaptive_direction_ == AdaptiveDirection::GET_AGGRESSIVE) {
+				this->L1D_THRESH = std::max(MIN_L1D_THRESH, this->L1D_THRESH - THRESHOLD_STEP);
+			} else if (adaptive_direction_ == AdaptiveDirection::GET_CONSERVATIVE) {
+				this->L1D_THRESH = std::min(MAX_L1D_THRESH, this->L1D_THRESH + THRESHOLD_STEP);
+			}
+			direction_stable_count_ = 0; // Reset after applying change
+		}
+
+		// Set MSHR reservation based on the current (potentially uncommitted) direction
+		if (adaptive_direction_ == AdaptiveDirection::GET_CONSERVATIVE) {
+			this->reserved_mshrs = 2; // Cap reservation at 2 to avoid starving demand misses
+		} else {
+			this->reserved_mshrs = 1; // Default/Aggressive: Reserve minimal space
 		}
 
 		// Update L2C threshold to be proportional

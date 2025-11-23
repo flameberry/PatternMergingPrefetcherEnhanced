@@ -42,12 +42,12 @@ PREFETCHERS_TO_RUN = ["no", "pmp"]
 # --- End Configuration ---
 
 
-def generate_reports(output_dir):
+def generate_reports(output_dir, num_cores=1):
     """
     Fetches raw data, calculates metrics, saves them to CSV files,
     and returns the resulting dataframes.
     """
-    print("--- 1. Fetching and Processing Simulation Data ---")
+    print(f"1. Fetching and Processing Simulation Data (Cores: {num_cores})")
 
     prefixes_to_use = {p: PREFIX for p in PREFETCHERS_TO_RUN}
 
@@ -62,7 +62,11 @@ def generate_reports(output_dir):
             l2_pf_useful,
             l2_pf_useless,
             workloads_simplified,
-        ) = get_raw_results(1, PREFETCHERS_TO_RUN, prefixes_to_use, workloads_all)
+            l1d_load_miss,
+            l2c_load_miss,
+        ) = get_raw_results(
+            num_cores, PREFETCHERS_TO_RUN, prefixes_to_use, workloads_all
+        )
     except Exception as e:
         print(f"Error during get_raw_results: {e}", file=sys.stderr)
         return None, None
@@ -77,6 +81,8 @@ def generate_reports(output_dir):
         l1_pf_useless,
         l2_pf_useful,
         l2_pf_useless,
+        l1d_load_miss,
+        l2c_load_miss,
     ]:
         eliminate_invalid_values(d, PREFETCHERS_TO_RUN, workloads_simplified)
 
@@ -98,18 +104,42 @@ def generate_reports(output_dir):
         )
 
         try:
-            cycles_no = cycles["no"][workload][0]
-            cycles_pmp = cycles["pmp"][workload][0]
-            ipc_no = ipc["no"][workload][0]
-            ipc_pmp = ipc["pmp"][workload][0]
-            speedup = (
-                cycles_no / cycles_pmp if cycles_no > 0 and cycles_pmp > 0 else 1.0
+            # Aggregate data across all cores for this workload
+            # For cycles, taking the MAX cycles across cores determines the makespan of the workload mix
+            cycles_no = max(cycles["no"][workload])
+            cycles_pmp = max(cycles["pmp"][workload])
+
+            # For IPC, we calculate System IPC: Sum(Instructions) / Max(Cycles)
+            # Since get_raw_results returns pre-calculated IPC per core (instr/cycles),
+            # we can't just sum them if cycles differ.
+            # However, get_raw_results computes IPC = instr/cycles.
+            # Let's approximate System IPC roughly as sum of individual IPCs for simplicity,
+            # or better: verify if get_raw_results gives instructions.
+            # It currently gives 'ipc' and 'cycles'. Instructions = ipc * cycles.
+
+            instr_no = sum(
+                [
+                    ipc["no"][workload][i] * cycles["no"][workload][i]
+                    for i in range(num_cores)
+                ]
+            )
+            instr_pmp = sum(
+                [
+                    ipc["pmp"][workload][i] * cycles["pmp"][workload][i]
+                    for i in range(num_cores)
+                ]
             )
 
-            l2_useful = l2_pf_useful["pmp"][workload][0]
-            l2_useless = l2_pf_useless["pmp"][workload][0]
-            l1_useful = l1_pf_useful["pmp"][workload][0]
-            l1_useless = l1_pf_useless["pmp"][workload][0]
+            system_ipc_no = instr_no / cycles_no if cycles_no > 0 else 0
+            system_ipc_pmp = instr_pmp / cycles_pmp if cycles_pmp > 0 else 0
+
+            speedup = system_ipc_pmp / system_ipc_no if system_ipc_no > 0 else 1.0
+
+            # Sum counts across all cores
+            l2_useful = sum(l2_pf_useful["pmp"][workload])
+            l2_useless = sum(l2_pf_useless["pmp"][workload])
+            l1_useful = sum(l1_pf_useful["pmp"][workload])
+            l1_useless = sum(l1_pf_useless["pmp"][workload])
 
             total_useful = l2_useful + l1_useful
             total_prefetches = total_useful + l2_useless + l1_useless
@@ -122,23 +152,46 @@ def generate_reports(output_dir):
             l2_total = l2_useful + l2_useless
             l2_accuracy = l2_useful / l2_total if l2_total > 0 else 0.0
 
-            baseline_misses = llc_load_miss["no"][workload][0]
-            prefetcher_misses = llc_load_miss["pmp"][workload][0]
-            coverage = (
-                1 - (prefetcher_misses / baseline_misses)
-                if baseline_misses > 0
-                else (1.0 if prefetcher_misses == 0 else 0.0)
+            # LLC Coverage (Sum misses across cores)
+            baseline_misses_llc = sum(llc_load_miss["no"][workload])
+            prefetcher_misses_llc = sum(llc_load_miss["pmp"][workload])
+            coverage_llc = (
+                1 - (prefetcher_misses_llc / baseline_misses_llc)
+                if baseline_misses_llc > 0
+                else (1.0 if prefetcher_misses_llc == 0 else 0.0)
             )
-            coverage = max(0.0, coverage)
+            coverage_llc = max(0.0, coverage_llc)
+
+            # L1D Coverage
+            baseline_misses_l1 = sum(l1d_load_miss["no"][workload])
+            prefetcher_misses_l1 = sum(l1d_load_miss["pmp"][workload])
+            coverage_l1 = (
+                1 - (prefetcher_misses_l1 / baseline_misses_l1)
+                if baseline_misses_l1 > 0
+                else (1.0 if prefetcher_misses_l1 == 0 else 0.0)
+            )
+            coverage_l1 = max(0.0, coverage_l1)
+
+            # L2C Coverage
+            baseline_misses_l2 = sum(l2c_load_miss["no"][workload])
+            prefetcher_misses_l2 = sum(l2c_load_miss["pmp"][workload])
+            coverage_l2 = (
+                1 - (prefetcher_misses_l2 / baseline_misses_l2)
+                if baseline_misses_l2 > 0
+                else (1.0 if prefetcher_misses_l2 == 0 else 0.0)
+            )
+            coverage_l2 = max(0.0, coverage_l2)
 
             per_workload_data.append(
                 {
                     "workload": clean_name,
-                    "ipc_no": ipc_no,
-                    "ipc_pmp": ipc_pmp,
+                    "ipc_no": system_ipc_no,
+                    "ipc_pmp": system_ipc_pmp,
                     "pmp_Speedup": speedup,
                     "pmp_Overall_Accuracy": overall_accuracy,
-                    "pmp_LLC_Coverage": coverage,
+                    "pmp_LLC_Coverage": coverage_llc,
+                    "pmp_L1D_Coverage": coverage_l1,
+                    "pmp_L2C_Coverage": coverage_l2,
                     "pmp_L1D_Accuracy": l1_accuracy,
                     "pmp_L2C_Accuracy": l2_accuracy,
                     "pmp_L1D_Useful": l1_useful,
@@ -167,8 +220,9 @@ def generate_reports(output_dir):
     late_tmp = []
     for workload in workloads_simplified:
         try:
-            useful = l1_pf_useful["pmp"][workload][0]
-            late = l1_pf_late["pmp"][workload][0]
+            # Sum useful/late across cores for aggregation
+            useful = sum(l1_pf_useful["pmp"][workload])
+            late = sum(l1_pf_late["pmp"][workload])
             late_tmp.append(late / useful if useful > 0 else 0)
         except KeyError:
             pass
@@ -180,6 +234,8 @@ def generate_reports(output_dir):
         "pmp_Mean_PMP_IPC": df_detail["ipc_pmp"].mean(),
         "pmp_Mean_Overall_Accuracy": df_detail["pmp_Overall_Accuracy"].mean(),
         "pmp_Mean_LLC_Coverage": df_detail["pmp_LLC_Coverage"].mean(),
+        "pmp_Mean_L1D_Coverage": df_detail["pmp_L1D_Coverage"].mean(),
+        "pmp_Mean_L2C_Coverage": df_detail["pmp_L2C_Coverage"].mean(),
         "pmp_Mean_Late_Ratio": mean_late_ratio,
         "pmp_Mean_L1D_Accuracy": df_detail["pmp_L1D_Accuracy"].mean(),
         "pmp_Mean_L2C_Accuracy": df_detail["pmp_L2C_Accuracy"].mean(),
@@ -316,20 +372,34 @@ def plot_radar_chart(df, output_image):
 
 def plot_accuracy_coverage_summary(df, output_image):
     try:
+        # Default metrics
         metrics = {
             "LLC Coverage": df["pmp_Mean_LLC_Coverage"].iloc[0],
             "L1D Accuracy": df["pmp_Mean_L1D_Accuracy"].iloc[0],
             "L2C Accuracy": df["pmp_Mean_L2C_Accuracy"].iloc[0],
         }
+
+        # Add L1/L2 Coverage if available
+        if "pmp_Mean_L1D_Coverage" in df.columns:
+            metrics["L1D Coverage"] = df["pmp_Mean_L1D_Coverage"].iloc[0]
+        if "pmp_Mean_L2C_Coverage" in df.columns:
+            metrics["L2C Coverage"] = df["pmp_Mean_L2C_Coverage"].iloc[0]
+
     except (KeyError, IndexError) as e:
         print(
             f"Warning: Missing data for accuracy/coverage plot: {e}. Skipping.",
             file=sys.stderr,
         )
         return
+
     labels, values = list(metrics.keys()), list(metrics.values())
-    plt.figure(figsize=(10, 6))
-    bars = plt.bar(labels, values, color=["#007acc", "#cc3300", "#009966"])
+    plt.figure(figsize=(max(10, len(labels) * 2), 6))
+
+    # Extended color palette for up to 5 metrics
+    # Blue, Red, Green, Purple, Orange
+    colors = ["#007acc", "#cc3300", "#009966", "#9933cc", "#ff9900"]
+
+    bars = plt.bar(labels, values, color=colors[: len(labels)])
     plt.title("Overall Coverage and Accuracy", fontsize=16, fontweight="bold")
     plt.ylabel("Rate", fontsize=12)
     plt.gca().yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
@@ -622,20 +692,24 @@ def plot_speedup_comparison(df, output_image):
 
 
 def plot_accuracy_comparison(df, output_image):
-    if not all(
-        c in df.columns
-        for c in [
-            "workload",
-            "accuracy_l1d_default",
-            "accuracy_l1d_adaptive",
-            "accuracy_l2c_default",
-            "accuracy_l2c_adaptive",
-            "accuracy_overall_default",
-            "accuracy_overall_adaptive",
-        ]
-    ):
+    # Define the desired order of metrics
+    potential_metrics = [
+        ("L1D Accuracy", "accuracy_l1d"),
+        ("L1D Coverage", "coverage_l1d"),
+        ("L2C Accuracy", "accuracy_l2c"),
+        ("L2C Coverage", "coverage_l2c"),
+        ("Overall Accuracy", "accuracy_overall"),
+    ]
+
+    # Filter based on what is actually in the dataframe
+    metrics = []
+    for title, base in potential_metrics:
+        if f"{base}_default" in df.columns and f"{base}_adaptive" in df.columns:
+            metrics.append((title, base))
+
+    if not metrics:
         print(
-            "Warning: Missing data for accuracy comparison. Skipping plot.",
+            "Warning: Missing data for accuracy/coverage comparison. Skipping plot.",
             file=sys.stderr,
         )
         return
@@ -645,14 +719,17 @@ def plot_accuracy_comparison(df, output_image):
     index = np.arange(n_workloads)
     bar_width = 0.35
 
+    # Dynamically calculate height: 5 inches per subplot
     fig, axes = plt.subplots(
-        3, 1, figsize=(max(12, n_workloads * 0.4), 18), sharex=True
+        len(metrics),
+        1,
+        figsize=(max(12, n_workloads * 0.4), 5 * len(metrics)),
+        sharex=True,
     )
-    metrics = [
-        ("L1D Accuracy", "accuracy_l1d"),
-        ("L2C Accuracy", "accuracy_l2c"),
-        ("Overall Accuracy", "accuracy_overall"),
-    ]
+
+    # Handle single subplot case where axes is not a list
+    if len(metrics) == 1:
+        axes = [axes]
 
     for i, (title, metric_base) in enumerate(metrics):
         axes[i].bar(
@@ -669,26 +746,27 @@ def plot_accuracy_comparison(df, output_image):
             label="Adaptive",
             color="#007acc",
         )
-        axes[i].set_ylabel("Accuracy")
+
+        # Determine Y-axis label based on metric type
+        y_label = "Accuracy" if "Accuracy" in title else "Coverage"
+        axes[i].set_ylabel(y_label)
         axes[i].set_title(title)
         axes[i].legend()
         axes[i].grid(axis="y", linestyle=":", alpha=0.7)
         axes[i].yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
-        axes[i].set_ylim(
-            0,
-            max(
-                1.0,
-                df_sorted[[f"{metric_base}_default", f"{metric_base}_adaptive"]]
-                .max()
-                .max()
-                * 1.1,
-            ),
+
+        # Calculate max value for ylim, ensuring at least 1.0
+        max_val = (
+            df_sorted[[f"{metric_base}_default", f"{metric_base}_adaptive"]].max().max()
         )
+        axes[i].set_ylim(0, max(1.0, max_val * 1.1))
 
     plt.xlabel("Workload")
     plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
     fig.suptitle(
-        "PMP Accuracy Comparison: Default vs. Adaptive", fontsize=16, fontweight="bold"
+        "PMP Accuracy & L1/L2 Coverage Comparison: Default vs. Adaptive",
+        fontsize=16,
+        fontweight="bold",
     )
     fig.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.savefig(output_image, dpi=300)
@@ -697,12 +775,18 @@ def plot_accuracy_comparison(df, output_image):
 
 
 def plot_coverage_comparison(df, output_image):
-    if not all(
-        c in df.columns
-        for c in ["workload", "coverage_llc_default", "coverage_llc_adaptive"]
-    ):
+    # Determine which coverage metrics are available
+    metrics = []
+    if "coverage_llc_default" in df.columns and "coverage_llc_adaptive" in df.columns:
+        metrics.append(("LLC Coverage", "coverage_llc"))
+    if "coverage_l1d_default" in df.columns and "coverage_l1d_adaptive" in df.columns:
+        metrics.append(("L1D Coverage", "coverage_l1d"))
+    if "coverage_l2c_default" in df.columns and "coverage_l2c_adaptive" in df.columns:
+        metrics.append(("L2C Coverage", "coverage_l2c"))
+
+    if not metrics:
         print(
-            "Warning: Missing data for coverage comparison. Skipping plot.",
+            "Warning: No complete coverage pairs found for comparison. Skipping coverage plot.",
             file=sys.stderr,
         )
         return
@@ -712,37 +796,47 @@ def plot_coverage_comparison(df, output_image):
     index = np.arange(n_workloads)
     bar_width = 0.35
 
-    fig, ax = plt.subplots(figsize=(max(12, n_workloads * 0.6), 7))
-    ax.bar(
-        index - bar_width / 2,
-        df_sorted["coverage_llc_default"],
-        bar_width,
-        label="Default PMP",
-        color="#ffc107",
-    )
-    ax.bar(
-        index + bar_width / 2,
-        df_sorted["coverage_llc_adaptive"],
-        bar_width,
-        label="Adaptive PMP",
-        color="#007acc",
+    # Adjust figure size based on number of metrics
+    fig, axes = plt.subplots(
+        len(metrics),
+        1,
+        figsize=(max(12, n_workloads * 0.4), 6 * len(metrics)),
+        sharex=True,
     )
 
-    ax.set_xlabel("Workload", fontsize=12)
-    ax.set_ylabel("LLC Coverage", fontsize=12)
-    ax.set_title(
-        "LLC Coverage Comparison: Default PMP vs. Adaptive PMP",
-        fontsize=16,
-        fontweight="bold",
+    # If only one metric, axes is not a list, so wrap it
+    if len(metrics) == 1:
+        axes = [axes]
+
+    for i, (title, metric_base) in enumerate(metrics):
+        axes[i].bar(
+            index - bar_width / 2,
+            df_sorted[f"{metric_base}_default"],
+            bar_width,
+            label="Default",
+            color="#ffc107",
+        )
+        axes[i].bar(
+            index + bar_width / 2,
+            df_sorted[f"{metric_base}_adaptive"],
+            bar_width,
+            label="Adaptive",
+            color="#007acc",
+        )
+        axes[i].set_ylabel("Coverage")
+        axes[i].set_title(title)
+        axes[i].legend()
+        axes[i].grid(axis="y", linestyle=":", alpha=0.7)
+        axes[i].yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+        axes[i].set_ylim(0, 1.05)
+
+    plt.xlabel("Workload")
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    fig.suptitle(
+        "PMP Coverage Comparison: Default vs. Adaptive", fontsize=16, fontweight="bold"
     )
-    ax.set_xticks(index)
-    ax.set_xticklabels(df_sorted["workload"], rotation=90, fontsize=8)
-    ax.legend()
-    ax.grid(axis="y", linestyle=":", alpha=0.7)
-    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
-    ax.set_ylim(0, 1)
-    fig.tight_layout()
-    plt.savefig(output_image, dpi=300, bbox_inches="tight")
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
+    plt.savefig(output_image, dpi=300)
     plt.close()
     print(f"Saved {os.path.basename(output_image)}")
 
@@ -758,15 +852,24 @@ def generate_comparison_report(current_df, compare_dir, output_dir):
         )
         return
 
-    # Load and process the comparison dataframe (default PMP)
+    # Load the comparison dataframe (default PMP)
     default_df = pd.read_csv(comparison_csv_path)
-    rename_dict_default = {
+
+    # Define potential mappings
+    potential_renames = {
         "ipc_pmp": "ipc_default",
         "pmp_Speedup": "speedup_default",
         "pmp_Overall_Accuracy": "accuracy_overall_default",
         "pmp_LLC_Coverage": "coverage_llc_default",
+        "pmp_L1D_Coverage": "coverage_l1d_default",
+        "pmp_L2C_Coverage": "coverage_l2c_default",
         "pmp_L1D_Accuracy": "accuracy_l1d_default",
         "pmp_L2C_Accuracy": "accuracy_l2c_default",
+    }
+
+    # Only apply renames for columns that actually exist in the loaded CSV
+    rename_dict_default = {
+        k: v for k, v in potential_renames.items() if k in default_df.columns
     }
     default_df = default_df.rename(columns=rename_dict_default)
 
@@ -777,22 +880,31 @@ def generate_comparison_report(current_df, compare_dir, output_dir):
             "pmp_Speedup": "speedup_adaptive",
             "pmp_Overall_Accuracy": "accuracy_overall_adaptive",
             "pmp_LLC_Coverage": "coverage_llc_adaptive",
+            "pmp_L1D_Coverage": "coverage_l1d_adaptive",
+            "pmp_L2C_Coverage": "coverage_l2c_adaptive",
             "pmp_L1D_Accuracy": "accuracy_l1d_adaptive",
             "pmp_L2C_Accuracy": "accuracy_l2c_adaptive",
         }
     )
 
-    # Merge dataframes
-    cols_to_merge = [
-        "workload",
+    # Identify which columns are available to merge
+    potential_merge_cols = [
         "ipc_default",
         "speedup_default",
         "accuracy_overall_default",
         "coverage_llc_default",
+        "coverage_l1d_default",
+        "coverage_l2c_default",
         "accuracy_l1d_default",
         "accuracy_l2c_default",
     ]
-    # Use only the necessary columns from the default dataframe
+
+    # Filter cols_to_merge to only those present in default_df
+    cols_to_merge = ["workload"] + [
+        c for c in potential_merge_cols if c in default_df.columns
+    ]
+
+    # Merge dataframes
     merged_df = pd.merge(
         adaptive_df, default_df[cols_to_merge], on="workload", how="inner"
     )
@@ -840,13 +952,20 @@ if __name__ == "__main__":
         metavar="PATH",
         help="Path to a previous result directory to compare against.",
     )
+    parser.add_argument(
+        "--cores",
+        type=int,
+        default=1,
+        choices=[1, 2, 4, 8],
+        help="Number of cores used in the simulation (1, 2, 4, or 8). Default is 1.",
+    )
     args = parser.parse_args()
 
     output_directory = create_output_directory()
     if not output_directory:
         sys.exit(1)
 
-    df_detail, df_summary = generate_reports(output_directory)
+    df_detail, df_summary = generate_reports(output_directory, args.cores)
 
     if df_detail is not None and df_summary is not None:
         generate_graphs(df_detail, df_summary, output_directory)
