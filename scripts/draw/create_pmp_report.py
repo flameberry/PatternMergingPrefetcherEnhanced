@@ -582,6 +582,7 @@ def generate_comparison_graphs(merged_df, output_dir):
         "comparison_speedup.png": plot_speedup_comparison,
         "comparison_accuracy.png": plot_accuracy_comparison,
         "comparison_coverage.png": plot_coverage_comparison,
+        "comparison_summary.png": plot_summary_comparison,
     }
 
     for filename, plot_func in comparison_plots.items():
@@ -592,6 +593,71 @@ def generate_comparison_graphs(merged_df, output_dir):
                 f"Warning: Merged dataframe for {filename} is empty. Skipping comparison plot.",
                 file=sys.stderr,
             )
+
+
+def plot_summary_comparison(df, output_image):
+    # Define the metrics and their order
+    # Format: (Display Label, Column Base Name)
+    desired_metrics = [
+        ("L1D Accuracy", "accuracy_l1d"),
+        ("L1D Coverage", "coverage_l1d"),
+        ("L2C Accuracy", "accuracy_l2c"),
+        ("L2C Coverage", "coverage_l2c"),
+        ("LLC Coverage", "coverage_llc"),
+    ]
+
+    labels = []
+    default_means = []
+    adaptive_means = []
+
+    # Calculate means for available columns
+    for label, base in desired_metrics:
+        col_def = f"{base}_default"
+        col_adap = f"{base}_adaptive"
+        
+        if col_def in df.columns and col_adap in df.columns:
+            labels.append(label)
+            default_means.append(df[col_def].mean())
+            adaptive_means.append(df[col_adap].mean())
+
+    if not labels:
+        print("Warning: No summary metrics found for comparison.", file=sys.stderr)
+        return
+
+    x = np.arange(len(labels))
+    width = 0.35
+
+    fig, ax = plt.subplots(figsize=(max(10, len(labels) * 2), 6))
+    
+    rects1 = ax.bar(x - width/2, default_means, width, label='Default', color='#ffc107')
+    rects2 = ax.bar(x + width/2, adaptive_means, width, label='Adaptive', color='#007acc')
+
+    ax.set_ylabel('Rate')
+    ax.set_title('Overall Performance Summary Comparison', fontsize=16, fontweight='bold')
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.legend()
+    ax.yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+    ax.set_ylim(0, 1.05)
+    ax.grid(axis='y', linestyle=':', alpha=0.7)
+
+    # Add value labels on top of bars
+    def autolabel(rects):
+        for rect in rects:
+            height = rect.get_height()
+            ax.annotate(f'{height:.1%}',
+                        xy=(rect.get_x() + rect.get_width() / 2, height),
+                        xytext=(0, 3),  # 3 points vertical offset
+                        textcoords="offset points",
+                        ha='center', va='bottom', fontsize=9, fontweight='bold')
+
+    autolabel(rects1)
+    autolabel(rects2)
+
+    fig.tight_layout()
+    plt.savefig(output_image, dpi=300)
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
 
 
 def plot_ipc_comparison_3way(df, output_image):
