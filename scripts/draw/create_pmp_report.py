@@ -372,18 +372,21 @@ def plot_radar_chart(df, output_image):
 
 def plot_accuracy_coverage_summary(df, output_image):
     try:
-        # Default metrics
-        metrics = {
-            "LLC Coverage": df["pmp_Mean_LLC_Coverage"].iloc[0],
-            "L1D Accuracy": df["pmp_Mean_L1D_Accuracy"].iloc[0],
-            "L2C Accuracy": df["pmp_Mean_L2C_Accuracy"].iloc[0],
-        }
-
-        # Add L1/L2 Coverage if available
+        # Reconstruct metrics dictionary in the requested order:
+        # L1D Acc, L1D Cov, L2C Acc, L2C Cov, LLC Cov
+        metrics = {}
+        
+        metrics["L1D Accuracy"] = df["pmp_Mean_L1D_Accuracy"].iloc[0]
+        
         if "pmp_Mean_L1D_Coverage" in df.columns:
             metrics["L1D Coverage"] = df["pmp_Mean_L1D_Coverage"].iloc[0]
+            
+        metrics["L2C Accuracy"] = df["pmp_Mean_L2C_Accuracy"].iloc[0]
+        
         if "pmp_Mean_L2C_Coverage" in df.columns:
             metrics["L2C Coverage"] = df["pmp_Mean_L2C_Coverage"].iloc[0]
+            
+        metrics["LLC Coverage"] = df["pmp_Mean_LLC_Coverage"].iloc[0]
 
     except (KeyError, IndexError) as e:
         print(
@@ -698,7 +701,6 @@ def plot_accuracy_comparison(df, output_image):
         ("L1D Coverage", "coverage_l1d"),
         ("L2C Accuracy", "accuracy_l2c"),
         ("L2C Coverage", "coverage_l2c"),
-        ("Overall Accuracy", "accuracy_overall"),
     ]
 
     # Filter based on what is actually in the dataframe
@@ -777,12 +779,13 @@ def plot_accuracy_comparison(df, output_image):
 def plot_coverage_comparison(df, output_image):
     # Determine which coverage metrics are available
     metrics = []
-    if "coverage_llc_default" in df.columns and "coverage_llc_adaptive" in df.columns:
-        metrics.append(("LLC Coverage", "coverage_llc"))
+    # Reordered: L1D, L2C, LLC
     if "coverage_l1d_default" in df.columns and "coverage_l1d_adaptive" in df.columns:
         metrics.append(("L1D Coverage", "coverage_l1d"))
     if "coverage_l2c_default" in df.columns and "coverage_l2c_adaptive" in df.columns:
         metrics.append(("L2C Coverage", "coverage_l2c"))
+    if "coverage_llc_default" in df.columns and "coverage_llc_adaptive" in df.columns:
+        metrics.append(("LLC Coverage", "coverage_llc"))
 
     if not metrics:
         print(
