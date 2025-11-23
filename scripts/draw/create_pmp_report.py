@@ -583,6 +583,7 @@ def generate_comparison_graphs(merged_df, output_dir):
         "comparison_accuracy.png": plot_accuracy_comparison,
         "comparison_coverage.png": plot_coverage_comparison,
         "comparison_summary.png": plot_summary_comparison,
+        "comparison_l1_l2_accuracy.png": plot_l1_l2_accuracy_comparison,
     }
 
     for filename, plot_func in comparison_plots.items():
@@ -655,6 +656,84 @@ def plot_summary_comparison(df, output_image):
     autolabel(rects2)
 
     fig.tight_layout()
+    plt.savefig(output_image, dpi=300)
+    plt.close()
+    print(f"Saved {os.path.basename(output_image)}")
+
+
+def plot_l1_l2_accuracy_comparison(df, output_image):
+    # Define the desired order of metrics
+    potential_metrics = [
+        ("L1D Accuracy", "accuracy_l1d"),
+        ("L2C Accuracy", "accuracy_l2c"),
+    ]
+
+    # Filter based on what is actually in the dataframe
+    metrics = []
+    for title, base in potential_metrics:
+        if f"{base}_default" in df.columns and f"{base}_adaptive" in df.columns:
+            metrics.append((title, base))
+
+    if not metrics:
+        print(
+            "Warning: Missing data for L1/L2 accuracy comparison. Skipping plot.",
+            file=sys.stderr,
+        )
+        return
+
+    df_sorted = df.sort_values(by="speedup_adaptive", ascending=False)
+    n_workloads = len(df_sorted)
+    index = np.arange(n_workloads)
+    bar_width = 0.35
+
+    # Dynamically calculate height: 5 inches per subplot
+    fig, axes = plt.subplots(
+        len(metrics),
+        1,
+        figsize=(max(12, n_workloads * 0.4), 5 * len(metrics)),
+        sharex=True,
+    )
+
+    # Handle single subplot case where axes is not a list
+    if len(metrics) == 1:
+        axes = [axes]
+
+    for i, (title, metric_base) in enumerate(metrics):
+        axes[i].bar(
+            index - bar_width / 2,
+            df_sorted[f"{metric_base}_default"],
+            bar_width,
+            label="Default",
+            color="#ffc107",
+        )
+        axes[i].bar(
+            index + bar_width / 2,
+            df_sorted[f"{metric_base}_adaptive"],
+            bar_width,
+            label="Adaptive",
+            color="#007acc",
+        )
+
+        axes[i].set_ylabel("Accuracy")
+        axes[i].set_title(title)
+        axes[i].legend()
+        axes[i].grid(axis="y", linestyle=":", alpha=0.7)
+        axes[i].yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
+        # Calculate max value for ylim, ensuring at least 1.0
+        max_val = (
+            df_sorted[[f"{metric_base}_default", f"{metric_base}_adaptive"]].max().max()
+        )
+        axes[i].set_ylim(0, max(1.0, max_val * 1.1))
+
+    plt.xlabel("Workload")
+    plt.xticks(index, df_sorted["workload"], rotation=90, fontsize=8)
+    fig.suptitle(
+        "PMP L1D & L2C Accuracy Comparison: Default vs. Adaptive",
+        fontsize=16,
+        fontweight="bold",
+    )
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.savefig(output_image, dpi=300)
     plt.close()
     print(f"Saved {os.path.basename(output_image)}")
