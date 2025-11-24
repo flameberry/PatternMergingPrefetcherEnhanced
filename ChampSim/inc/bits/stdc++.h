@@ -1,0 +1,19 @@
+// Minimal fallback for macOS/Clang users
+#include <algorithm>
+#include <assert.h>
+#include <cmath>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>

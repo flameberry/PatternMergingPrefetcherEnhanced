@@ -1,0 +1,91 @@
+flowchart TD
+    %% Subgraphs
+    subgraph CPU_Subsystem ["CPU & Cache Subsystem"]
+        direction TB
+        L1D_Load("L1D Demand Load")
+        L1D_Cache("L1D Cache")
+        MSHR("MSHRs (Miss Status Holding Registers)")
+    end
+
+    subgraph PMP_Core ["PMP Core Engine (Black Box)"]
+        direction TB
+        Pattern_Engine("Pattern Merging & Prediction Engine<br/>(FT, AT, OPT, PPT)")
+        Arbiter("Arbitration Logic<br/>(Uses L1D_THRESH)")
+    end
+
+    subgraph Prefetch_Execution ["Execution & Throttling"]
+        direction TB
+        PB_Logic{"<b>MSHR Throttling Check</b><br/>Is (MSHR_Occupancy < MSHR_Size - <b>reserved_mshrs</b>)?"}
+        PB_Queue("Prefetch Queue")
+        Drop("Drop Prefetch")
+    end
+
+    subgraph Adaptive_Logic ["Adaptive Feedback Loop (Every 10k Cycles)"]
+        direction TB
+        Tracker("Inflight PF Tracker<br/>(Tracks Useful/Useless)")
+        
+        subgraph Decision_Process ["Detailed Control Logic"]
+            Calc_Acc("Calc Accuracy = Useful / (Useful + Useless)")
+            
+            Decision{"Compare Accuracy"}
+            
+            Aggressive_Path("<b>Case: High Accuracy (> 40%)</b><br/>Direction: GET_AGGRESSIVE")
+            Conservative_Path("<b>Case: Low Accuracy (< 20%)</b><br/>Direction: GET_CONSERVATIVE")
+            Stable_Path("<b>Case: Else</b><br/>Direction: STABLE")
+
+            Stability_Check{"<b>Stability Check</b><br/>Has direction been consistent<br/>for 2 intervals?"}
+            
+            Update_Aggr("<b>Action: Increase Aggressiveness</b><br/>1. L1D_THRESH -= 0.05 (Min 0.10)<br/>2. L2C_THRESH = L1D_THRESH * 0.3<br/>3. reserved_mshrs = 1 (Relax Throttling)")
+            Update_Cons("<b>Action: Increase Conservativeness</b><br/>1. L1D_THRESH += 0.05 (Max 0.90)<br/>2. L2C_THRESH = L1D_THRESH * 0.3<br/>3. reserved_mshrs = 2 (Strict Throttling)")
+        end
+    end
+
+    %% Connections
+    
+    %% Access Flow
+    L1D_Load --> Pattern_Engine
+    Pattern_Engine -->|"Candidate Patterns"| Arbiter
+    Arbiter -->|"Filtered Prefetches"| PB_Logic
+    
+    %% Throttling Logic connection
+    MSHR -.->|"Current Occupancy"| PB_Logic
+    PB_Logic --"Yes (Space Available)"--> PB_Queue
+    PB_Logic --"No (Throttled)"--> Drop
+    PB_Queue -->|"Prefetch Request"| L1D_Cache
+    
+
+    %% Feedback Flow
+    PB_Queue --"Record Issue"--> Tracker
+    L1D_Load --"Probe (Hit/Used)"--> Tracker
+    Tracker --> Calc_Acc
+
+    %% Logic Flow
+    Calc_Acc --> Decision
+    Decision -->|"> 0.40"| Aggressive_Path
+    Decision -->|"< 0.20"| Conservative_Path
+    Decision -->|"Else"| Stable_Path
+    
+    Aggressive_Path --> Stability_Check
+    Conservative_Path --> Stability_Check
+    
+    Stability_Check -->|"Yes"| Update_Aggr
+    Stability_Check -->|"Yes"| Update_Cons
+    
+    %% Control Signals (The Feedback)
+    Update_Aggr -.->|"Reduce Threshold (More Prefetches)"| Arbiter
+    Update_Cons -.->|"Increase Threshold (Fewer Prefetches)"| Arbiter
+    
+    Update_Aggr -.->|"Set Reserve = 1"| PB_Logic
+    Update_Cons -.->|"Set Reserve = 2"| PB_Logic
+
+    %% Styling
+    classDef logic fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef action fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px;
+    classDef core fill:#fff9c4,stroke:#fbc02d,stroke-width:1px;
+    classDef decision fill:#fff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5;
+    classDef throttle fill:#ffccbc,stroke:#bf360c,stroke-width:2px;
+
+    class Calc_Acc,Decision,Stability_Check logic;
+    class Update_Aggr,Update_Cons action;
+    class Pattern_Engine,Arbiter core;
+    class PB_Logic throttle;
