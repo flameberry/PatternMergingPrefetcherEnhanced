@@ -159,13 +159,13 @@ def modify_config_multicore(num_cores, branch, prefetcher, name):
     # default: 1core -> 4 GB, 4core -> 2 channels
     # default: 1 1 8 65536 128
     # DRAM_CHANNELS * DRAM_RANKS * DRAM_BANKS * DRAM_ROWS * DRAM_COLUMNS * BLOCK_SIZE
-    if num_cores == 2:
-        load_dict["physical_memory"]["channels"] = 2
-    elif num_cores == 4:
-        load_dict["physical_memory"]["channels"] = 2
+    #if num_cores == 2:
+        #load_dict["physical_memory"]["channels"] = 2
+    if num_cores == 4:
+        #load_dict["physical_memory"]["channels"] = 2
         load_dict["physical_memory"]["ranks"] = 2
     elif num_cores == 8:
-        load_dict["physical_memory"]["channels"] = 4
+        #load_dict["physical_memory"]["channels"] = 4
         load_dict["physical_memory"]["ranks"] = 2
     # rq_size, wq_size are per channel parameterss
 

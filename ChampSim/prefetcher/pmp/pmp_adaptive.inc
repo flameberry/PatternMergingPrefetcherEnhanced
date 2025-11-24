@@ -58,6 +58,34 @@ int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_
 	pattern[region_offset] = 0;
 	int pf_offset;
 	DEBUG(cout << "[Prefetch Begin] base_addr " << std::hex << base_addr << ", " << std::dec;)
+
+	// (Manish) IMPROVED: Count prefetch MSHRs and enforce budget
+	uint32_t mshr_size = cache->get_size(0, 0);
+	uint32_t prefetch_mshr_count = 0;
+	
+	// Count current prefetch MSHRs (implementation depends on your MSHR structure)
+	// This is a placeholder - adjust based on actual MSHR API
+	for (uint32_t i = 0; i < cache->get_occupancy(0, 0); i++) {
+		// If your cache tracks prefetch type, count them here
+		// prefetch_mshr_count += cache->MSHR[i].is_prefetch ? 1 : 0;
+	}
+	// Fallback: estimate from metadata if direct counting unavailable
+	// For now, we'll use the check without counting (Phase 1)
+	
+	// Calculate budget using percentage reservation
+	uint32_t reserved_for_demand = (uint32_t)(mshr_size * pmp_parent->demand_reserve_pct);
+	uint32_t max_prefetch_budget = mshr_size - reserved_for_demand;
+	
+	if (this->debug_level >= 2) {
+		std::cerr << "[PrefetchBuffer] MSHR Budget: "
+				  << "Total=" << mshr_size 
+				  << ", Reserved=" << reserved_for_demand
+				  << ", PF_Budget=" << max_prefetch_budget << std::endl;
+	}
+
+	// (Manish ends)
+
+
 	for (int d = 1; d < this->pattern_len; d += 1) { // d: 1 -> 64
 		for (int sgn = +1; sgn >= -1; sgn -= 2) {	 // sgn: -1, 1
 			pf_offset = region_offset + sgn * d;
@@ -65,7 +93,28 @@ int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_
 				DEBUG(cout << pf_offset << " ";)
 				uint64_t pf_address = (region_number * this->pattern_len + pf_offset) << LOG2_BLOCK_SIZE;
 				// MSHR + PQ < MSHR - 1 && PQ is not full
-				if (cache->get_occupancy(0, 0) < (cache->get_size(0, 0) - pmp_parent->reserved_mshrs) && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
+				//if (cache->get_occupancy(0, 0) < (cache->get_size(0, 0) - pmp_parent->reserved_mshrs) && cache->get_occupancy(3, 0) < cache->get_size(3, 0)) {
+				//	uint32_t pf_metadata = 0;
+				//	pf_metadata = __add_pf_sour_level(pf_metadata, 1);
+				//	if (pattern[pf_offset] == 1) { // FILL_L1_PMP = 1
+				//		pf_metadata = __add_pf_dest_level(pf_metadata, 1);
+				//	} else {
+				//		pf_metadata = __add_pf_dest_level(pf_metadata, 2);
+				//	}
+
+				// (Manish) IMPROVED: Three-part check for MSHR safety
+				// 1. Total pressure check (don't overflow)
+				uint32_t total_mshr_pressure = cache->get_occupancy(0, 0) + cache->get_occupancy(3, 0);
+				
+				// 2. Prefetch budget check (leave room for demand)
+				// Using occupancy as proxy since we can't directly count prefetch MSHRs in all simulators
+				uint32_t estimated_demand_mshrs = reserved_for_demand; // Conservative estimate
+				bool within_budget = (total_mshr_pressure + 1) <= (mshr_size - estimated_demand_mshrs);
+				
+				// 3. PQ not full check
+				bool pq_available = cache->get_occupancy(3, 0) < cache->get_size(3, 0);
+				
+				if (total_mshr_pressure < mshr_size && within_budget && pq_available) {
 					uint32_t pf_metadata = 0;
 					pf_metadata = __add_pf_sour_level(pf_metadata, 1);
 					if (pattern[pf_offset] == 1) { // FILL_L1_PMP = 1
@@ -73,6 +122,7 @@ int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_
 					} else {
 						pf_metadata = __add_pf_dest_level(pf_metadata, 2);
 					}
+				// (Manish Ends)
 
 					int ok = cache->prefetch_line(pf_address, pattern[pf_offset] == 1 ? true : false, pf_metadata);
 					pf_issued += ok;
@@ -87,6 +137,14 @@ int pmp::PrefetchBuffer::prefetch(PMP* pmp_parent, CACHE* cache, uint64_t block_
 					pattern[pf_offset] = 0;
 				} else {
 					DEBUG(cout << std::endl;)
+					// (Manish)
+					if (this->debug_level >= 2) {
+						std::cerr << "[PrefetchBuffer::prefetch] Throttled: "
+								  << "total_pressure=" << total_mshr_pressure << "/" << mshr_size
+								  << ", within_budget=" << within_budget 
+								  << ", pq_avail=" << pq_available << std::dec << std::endl;
+					}
+					// (Manish Ends)
 					return pf_issued;
 				}
 			}
@@ -362,9 +420,30 @@ void pmp::PMP::record_prefetch_issue(uint64_t pf_addr) {
 	auto evicted = this->inflight_pf_tracker.insert(this->inflight_pf_tracker.build_key(pf_block), {});
 	if (evicted.valid && !evicted.data.used) {
 		// An unused prefetch was evicted from our tracker, count it as useless
-		this->useless_prefetches++;
+		//this->useless_prefetches++;
+		// (Manish) :Add aged base useless count
+		uint64_t age = this->cycle_count - evicted.data.issue_cycle;
+		if (age < PREFETCH_TIMEOUT_CYCLES) {
+			this->useless_prefetches++;
+		}
+		// If too old, we're not confident it was actually useless, so don't count
 	}
 }
+
+// (Manish)NEW: Track prefetch evictions from cache
+void pmp::PMP::record_prefetch_eviction(uint64_t pf_addr) {
+	uint64_t pf_block = pf_addr >> LOG2_BLOCK_SIZE;
+	auto* entry = this->inflight_pf_tracker.find(
+		this->inflight_pf_tracker.build_key(pf_block));
+	
+	if (entry && !entry->data.used) {
+		this->useless_prefetches++;
+		this->inflight_pf_tracker.erase(
+			this->inflight_pf_tracker.build_key(pf_block));
+	}
+}
+
+// (Manish) Ends 
 
 void pmp::PMP::cycle_operate() {
 	// Define constants for the adaptive mechanism
@@ -380,6 +459,33 @@ void pmp::PMP::cycle_operate() {
 		return;
 	}
 
+
+	// (Manish): Also adapt MSHR reservation based on demand blocking
+	if (demand_miss_total_count > 50) {
+		double block_rate = (double)demand_miss_blocked_count / demand_miss_total_count;
+		
+		if (block_rate > 0.05) {  // More than 5% of demands blocked
+			// Increase demand reservation (reduce prefetch budget)
+			this->demand_reserve_pct = std::min(0.50, this->demand_reserve_pct + 0.05);
+			if (this->debug_level >= 1) {
+				std::cerr << "[PMP Adaptive] Demand blocking high (" << block_rate 
+						  << "), increasing reserve to " << this->demand_reserve_pct << std::endl;
+			}
+		} else if (block_rate < 0.01) {  // Less than 1% blocked
+			// Decrease demand reservation (allow more prefetch)
+			this->demand_reserve_pct = std::max(0.10, this->demand_reserve_pct - 0.05);
+			if (this->debug_level >= 1) {
+				std::cerr << "[PMP Adaptive] Demand blocking low (" << block_rate 
+						  << "), decreasing reserve to " << this->demand_reserve_pct << std::endl;
+			}
+		}
+		
+		// Reset demand tracking
+		demand_miss_blocked_count = 0;
+		demand_miss_total_count = 0;
+	}
+	// (Manish) Ends
+
 	// Interval reached, perform adaptation
 	uint64_t total_evaluated = useful_prefetches + useless_prefetches;
 	if (total_evaluated > 50) { // Only adapt if we have a meaningful number of samples
@@ -388,13 +494,13 @@ void pmp::PMP::cycle_operate() {
 		if (current_accuracy > HIGH_ACCURACY_TARGET) {
 			// Too conservative, get more aggressive
 			this->L1D_THRESH = std::max(MIN_L1D_THRESH, this->L1D_THRESH - THRESHOLD_STEP);
-			this->reserved_mshrs = 1; // High accuracy -> Be aggressive
+			//this->reserved_mshrs = 1; // High accuracy -> Be aggressive
 		} else if (current_accuracy < LOW_ACCURACY_TARGET) {
 			// Too aggressive, get more conservative
 			this->L1D_THRESH = std::min(MAX_L1D_THRESH, this->L1D_THRESH + THRESHOLD_STEP);
-			this->reserved_mshrs = 4; // Low accuracy -> Be conservative
+			//this->reserved_mshrs = 4; // Low accuracy -> Be conservative
 		} else {
-			this->reserved_mshrs = 2; // Moderate accuracy -> Default
+			//this->reserved_mshrs = 2; // Moderate accuracy -> Default
 		}
 
 		// Update L2C threshold to be proportional
@@ -409,7 +515,7 @@ void pmp::PMP::cycle_operate() {
 // (Aditya): End of change.
 
 void CACHE::prefetcher_initialize() {
-	std::cout << NAME << " PMP prefetcher" << std::endl;
+	std::cout << NAME << " PMP adaptive prefetcher" << std::endl;
 	prefetchers = std::vector<pmp::PMP>(NUM_CPUS,
 		pmp::PMP(PATTERN_LEN, pmp::OFFSET_BITS, OPT_SIZE, OFFSET_MAX_CONF, OPT_WAYS, pmp::PC_BITS, PPT_SIZE,
 			PC_MAX_CONF, PPT_WAYS, FT_SIZE, FT_WAY, AT_SIZE, AT_WAY, pmp::PF_BUFFER_SIZE, pmp::PF_BUFFER_WAY,
@@ -466,7 +572,14 @@ void CACHE::prefetcher_final_stats() {
 			  << "Prefetch Request to L2: " << pmp::prefetch_to_l2 << std::endl;
 	std::cout << "Invalid by Eviction: " << prefetchers[cpu].invalid_by_eviction << std::endl;
 	std::cout << "Invalid by Max: " << prefetchers[cpu].invalid_by_max << std::endl;
+	// (Manish)
+	std::cout << "Final L1D Threshold: " << std::fixed << std::setprecision(3) 
+			  << prefetchers[cpu].L1D_THRESH << std::endl;
+	std::cout << "Final Demand Reserve: " << std::fixed << std::setprecision(1)
+			  << (prefetchers[cpu].demand_reserve_pct * 100) << "%" << std::endl;
+	// (Manish) Ends
 	prefetchers[cpu].log();
+	
 
 	std::cout << "Filter by PPT: " << pmp::filter_by_ppt << std::endl;
 }

@@ -42,6 +42,8 @@ namespace pmp {
 	class InflightPFData {
 	public:
 		bool used = false;
+		// (Manish)
+		uint64_t issue_cycle = 0;  // Track when prefetch was issued
 	};
 
 	class InflightPFTracker : public custom_util::LRUSetAssociativeCache<InflightPFData> {
@@ -368,7 +370,7 @@ namespace pmp {
 											  // (Aditya): Initialize adaptive thresholds and the in-flight tracker.
 											  , L1D_THRESH(0.50)
 											  , L2C_THRESH(0.150)
-											  , inflight_pf_tracker(pf_buffer_size * 2, pf_buffer_way * 2)
+											  , inflight_pf_tracker(pf_buffer_size * 8, pf_buffer_way * 4) // (Manish) //Was *2, *2
 											  // (Aditya): End of change.
 											  , FILL_L1_PMP(1)
 											  , FILL_L2_PMP(2)
@@ -392,6 +394,7 @@ namespace pmp {
 		// (Aditya): Add public methods for the adaptive feedback loop.
 		void cycle_operate();
 		void record_prefetch_issue(uint64_t pf_addr);
+		void record_prefetch_eviction(uint64_t pf_addr);  // (Manish) NEW: Track evictions
 		// (Aditya): End of change.
 
 		int FILL_L1_PMP;
@@ -399,7 +402,18 @@ namespace pmp {
 		int FILL_LLC_PMP;
 		int invalid_by_eviction = 0;
 		int invalid_by_max = 0;
-		uint32_t reserved_mshrs = 2; // Adaptive number of MSHRs to reserve for demand misses.
+
+		// (Manish)
+		// IMPROVED: Percentage-based MSHR reservation instead of fixed slots
+		double demand_reserve_pct = 0.25; // Reserve 25% of MSHRs for demand misses
+		
+		// Track demand pressure for adaptive reservation
+		uint64_t demand_miss_blocked_count = 0;
+		uint64_t demand_miss_total_count = 0;
+		double L1D_THRESH;
+		double L2C_THRESH;
+		const double LLC_THRESH = 1; /* off */
+		// (Manish) Ends here
 
 	private:
 		std::vector<int>
@@ -408,9 +422,7 @@ namespace pmp {
 		std::vector<int> vote(const std::vector<OffsetPatternTableData>& x, bool is_pc_opt = false);
 
 		// (Aditya): Make thresholds non-const and add members for the adaptive mechanism.
-		double L1D_THRESH;
-		double L2C_THRESH;
-		const double LLC_THRESH = 1; /* off */
+		
 
 		const double PC_L1D_THRESH = 0.50;
 		const double PC_L2C_THRESH = 0.150;
@@ -435,6 +447,11 @@ namespace pmp {
 		const double L2C_THRESH_RATIO = 0.3; // Keep L2C threshold proportional to L1D's
 
 		// (Aditya): End of change.
+
+		// (Manish) :		
+		// NEW: Constants for adaptive mechanism
+		static constexpr uint64_t PREFETCH_TIMEOUT_CYCLES = 50000; // Timeout for stale prefetches
+		// (Manish) : End of change
 	};
 
 } // namespace pmp
